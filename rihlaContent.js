@@ -1,0 +1,1 @@
+export { emirates, pillars, allPlaces } from './emirates';

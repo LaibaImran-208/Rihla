@@ -1,0 +1,10 @@
+import Navbar from '@/components/rihla/Navbar';
+import Footer from '@/components/rihla/Footer';
+import Countdown from '@/components/rihla/Countdown';
+import { festivals } from '@/data/festivals';
+import { Image } from '@/components/ui/image';
+export default function CulturalCalendar() {
+  return <main className="min-h-screen bg-[#050E1D]"><Navbar />
+    <section className="px-5 pb-8 pt-36 text-center"><span className="rihla-kicker">Cultural Calendar</span><h1 className="font-display text-5xl font-bold text-[#F5F0E8] sm:text-6xl">Festivals & <span className="text-[#C8965A]">Holidays</span></h1><p className="rihla-subtitle">Major UAE public holidays and cultural celebrations with dynamic countdowns.</p></section>
+    <section className="mx-auto max-w-5xl px-5 py-14"><div className="space-y-6">{festivals.map((f) => <article key={f.name} className="overflow-hidden rounded-[2rem] border border-[#1A3355] bg-[#0A1A30]"><div className="relative h-48"><Image src={`${f.image}?auto=format&fit=crop&w=1000&q=85`} alt={f.name} className="h-full w-full" /><div className="absolute inset-0 bg-gradient-to-t from-[#0A1A30] to-transparent" /><div className="absolute bottom-4 left-6"><p className="text-[#E8B97A] text-4xl [font-family:'Architects_Daughter',_system-ui]" dir="rtl">{f.arabic}</p><h2 className="font-display text-2xl font-bold text-white">{f.name}</h2></div></div><div className="p-6"><div className="flex flex-wrap items-center justify-between gap-3"><span className="rounded-full bg-[#1A3355] px-3 py-1 text-xs text-[#B7C3D4]">{f.type === 'fixed' ? `Fixed date` : 'Lunar calendar'}</span><Countdown festival={f} /></div><p className="mt-4 leading-7 text-[#B7C3D4]"><b className="text-[#C8965A]">Significance:</b> {f.significance}</p><p className="mt-3 text-sm leading-6 text-[#8FA3BF]"><b className="text-[#C8965A]">History:</b> {f.history}</p><p className="mt-3 text-sm leading-6 text-[#8FA3BF]"><b className="text-[#C8965A]">Traditions:</b> {f.traditions}</p><p className="mt-3 text-sm leading-6 text-[#8FA3BF]"><b className="text-[#C8965A]">Food:</b> {f.food}</p></div></article>)}</div></section><Footer /></main>;
+}

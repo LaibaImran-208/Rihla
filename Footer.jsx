@@ -1,0 +1,4 @@
+import { Link } from 'react-router-dom';
+export default function Footer(){
+  return (<footer className="border-t border-[#1A3355] bg-[#050E1D] px-5 py-10"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 text-sm text-[#8FA3BF] sm:flex-row"><Link to="/" className="font-display text-xl font-bold text-[#F5F0E8]">🧭 Rihla <span className="text-[#C8965A]">رحلة</span></Link><p>© 2026 · United Arab Emirates</p><div className="flex flex-wrap justify-center gap-4"><Link to="/">Home</Link><Link to="/emirates-explorer">Explorer</Link><Link to="/culture">Culture</Link><Link to="/timeline">Timeline</Link><Link to="/calendar">Calendar</Link><Link to="/digital-passport">Passport</Link></div></div></footer>);
+}
