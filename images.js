@@ -87,7 +87,7 @@ export const locationImages = {
   'uaq-mangrove-reserve':         'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/481073cd5_generated_image.png',
 
   // --- Ras Al Khaimah ---
-  'jebel-jais':                   'https://images.unsplash.com/photo-1542878447-e2b6df2526fa?auto=format&fit=crop&w=1200&q=85',
+  'jebel-jais':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXFeoTtGOmSpkRt8afyJ-nCHzspQ5F6PBMUao60wWnA&s=10',
   'dhayah-fort':                  'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/b65816a13_generated_image.png',
   'al-jazirah-al-hamra':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fa2738621_generated_image.png',
   'rak-national-museum':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fcaff0948_generated_image.png',
