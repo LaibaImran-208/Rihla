@@ -77,15 +77,14 @@ export const locationImages = {
   'al-nuaimi-mosque':             'https://images.unsplash.com/photo-1465414951857-102134ffaa57?auto=format&fit=crop&w=1200&q=85',
 
   // --- Umm Al Quwain ---
-  'uaq-national-museum':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/93fe67b5d_generated_image.png',
-  'uaq-fort':                     'https://images.unsplash.com/photo-1606382837285-96f342fc1ef8?auto=format&fit=crop&w=1200&q=85',
-  'uaq-old-harbour':              'https://images.unsplash.com/photo-1588408687414-434a389defac?auto=format&fit=crop&w=1200&q=85',
-  'al-sinniyah-island':           'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/b1636789c_generated_image.png',
-  'tell-abraq':                   'https://images.unsplash.com/photo-1686643117124-5e63123d2c1f?auto=format&fit=crop&w=1200&q=85',
-  'falaj-al-mualla':              'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/499a1b73a_generated_image.png',
-  'dreamland-aqua-park':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/dc9fb39dd_generated_image.png',
-  'uaq-mangrove-reserve':         'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/481073cd5_generated_image.png',
-
+  'uaq-national-museum':          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/9b/b3/58/caption.jpg?w=900&h=500&s=1',
+  'uaq-fort':                     'https://mala.ae/wp-content/uploads/2023/03/hiestory-fort.jpg',
+  'uaq-old-harbour':              'https://images.locationscout.net/2025/07/old-port-umm-al-quwain-united-arab-emirates-hytr.webp?h=1400&q=80',
+  'al-sinniyah-island':           'https://www.timeoutdubai.com/cloud/timeoutdubai/2022/02/18/Zaya-Nurai-Island-1024x768.jpg',
+  'tell-abraq':                   'https://cloudfront-eu-central-1.images.arcpublishing.com/thenational/C5Q2KHMYVVGIDBVENVXN6NKCJQ.jpg',
+  'falaj-al-mualla':              'https://d3ob0s3rxbjyep.cloudfront.net/content/Falaj_Al_Mualla_Fort_692021_be5158320f.jpg',
+  'dreamland-aqua-park':          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/c5/b5/8c/dreamland-aqua-park.jpg?w=800&h=500&s=1',
+  'uaq-mangrove-reserve':         'https://www.thenationalnews.com/resizer/C9LvrNcm3fFasbdJRp3-rvDxmtM=/arc-photo-thenational/eu-central-1-prod/public/HIWVMSWHZJECVEUTSYTFUOZ5Q4.jpg',
   // --- Ras Al Khaimah ---
   'jebel-jais':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXFeoTtGOmSpkRt8afyJ-nCHzspQ5F6PBMUao60wWnA&s=10',
   'dhayah-fort':                  'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-10.jpg',
