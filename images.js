@@ -13,7 +13,7 @@ const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me
 // ===== EMIRATE IMAGES =====
 export const emirateImages = {
   'abu-dhabi':       'https://media.assettype.com/outlooktraveller/2024-08-20/0nbfvji7/shutterstock_2473580625.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100',
-  'dubai':           'https://images.unsplash.com/photo-1658301839070-656a71f805d1?auto=format&fit=crop&w=1200&q=85',
+  'dubai':           'https://365adventures.me/wp-content/uploads/2023/09/Dubai-COVER-PHOTO.jpg',
   'sharjah':         'https://images.unsplash.com/photo-1691932092749-981f9905a9fa?auto=format&fit=crop&w=1200&q=85',
   'ajman':           'https://images.unsplash.com/photo-1655713532401-c5df95bc6e96?auto=format&fit=crop&w=1200&q=85',
   'umm-al-quwain':   'https://images.unsplash.com/photo-1590453905958-d541322af7a5?auto=format&fit=crop&w=1200&q=85',
