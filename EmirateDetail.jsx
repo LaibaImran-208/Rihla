@@ -106,8 +106,8 @@ export default function EmirateDetail() {
     <main className="min-h-screen bg-[#050E1D]">
       <Navbar />
       {/* Emirate Hero */}
-      <div className="relative h-[380px] w-full overflow-hidden bg-[#050E1D]">
-        <Image src={emirate.image} alt={emirate.name} className="h-full w-full object-contain" />
+      <div className="relative h-[380px] w-full overflow-hidden">
+        <Image src={`${emirate.image}?auto=format&fit=crop&w=1400&q=85`} alt={emirate.name} className="h-full w-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
           <Link to="/emirates-explorer" className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A] hover:text-[#F5F0E8]">
@@ -226,8 +226,8 @@ export default function EmirateDetail() {
                 key={p.id}
                 className="group overflow-hidden rounded-2xl border border-[#1A3355] bg-[#0A1A30] transition hover:border-[#C8965A]/40 hover:-translate-y-1"
               >
-                <div className="relative h-48 bg-[#0A1A30]">
-                  <Image src={p.image} alt={p.name} className="h-full w-full object-contain" />
+                <div className="relative h-48">
+                  <Image src={`${p.image}?auto=format&fit=crop&w=600&q=85`} alt={p.name} className="h-full w-full" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A30] to-transparent" />
                   <div className="absolute left-4 top-4">
                     <span className="rounded-full bg-[#050E1D]/80 px-3 py-1 text-xs text-[#E8B97A] backdrop-blur">{p.category}</span>
