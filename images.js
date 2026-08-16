@@ -45,25 +45,24 @@ export const locationImages = {
   'dubai-frame':                  'https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWklMjBmcmFtZXxlbnwwfHwwfHx8MA%3D%3D',
   'museum-of-the-future':         'https://images.unsplash.com/photo-1667592441284-b590021411e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVzZXVtJTIwb2YlMjBmdXR1cmV8ZW58MHx8MHx8fDA%3D',
   'jumeirah-mosque':              'https://arabiahorizons.com/blog/wp-content/uploads/2021/02/Jumeirah-Mosque-in-Dubai.jpg',
-  'etihad-museum':                'https://tse4.mm.bing.net/th/id/OIP.dwu3PXTBDJtGJeBmGORHIAHaEm?r=0&pid=Api',
+  'etihad-museum':                'https://www.egypttoursplus.com/wp-content/uploads/2025/07/Etihad-Museum-in-Dubai-%E2%80%93-modern-cultural-landmark-showcasing-the-history-of-the-UAEs-unification-through-interactive-exhibits-and-original-documents.webp',
   'palm-jumeirah':                'https://www.iranydubai.hu/wp-content/uploads/2020/08/palm-jumeirah.jpg',
   'burj-al-arab':                 'https://images.unsplash.com/flagged/photo-1555457900-4f4cf4768371?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'hatta-heritage-village':       'https://www.visitdubai.com/-/media/gathercontent/article/h/hattas-rich-history/fallback-image/discover-hattas-rich-historyherodtcm.jpg',
   'global-village':               'https://blog.citylaila.com/wp-content/uploads/2023/11/GlobalVillageTicketinDubaiUnitedArabEmirates-KlookIndia.jpg',
   'ras-al-khor-wildlife-sanctuary': 'https://captaindunes.com/wp-content/uploads/2025/09/Ras-Al-Khor-Wildlife-Sanctuary-In-Dubai.jpg',
 
-// --- Sharjah ---
+  // --- Sharjah ---
   'heart-of-sharjah':             'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Heart_of_Sharjah.jpg/500px-Heart_of_Sharjah.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
   'sharjah-museum-islamic-civilization': 'https://universes.art/fileadmin/media/images/art_destinations/sharjah/museums/islamic_civilization/01_310/1828581-1-eng-GB/01_310.jpg',
   'sharjah-heritage-museum':      'https://teachmiddleeastmag.com/wp-content/uploads/2014/10/DSC_0099.jpg',
-  'al-noor-mosque':               'https://indiansinuae.org/wp-content/uploads/2021/08/310853007_Al-Noor-Mosque.jpg',
+  'al-noor-mosque':               'https://images.daytrip.com/al-noor-mosque1.jpg?w=1920&q=30',
   'al-qasba':                     'https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Feature-Photo-4.jpg',
   'mleiha-archaeological-centre': 'https://images.adsttc.com/media/images/63a5/a8c7/6c62/5769/af37/8d33/slideshow/mleiha-archaeological-centre-dabbagh-architects_1.jpg?1671801077',
   'sharjah-art-museum':           'https://universes.art/fileadmin/user_upload/Biennials/Sharjah/2023/Venues-500/City/01-Sharjah-Art-Museum-A.jpg',
   'house-of-wisdom':              'https://www.e-architect.com/wp-content/uploads/2021/03/house-of-wisdom-in-sharjah-uae-f110321-1.jpg',
   'sharjah-fort':                 'https://2.bp.blogspot.com/-kEeDXq4uUg4/USHjMlZW1wI/AAAAAAAACo0/55wlT0deEVs/s1600/Sharjah_AlHisnFort.jpg',
   'khor-fakkan':                  'https://shozon.com/blog/wp-content/uploads/2026/02/Sharjah-Khor-Fakkan-1024x505.webp',
-
 // --- Ajman ---
   'ajman-museum':                 'https://visit-ajman.ae/media/wusbwwa0/ajman-meuseum-inside-1700x700.jpg',
   'ajman-fort':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_XGoO3-v1MJdlQN2HwAQ0GqO8yJE-J5CgNmUGU86iBT4hxrZcMfEYrFI&s=10',
