@@ -176,7 +176,7 @@ export const timelineImages = {
 
 // ===== SUSTAINABILITY IMAGES =====
 export const sustainabilityImages = {
-  'masdar-city':           'https://images.unsplash.com/photo-1647377129158-40daa63b2f51?auto=format&fit=crop&w=1200&q=85',
+  'masdar-city':           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBYcoYKrYTRRfychekf2cIoyoFKmDSxpbtKgj9LOoKQ&s=10',
   'solar-park':            'https://images.unsplash.com/photo-1687754715959-41fed2161528?auto=format&fit=crop&w=1200&q=85',
   'mangrove-restoration': 'https://images.unsplash.com/photo-1641852347240-9d64f5c7b8f2?auto=format&fit=crop&w=1200&q=85',
   'marine-conservation':  'https://images.unsplash.com/photo-1677632227880-4d21073ef8f4?auto=format&fit=crop&w=1200&q=85',
