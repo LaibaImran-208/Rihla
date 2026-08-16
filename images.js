@@ -66,16 +66,16 @@ export const locationImages = {
   'sharjah-fort':                 'https://images.unsplash.com/photo-1730626480563-10d80cab5201?auto=format&fit=crop&w=1200&q=85',
   'khor-fakkan':                  'https://images.unsplash.com/photo-1677508398331-58597cd61618?auto=format&fit=crop&w=1200&q=85',
 
-  // --- Ajman ---
-  'ajman-museum':                 'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/ace89af82_generated_image.png',
-  'ajman-fort':                   'https://images.unsplash.com/photo-1730628771563-ca08ef042a23?auto=format&fit=crop&w=1200&q=85',
-  'ajman-corniche':               'https://images.unsplash.com/photo-1705412082002-6d7200fa10ba?auto=format&fit=crop&w=1200&q=85',
-  'al-zorah-nature-reserve':      'https://images.unsplash.com/photo-1679899608908-2e9536b14617?auto=format&fit=crop&w=1200&q=85',
-  'al-muwayhat':                  'https://images.unsplash.com/photo-1680425982106-4a7af217e2a6?auto=format&fit=crop&w=1200&q=85',
-  'masfout':                      'https://images.unsplash.com/photo-1745708804966-fc71b259a01b?auto=format&fit=crop&w=1200&q=85',
-  'masfout-castle':               'https://images.unsplash.com/photo-1633981871770-214950461624?auto=format&fit=crop&w=1200&q=85',
-  'al-nuaimi-mosque':             'https://images.unsplash.com/photo-1465414951857-102134ffaa57?auto=format&fit=crop&w=1200&q=85',
-
+// --- Ajman ---
+  'ajman-museum':                 'https://visit-ajman.ae/media/wusbwwa0/ajman-meuseum-inside-1700x700.jpg',
+  'ajman-fort':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_XGoO3-v1MJdlQN2HwAQ0GqO8yJE-J5CgNmUGU86iBT4hxrZcMfEYrFI&s=10',
+  'ajman-corniche':               'https://topaddress.ae/wp-content/uploads/2022/01/corniche-residences-apart-1br-0.webp',
+  'al-zorah-nature-reserve':      'https://146414699.fs1.hubspotusercontent-eu1.net/hubfs/146414699/Imported_Blog_Media/Al%20Zorah%20Nature%20reserve-jpg-Oct-12-2025-09-56-47-6390-AM.jpg',
+  'al-muwayhat':                  'https://universes.art/fileadmin/_processed_/b/2/csm_04_ab72fa8d1c.jpg',
+  'masfout':                      'https://d3ob0s3rxbjyep.cloudfront.net/content/Masfout_Cover_07_05_2020_9d1dbcc5a6.jpg',
+  'masfout-castle':               'https://visit-ajman.ae/media/4qebogk1/masfout-castle.jpg',
+  'al-nuaimi-mosque':             'https://explore.rehlat.ae/static/media/searchdestination/thingstodo/images/ajman/al_nuaimia_mosque/large_b78dca1a8e9a397526b62f7cee954fa305e35eb8.webp',
+  
   // --- Umm Al Quwain ---
   'uaq-national-museum':          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/9b/b3/58/caption.jpg?w=900&h=500&s=1',
   'uaq-fort':                     'https://mala.ae/wp-content/uploads/2023/03/hiestory-fort.jpg',
