@@ -25,7 +25,7 @@ export const emirateImages = {
 // Each key matches the location's `id` field in the data files.
 export const locationImages = {
   // --- Abu Dhabi ---
-  'sheikh-zayed-grand-mosque':    'https://images.unsplash.com/photo-1564507060528-2545673c9e63?auto=format&fit=crop&w=1200&q=85',
+  'sheikh-zayed-grand-mosque':    'https://cdn1-m.alittihad.ae/store/archive/image/2024/7/28/4a3f2014-b420-4f51-b15a-d732f35c7c15.jpeg',
   'qasr-al-watan':                'https://images.unsplash.com/photo-1540272826122-ccf0a226259c?auto=format&fit=crop&w=1200&q=85',
   'qasr-al-hosn':                 'https://images.unsplash.com/photo-1587421890935-5fb13a3beccc?auto=format&fit=crop&w=1200&q=85',
   'louvre-abu-dhabi':             'https://images.unsplash.com/photo-1672324016837-4b803c38fc95?auto=format&fit=crop&w=1200&q=85',
