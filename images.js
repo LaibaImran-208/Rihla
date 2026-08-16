@@ -15,7 +15,7 @@ export const emirateImages = {
   'dubai':           'https://365adventures.me/wp-content/uploads/2023/09/Dubai-COVER-PHOTO.jpg',
   'sharjah':         'https://www.arabianbusiness.com/cloud/2022/03/31/Sharjah-skyline.jpg',
   'ajman':           'https://world-arabia.com/storage/images/news/crops/news-promo/jxsQZu1Obz1t8wutVorwht5kSh2oVHkBWWfRNlac.webp',
-  'umm-al-quwain':   'https://cdn.britannica.com/15/189715-050-4310222B/Dubai-United-Arab-Emirates-Burj-Khalifa-top.jpg',
+  'umm-al-quwain':   'https://metropolitan.realestate/wp-content/uploads/2025/05/Aerial-masterplan-2.jpg',
   'ras-al-khaimah':  'https://vootours.com/wp-content/uploads/2025/02/Rasalkhaimah-CityScape-1140x530.jpg',
   'fujairah':        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoM_efN738cNd1aDsf5enoEJGeWwMYu5pKuxdpaMhDmysuq1Q1lHKEtfr&s=10'
 };
@@ -25,7 +25,7 @@ export const emirateImages = {
 export const locationImages = {
 // --- Abu Dhabi ---
 'sheikh-zayed-grand-mosque':    'https://www.planetjanettravels.com/wp-content/uploads/2017/02/1_UAE-abu-dhabi-sheik-zayed-grand-mosque-name.jpg',
-'qasr-al-watan':                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/c3/da/97/qasr-al-watan.jpg?w=900&h=500&s=1',
+'qasr-al-watan':                'https://upload.wikimedia.org/wikipedia/en/7/7c/Qasr_Al_Watan_in_March_2022_02.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
 'qasr-al-hosn':                 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Qasr_al_Hosn_in_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
 'louvre-abu-dhabi':             'https://images.trvl-media.com/place/553248621560904133/0b49858a-e085-449c-bd25-6d8fab79e2d8.jpg',
 'heritage-village':             'https://visitabudhabi.ae/-/media/project/vad/things-to-do/culture-mfd/heritage/heritage-village/main-image.jpg?rev=2de66dfaeeda4ac288d96137dbc154c0',
@@ -35,7 +35,7 @@ export const locationImages = {
 'mangrove-national-park':       'https://visitabudhabi.ae/-/media/project/vad/things-to-do/nature-and-wildlife-mfd/parks/jubail-mangrove-park/jubail-mangrove-park-main-image-5000x2800.jpg?rev=2c21f4c64bd543eba756ce42fb4d0dfc',
 'al-wathba-fossil-dunes':       'https://visitabudhabi.ae/-/media/project/vad/things-to-do/nature-and-wildlife-mfd/natural-wonders/al-wathba-fossil-dunes/fossil-dunes-abu-dhabi-cover-20210712.jpg?rev=-1',
 'al-ain-oasis':                 'https://media.cntraveler.com/photos/582a01b09e1b702b18b73cfe/16:9/w_2560%2Cc_limit/CR52WG.jpg',
-'jebel-hafeet':                 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b4/6a/9e/abu-dhabi-is-one-of-the.jpg?w=900&h=500&s=1',
+'jebel-hafeet':                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Q5WGDQWq1h8kpvRCR-qnIelHKo2L_fkKs5bxy6erjoOEpesn__WqlbM&s=10',
 'sir-bani-yas-island':          'https://www.msccruises.fi/-/media/global-contents/destinations/ports/united-arab-emirates/sir-bani-yas-island/cruise-to-sir-bani-yas-island-united-arab-emirates.jpg?bc=transparent&as=1&mh=1395&mw=2460&hash=5E62787852643DA1A8E678186C0692F5',
 'abrahamic-family-house':       'https://afhqportalimageslive.blob.core.windows.net/qportalimageslive/venue/22/2025/06/01/customer-portal-config/pages/cover_images/1748807882_683cb0ca832fb_Main_Banner-min.jpg',
 // --- Dubai ---
@@ -91,8 +91,8 @@ export const locationImages = {
   'al-rams':                      'https://lh5.googleusercontent.com/p/AF1QipP79FxqS8Tb6nvTSq9-zO5xLy8svIrFtv9j8q2a=s1600',
   'suwaidi-pearls':               'https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/w9ey2gqhmieotgljynck.jpg',
   'khatt-springs':                'https://www.trawell.in/admin/images/upload/480294652khatts-springs.jpg',
-  'wadi-shawka':                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/4c/7e/61/climbing-the-mountain.jpg?w=1200&h=1200&s=1',
-  'jais-flight':                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/69/be/4e/jais-flight-against-the.jpg?w=1200&h=-1&s=1',
+'wadi-shawka':                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8_V55k-RytXDCd78ipWTsblDcj1xMnhpJDr_pYVgGSOsMytktpU5Sg&s=10',
+  'jais-flight':                  'https://rak.ae/wps/wcm/connect/a6d503be-379a-41fa-8100-98de7bc35fb6/%D8%AC%D8%A8%D9%84+%D8%AC%D9%8A%D8%B3.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-a6d503be-379a-41fa-8100-98de7bc35fb6-murF1QA',
   'shimal':                       'https://rakheritage.rak.ae/wp-content/uploads/2024/09/DigitalWeb_medium_JPG-RAKWALLPAPER-14.jpg',
 
   // --- Fujairah ---
@@ -137,7 +137,7 @@ export const cultureImages = {
   'traditional-instruments': 'https://storage.ghost.io/c/8e/d7/8ed7937e-239e-4c73-8661-3ab95a578ef0/content/images/2024/03/Your-paragraph-text--3--1.jpg',
   'nabati-poetry':      'https://www.al-monitor.com/sites/default/files/styles/article_hero_medium/public/2025-11/PHOTO-2025-10-29-21-38-36.jpg?h=ada05aa9&itok=egYzPxCv',
   'oral-traditions':    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBaHDnFL5sN7vGgR5PSJuYeQI3yBKHZuM3QCCwhmyWps0OexCEFbVPbRyS&s=10',
-  'uae-flag':           'https://images.stockcake.com/public/3/b/4/3b4b282e-4e94-417f-b6b9-babe2b4f6408_medium/desert-flag-display-stockcake.jpg',
+  'uae-flag':           'https://elements-resized.envatousercontent.com/elements-video-cover-images/d81652b5-e711-47ab-8cdd-a41e9ff2ff30/video_preview/video_preview_0000.jpg?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=b8f5d618433fb85b479b639b0416e173d842f53d5a2c521c75866b17cb984d58',
   'coat-of-arms':       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b705xSGXnXoiKSDLv-nRGlhyc4e-z-0B7dhmor-1aw&s',
   'national-anthem':    'https://i.ytimg.com/vi/7jTZMcxAUP8/hqdefault.jpg',
   'national-bird':      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaRB77TqqgyZEKNAwB6-zrNCT6VCB9KOLc02QLTlYBGDDRVPHXyOUC26B&s=10',
@@ -150,11 +150,11 @@ export const festivalImages = {
   'national-day':      'https://tripventura.com/cdn/shop/articles/spectacular-firework-nominated-2023-11-27-05-33-56-utc-scaled-1_b23c09d4-fa0c-4acd-bdf5-f521cc9d4482.jpg?crop=center&height=600&v=1767063291&width=1200',
   'flag-day':          'https://www.timeoutdubai.com/cloud/timeoutdubai/2024/10/31/qMYceO0v-WhatsApp-Image-2024-10-31-at-14.13.36-1200x900.jpg',
   'commemoration-day': 'https://media.assettype.com/gulfnews%2Fimport%2F2015%2F11%2F23%2F1_16a0812401e.1624764_1925568966_16a0812401e_large.jpg?w=480&auto=format%2Ccompress&fit=max',
-  'ramadan':           'https://images.unsplash.com/photo-1565538813539-8f68b084d99c?auto=format&fit=crop&w=1200&q=85',
-  'eid-al-fitr':       'https://images.unsplash.com/photo-1564507060528-2545673c9e63?auto=format&fit=crop&w=1200&q=85',
-  'eid-al-adha':       'https://images.unsplash.com/photo-1583771803077-e512cbd2059c?auto=format&fit=crop&w=1200&q=85',
-  'islamic-new-year':  'https://images.unsplash.com/photo-1562078128-70ebca46b10e?auto=format&fit=crop&w=1200&q=85',
-  'prophet-birthday': 'https://images.unsplash.com/photo-1569069438599-4b719f7463b4?auto=format&fit=crop&w=1200&q=85'
+  'ramadan':           'https://images.squarespace-cdn.com/content/v1/63922504b37f130fb6885933/39f314ad-83ee-40b1-8535-c448f80278b4/Explaining%2BRamadan%2Bto%2Byour%2Bchild.jfif',
+  'eid-al-fitr':       'https://static.toiimg.com/thumb/msid-128705634,imgsize-1210730,width-400,resizemode-4/uae.jpg',
+  'eid-al-adha':       'https://storage.viory.video/thumbnails/a3022_16062024/AaTbLzmqwF7diWoq/AaTbLzmqwF7diWoq.jpg',
+  'islamic-new-year':  'https://readfoundation.org.uk/wp-content/uploads/2025/01/Top-10-Facts-About-Ramadan.png',
+  'prophet-birthday': 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/12-rabi-ul-awal-template-design-afaf461d986e866b9a454acdf6411985_screen.jpg?ts=1695987101'
 };
 
 // ===== TIMELINE IMAGES =====
