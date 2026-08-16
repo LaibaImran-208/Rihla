@@ -54,17 +54,17 @@ export const locationImages = {
   'global-village':               'https://images.unsplash.com/photo-1647377129158-40daa63b2f51?auto=format&fit=crop&w=1200&q=85',
   'ras-al-khor-wildlife-sanctuary': 'https://images.unsplash.com/photo-1677632227880-4d21073ef8f4?auto=format&fit=crop&w=1200&q=85',
 
-  // --- Sharjah ---
-  'heart-of-sharjah':             'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/03987769e_generated_image.png',
-  'sharjah-museum-islamic-civilization': 'https://images.unsplash.com/photo-1715373690396-136e399e80b5?auto=format&fit=crop&w=1200&q=85',
-  'sharjah-heritage-museum':      'https://images.unsplash.com/photo-1546412414-28524ac58329?auto=format&fit=crop&w=1200&q=85',
-  'al-noor-mosque':               'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=85',
-  'al-qasba':                     'https://images.unsplash.com/photo-1702070114450-94d981d72233?auto=format&fit=crop&w=1200&q=85',
-  'mleiha-archaeological-centre': 'https://images.unsplash.com/photo-1680425982087-9f6f25861db1?auto=format&fit=crop&w=1200&q=85',
-  'sharjah-art-museum':           'https://images.unsplash.com/photo-1686918269961-507270a5a238?auto=format&fit=crop&w=1200&q=85',
-  'house-of-wisdom':              'https://images.unsplash.com/photo-1687754715959-41fed2161528?auto=format&fit=crop&w=1200&q=85',
-  'sharjah-fort':                 'https://images.unsplash.com/photo-1730626480563-10d80cab5201?auto=format&fit=crop&w=1200&q=85',
-  'khor-fakkan':                  'https://images.unsplash.com/photo-1677508398331-58597cd61618?auto=format&fit=crop&w=1200&q=85',
+// --- Sharjah ---
+  'heart-of-sharjah':             'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Heart_of_Sharjah.jpg/500px-Heart_of_Sharjah.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
+  'sharjah-museum-islamic-civilization': 'https://universes.art/fileadmin/media/images/art_destinations/sharjah/museums/islamic_civilization/01_310/1828581-1-eng-GB/01_310.jpg',
+  'sharjah-heritage-museum':      'https://teachmiddleeastmag.com/wp-content/uploads/2014/10/DSC_0099.jpg',
+  'al-noor-mosque':               'https://tse3.mm.bing.net/th/id/OIP.NdBbm4Syuj-DF2JGYTGPkAHaE8?r=0&pid=Api',
+  'al-qasba':                     'https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Feature-Photo-4.jpg',
+  'mleiha-archaeological-centre': 'https://images.adsttc.com/media/images/63a5/a8c7/6c62/5769/af37/8d33/slideshow/mleiha-archaeological-centre-dabbagh-architects_1.jpg?1671801077',
+  'sharjah-art-museum':           'https://universes.art/fileadmin/user_upload/Biennials/Sharjah/2023/Venues-500/City/01-Sharjah-Art-Museum-A.jpg',
+  'house-of-wisdom':              'https://www.e-architect.com/wp-content/uploads/2021/03/house-of-wisdom-in-sharjah-uae-f110321-1.jpg',
+  'sharjah-fort':                 'https://tse2.mm.bing.net/th/id/OIP.Rj4jCJH3pIaA_3LZG_B4fQHaE7?r=0&pid=Api',
+  'khor-fakkan':                  'https://shozon.com/blog/wp-content/uploads/2026/02/Sharjah-Khor-Fakkan-1024x505.webp',
 
 // --- Ajman ---
   'ajman-museum':                 'https://visit-ajman.ae/media/wusbwwa0/ajman-meuseum-inside-1700x700.jpg',
@@ -76,15 +76,16 @@ export const locationImages = {
   'masfout-castle':               'https://visit-ajman.ae/media/4qebogk1/masfout-castle.jpg',
   'al-nuaimi-mosque':             'https://explore.rehlat.ae/static/media/searchdestination/thingstodo/images/ajman/al_nuaimia_mosque/large_b78dca1a8e9a397526b62f7cee954fa305e35eb8.webp',
   
-  // --- Umm Al Quwain ---
-  'uaq-national-museum':          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/9b/b3/58/caption.jpg?w=900&h=500&s=1',
+// --- Umm Al Quwain ---
+  'uaq-national-museum':          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuonWB-Lzvmk-znBpMd7Jc66Wm-W-92FIndwW5loAx_rUOrXB3fB2jgBCI&s=10',
   'uaq-fort':                     'https://mala.ae/wp-content/uploads/2023/03/hiestory-fort.jpg',
-  'uaq-old-harbour':              'https://images.locationscout.net/2025/07/old-port-umm-al-quwain-united-arab-emirates-hytr.webp?h=1400&q=80',
+  'uaq-old-harbour':              'https://images.unsplash.com/photo-1617298126699-b58d6a0bae56?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2xkJTIwcG9ydCUyMHVtbSUyMGFsJTIwcXV3YWlufGVufDB8fDB8fHww',
   'al-sinniyah-island':           'https://www.timeoutdubai.com/cloud/timeoutdubai/2022/02/18/Zaya-Nurai-Island-1024x768.jpg',
   'tell-abraq':                   'https://cloudfront-eu-central-1.images.arcpublishing.com/thenational/C5Q2KHMYVVGIDBVENVXN6NKCJQ.jpg',
   'falaj-al-mualla':              'https://d3ob0s3rxbjyep.cloudfront.net/content/Falaj_Al_Mualla_Fort_692021_be5158320f.jpg',
-  'dreamland-aqua-park':          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/c5/b5/8c/dreamland-aqua-park.jpg?w=800&h=500&s=1',
-  'uaq-mangrove-reserve':         'https://www.thenationalnews.com/resizer/C9LvrNcm3fFasbdJRp3-rvDxmtM=/arc-photo-thenational/eu-central-1-prod/public/HIWVMSWHZJECVEUTSYTFUOZ5Q4.jpg',
+  'dreamland-aqua-park':          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLXTP3pHND9E-dVRTf6JO91YQxUf0l_xveskCT7WqJkREjL2PGpInHAh8&s=10',
+  'uaq-mangrove-reserve':         'https://gulfbuzz.com/wp-content/uploads/2024/10/2-3.png',
+  
   // --- Ras Al Khaimah ---
   'jebel-jais':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXFeoTtGOmSpkRt8afyJ-nCHzspQ5F6PBMUao60wWnA&s=10',
   'dhayah-fort':                  'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-10.jpg',
