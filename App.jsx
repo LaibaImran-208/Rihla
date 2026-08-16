@@ -18,7 +18,7 @@ import Sustainability from '@/pages/Sustainability';
 import Timeline from '@/pages/Timeline';
 import CulturalCalendar from '@/pages/CulturalCalendar';
 import Challenges from '@/pages/Challenges';
-
+// GitHub deployment test
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
 
