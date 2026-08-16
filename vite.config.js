@@ -1,19 +1,71 @@
-
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    base44({
-      // Support for legacy code that imports the base44 SDK with @/integrations, @/entities, etc.
-      // can be removed if the code has been updated to use the new SDK imports from @base44/sdk
-      legacySDKImports: process.env.BASE44_LEGACY_SDK_IMPORTS === 'true',
-      hmrNotifier: true,
-      navigationNotifier: true,
-      analyticsTracker: true,
-      visualEditAgent: true
-    }),
-    react(),
-  ]
-});
+  plugins: [react()],
+
+  resolve: {
+    alias: {
+      '@/components/ui/toaster': path.resolve(__dirname, './toaster.jsx'),
+      '@/components/ui/use-toast': path.resolve(__dirname, './use-toast.jsx'),
+      '@/components/ui/toast': path.resolve(__dirname, './toast.jsx'),
+      '@/components/ui/button': path.resolve(__dirname, './button.jsx'),
+      '@/components/ui/input': path.resolve(__dirname, './input.jsx'),
+      '@/components/ui/label': path.resolve(__dirname, './label.jsx'),
+      '@/components/ui/input-otp': path.resolve(__dirname, './input-otp.jsx'),
+      '@/components/ui/image': path.resolve(__dirname, './image.jsx'),
+      '@/components/ui/dialog': path.resolve(__dirname, './dialog.jsx'),
+      '@/components/ui': path.resolve(__dirname, '.'),
+      '@/components/rihla/Navbar': path.resolve(__dirname, './Navbar.jsx'),
+      '@/components/rihla/Footer': path.resolve(__dirname, './Footer.jsx'),
+      '@/components/rihla/Hero': path.resolve(__dirname, './Hero.jsx'),
+      '@/components/rihla/Pillars': path.resolve(__dirname, './Pillars.jsx'),
+      '@/components/rihla/EmiratesPreview': path.resolve(__dirname, './EmiratesPreview.jsx'),
+      '@/components/rihla/Countdown': path.resolve(__dirname, './Countdown.jsx'),
+      '@/components/rihla/GlobalSearch': path.resolve(__dirname, './GlobalSearch.jsx'),
+      '@/components/rihla/PassportBook': path.resolve(__dirname, './PassportBook.jsx'),
+      '@/components/rihla/QuizCard': path.resolve(__dirname, './QuizCard.jsx'),
+      '@/components/rihla/ChallengeQuiz': path.resolve(__dirname, './ChallengeQuiz.jsx'),
+      '@/components/rihla': path.resolve(__dirname, '.'),
+      '@/components/AuthLayout': path.resolve(__dirname, './AuthLayout.jsx'),
+      '@/components/GoogleIcon': path.resolve(__dirname, './GoogleIcon.jsx'),
+      '@/components/UserNotRegisteredError': path.resolve(__dirname, './UserNotRegisteredError.jsx'),
+      '@/components/ScrollToTop': path.resolve(__dirname, './ScrollToTop.jsx'),
+      '@/components': path.resolve(__dirname, '.'),
+      '@/pages/Home': path.resolve(__dirname, './Home.jsx'),
+      '@/pages/EmiratesExplorer': path.resolve(__dirname, './EmiratesExplorer.jsx'),
+      '@/pages/EmirateDetail': path.resolve(__dirname, './EmirateDetail.jsx'),
+      '@/pages/PlaceDetail': path.resolve(__dirname, './PlaceDetail.jsx'),
+      '@/pages/DigitalPassport': path.resolve(__dirname, './DigitalPassport.jsx'),
+      '@/pages/Culture': path.resolve(__dirname, './Culture.jsx'),
+      '@/pages/Values': path.resolve(__dirname, './Values.jsx'),
+      '@/pages/Citizenship': path.resolve(__dirname, './Citizenship.jsx'),
+      '@/pages/Sustainability': path.resolve(__dirname, './Sustainability.jsx'),
+      '@/pages/Timeline': path.resolve(__dirname, './Timeline.jsx'),
+      '@/pages/CulturalCalendar': path.resolve(__dirname, './CulturalCalendar.jsx'),
+      '@/pages/Challenges': path.resolve(__dirname, './Challenges.jsx'),
+      '@/pages': path.resolve(__dirname, '.'),
+      '@/lib/query-client': path.resolve(__dirname, './query-client.js'),
+      '@/lib/AuthContext': path.resolve(__dirname, './AuthContext.jsx'),
+      '@/lib/app-params': path.resolve(__dirname, './app-params.js'),
+      '@/lib/authReturnTo': path.resolve(__dirname, './authReturnTo.js'),
+      '@/lib/search': path.resolve(__dirname, './search.js'),
+      '@/lib/utils': path.resolve(__dirname, './utils.js'),
+      '@/lib': path.resolve(__dirname, '.'),
+      '@/data/emirates': path.resolve(__dirname, './emirates.js'),
+      '@/data/culture': path.resolve(__dirname, './culture.js'),
+      '@/data/festivals': path.resolve(__dirname, './festivals.js'),
+      '@/data/sustainability': path.resolve(__dirname, './sustainability.js'),
+      '@/data/timeline': path.resolve(__dirname, './timeline.js'),
+      '@/data/values': path.resolve(__dirname, './values.js'),
+      '@/data/citizenship': path.resolve(__dirname, './citizenship.js'),
+      '@/data': path.resolve(__dirname, '.'),
+      '@/hooks/useJourney': path.resolve(__dirname, './useJourney.js'),
+      '@/hooks/use-mobile': path.resolve(__dirname, './use-mobile.jsx'),
+      '@/hooks/use-size': path.resolve(__dirname, './use-size.jsx'),
+      '@/hooks': path.resolve(__dirname, '.'),
+      '@': path.resolve(__dirname, '.'),
+    },
+  },
+})

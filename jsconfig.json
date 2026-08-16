@@ -2,7 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"],
+      "@/components/*": ["./*"],
+      "@/components/ui/*": ["./*"],
+      "@/components/rihla/*": ["./*"],
+      "@/lib/*": ["./*"],
+      "@/pages/*": ["./*"],
+      "@/data/*": ["./*"],
+      "@/hooks/*": ["./*"]
     },
     "jsx": "react-jsx",
     "module": "esnext",
@@ -16,6 +23,6 @@
     "resolveJsonModule": true,
     "types": []
   },
-  "include": ["src/components/**/*.js", "src/pages/**/*.jsx", "src/Layout.jsx"],
-  "exclude": ["node_modules", "dist", "src/vite-plugins", "src/components/ui", "src/api", "src/lib"]
-} 
+  "include": ["**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules", "dist"]
+}

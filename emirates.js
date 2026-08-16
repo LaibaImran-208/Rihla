@@ -1,10 +1,10 @@
-import { abuDhabiPlaces } from './places/abuDhabi';
-import { dubaiPlaces } from './places/dubai';
-import { sharjahPlaces } from './places/sharjah';
-import { ajmanPlaces } from './places/ajman';
-import { uaqPlaces } from './places/uaq';
-import { rakPlaces } from './places/rak';
-import { fujairahPlaces } from './places/fujairah';
+import { abuDhabiPlaces } from './abuDhabi';
+import { dubaiPlaces } from './dubai';
+import { sharjahPlaces } from './sharjah';
+import { ajmanPlaces } from './ajman';
+import { uaqPlaces } from './uaq';
+import { rakPlaces } from './rak';
+import { fujairahPlaces } from './fujairah';
 import { emirateImages, locationImages } from './images';
 
 const IMG={

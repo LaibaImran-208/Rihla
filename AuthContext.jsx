@@ -6,6 +6,41 @@ import { appParams } from '@/lib/app-params';
 
 const AuthContext = createContext();
 
+const createAxiosClient = ({ baseURL, headers = {}, token, interceptResponses = false } = {}) => {
+  const buildHeaders = () => {
+    const mergedHeaders = { ...headers };
+    if (token) {
+      mergedHeaders.Authorization = `Bearer ${token}`;
+    }
+    return mergedHeaders;
+  };
+
+  return {
+    async get(path) {
+      const response = await fetch(`${baseURL}${path}`, {
+        method: 'GET',
+        headers: buildHeaders(),
+      });
+
+      const data = await response.text();
+      const parsed = data ? JSON.parse(data) : null;
+
+      if (!response.ok) {
+        const error = new Error(parsed?.message || 'Request failed');
+        error.status = response.status;
+        error.data = parsed;
+        throw error;
+      }
+
+      if (interceptResponses) {
+        return parsed;
+      }
+
+      return parsed;
+    },
+  };
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
