@@ -12,7 +12,7 @@ const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me
 
 // ===== EMIRATE IMAGES =====
 export const emirateImages = {
-  'abu-dhabi':       'https://images.unsplash.com/photo-1694431452845-719ff1e1eea9?auto=format&fit=crop&w=1200&q=85',
+  'abu-dhabi':       'https://www.outlooktraveller.com/destinations/international/10-things-to-know-before-your-first-abu-dhabi-vacation',
   'dubai':           'https://images.unsplash.com/photo-1658301839070-656a71f805d1?auto=format&fit=crop&w=1200&q=85',
   'sharjah':         'https://images.unsplash.com/photo-1691932092749-981f9905a9fa?auto=format&fit=crop&w=1200&q=85',
   'ajman':           'https://images.unsplash.com/photo-1655713532401-c5df95bc6e96?auto=format&fit=crop&w=1200&q=85',
