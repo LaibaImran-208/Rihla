@@ -161,18 +161,17 @@ export const festivalImages = {
 
 // ===== TIMELINE IMAGES =====
 export const timelineImages = {
-  'pearl-diving-era':     'https://images.unsplash.com/photo-1588408687414-434a389defac?auto=format&fit=crop&w=1200&q=85',
-  'oil-discovery':        'https://images.unsplash.com/photo-1694431452845-719ff1e1eea9?auto=format&fit=crop&w=1200&q=85',
-  'uae-formation':        'https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=1200&q=85',
-  'sheikh-zayed-mosque-opens': 'https://images.unsplash.com/photo-1564507060528-2545673c9e63?auto=format&fit=crop&w=1200&q=85',
-  'burj-khalifa-opens':   'https://images.unsplash.com/photo-1512453973666-147629fde45a?auto=format&fit=crop&w=1200&q=85',
-  'louvre-opens':         'https://images.unsplash.com/photo-1672324016837-4b803c38fc95?auto=format&fit=crop&w=1200&q=85',
-  'hope-probe':           'https://images.unsplash.com/photo-1667592441284-b590021411e3?auto=format&fit=crop&w=1200&q=85',
-  'museum-of-future-opens': 'https://images.unsplash.com/photo-1687754715959-41fed2161528?auto=format&fit=crop&w=1200&q=85',
-  'cop28':                'https://images.unsplash.com/photo-1647377129158-40daa63b2f51?auto=format&fit=crop&w=1200&q=85',
-  'net-zero-2050':        'https://images.unsplash.com/photo-1641852347240-9d64f5c7b8f2?auto=format&fit=crop&w=1200&q=85'
+  'pearl-diving-era':     'https://146414699.fs1.hubspotusercontent-eu1.net/hubfs/146414699/Imported_Blog_Media/0101279d-6b50-49e0-a1fe-3e10c9ecf7aa-1-Oct-12-2025-09-55-52-9160-AM.jpg',
+  'oil-discovery':        'https://cdn.emiratitimes.com/wp-content/uploads/2021/09/14191037/Emirates-Oil-World.jpg',
+  'uae-formation':        'https://vspauditors.com/wp-content/uploads/2016/06/UAE-Article-300x200.jpg',
+  'sheikh-zayed-mosque-opens': 'https://thenational.shorthandstories.com/sheikh-zayed-grand-mosque-abu-dhabi/assets/2eScnzehQZ/mosque-from-above-after-edit-2560x1447.jpg',
+  'burj-khalifa-opens':   'https://d2csxpduxe849s.cloudfront.net/media/42BB6A60-DC5B-4A0B-87CC3E8C248CB543/C8B8C53F-D4FB-47AD-BC8F1EAB4D570E00/webimage-3D0ADACC-95C6-4E46-917F764AC40B7B27.png',
+  'louvre-opens':         'https://images.trvl-media.com/place/553248621560904133/0b49858a-e085-449c-bd25-6d8fab79e2d8.jpg',
+  'hope-probe':           'https://spacein3d.com/wp-content/uploads/2021/02/Emirates_Hope.jpg',
+  'museum-of-future-opens': 'https://www.visitdubai.com/-/media/images/leisure/campaigns/dubai-presents/itineraries/spy/spy-media-museum-of-the-future.jpg',
+  'cop28':                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMsVa_0U6omz9Q48rSMjdedTjmq2ZTOOX5WApVdgewytVqIRCOOVYwXg&s=10',
+  'net-zero-2050':        'https://www.ku.ac.ae/wp-content/uploads/2021/08/Carbon_Neutrality_by_2050.jpg'
 };
-
 // ===== SUSTAINABILITY IMAGES =====
 export const sustainabilityImages = {
   'masdar-city':           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBYcoYKrYTRRfychekf2cIoyoFKmDSxpbtKgj9LOoKQ&s=10',
