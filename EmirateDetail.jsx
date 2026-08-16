@@ -106,8 +106,8 @@ export default function EmirateDetail() {
     <main className="min-h-screen bg-[#050E1D]">
       <Navbar />
       {/* Emirate Hero */}
-      <div className="relative h-[380px] w-full overflow-hidden">
-        <Image src={`${emirate.image}?auto=format&fit=crop&w=1400&q=85`} alt={emirate.name} className="h-full w-full" />
+      <div className="relative h-[380px] w-full overflow-hidden bg-[#050E1D]">
+         <Image src={emirate.image} alt={emirate.name} fittingType="fit"className="h-full w-full"/>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
           <Link to="/emirates-explorer" className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A] hover:text-[#F5F0E8]">
