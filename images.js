@@ -88,15 +88,15 @@ export const locationImages = {
 
   // --- Ras Al Khaimah ---
   'jebel-jais':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXFeoTtGOmSpkRt8afyJ-nCHzspQ5F6PBMUao60wWnA&s=10',
-  'dhayah-fort':                  'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/b65816a13_generated_image.png',
-  'al-jazirah-al-hamra':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fa2738621_generated_image.png',
-  'rak-national-museum':          'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fcaff0948_generated_image.png',
-  'al-rams':                      'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/877cb9cb4_generated_image.png',
-  'suwaidi-pearls':               'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/e8dffe6af_generated_image.png',
-  'khatt-springs':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/e1ba9cf8c_generated_image.png',
-  'wadi-shawka':                  'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fec7a46b8_generated_image.png',
-  'jais-flight':                  'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/33d99efbe_generated_image.png',
-  'shimal':                       'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/5f45fb33f_generated_image.png',
+  'dhayah-fort':                  'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-10.jpg',
+  'al-jazirah-al-hamra':          'https://upload.wikimedia.org/wikipedia/commons/5/58/Al_Jazirah_Al_Hamra_2026-01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+  'rak-national-museum':          'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-6.jpg',
+  'al-rams':                      'https://lh5.googleusercontent.com/p/AF1QipP79FxqS8Tb6nvTSq9-zO5xLy8svIrFtv9j8q2a=s1600',
+  'suwaidi-pearls':               'https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/w9ey2gqhmieotgljynck.jpg',
+  'khatt-springs':                'https://www.trawell.in/admin/images/upload/480294652khatts-springs.jpg',
+  'wadi-shawka':                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/4c/7e/61/climbing-the-mountain.jpg?w=1200&h=1200&s=1',
+  'jais-flight':                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/69/be/4e/jais-flight-against-the.jpg?w=1200&h=-1&s=1',
+  'shimal':                       'https://rakheritage.rak.ae/wp-content/uploads/2024/09/DigitalWeb_medium_JPG-RAKWALLPAPER-14.jpg',
 
   // --- Fujairah ---
   'fujairah-fort':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/3872c4e6e_generated_image.png',
