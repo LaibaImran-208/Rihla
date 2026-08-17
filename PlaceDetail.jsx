@@ -15,8 +15,66 @@ export default function PlaceDetail(){
   const explored=exploredPlaces.includes(place.id);
   const related=place.related?.map(r=>allPlaces.find(p=>p.id===r)).filter(Boolean)||[];
   return (<main className="min-h-screen bg-[#050E1D]"><Navbar/>
-    <div className="relative h-[420px] w-full overflow-hidden bg-[#050E1D]">
-  <Image src={place.image} alt={place.name} fittingType="fit" className="h-full w-full"/> <div className="absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent"/><div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10"><Link to={`/explore/${place.emirate}`} className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A]"><ArrowLeft size={16}/> Back to {emirate?.name || 'Emirates'}</Link><div className="flex items-center gap-2"><span className="rounded-full bg-[#C8965A]/20 px-3 py-1 text-xs text-[#E8B97A]">{place.category}</span><span className="rounded-full bg-[#1A3355] px-3 py-1 text-xs text-[#B7C3D4]">{emirate?.name}</span></div><h1 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">{place.name}</h1></div></div>
+
+  {/*herooo*/}
+
+<div className="relative h-[280px] sm:h-[340px] md:h-[420px] w-full overflow-hidden bg-[#050E1D]">
+
+  {/* Image centered, fully undistorted (natural aspect ratio), edges dissolve into bg */}
+  <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-10">
+    <Image
+      src={place.image}
+      alt={place.name}
+      className="hero-fade-image w-auto h-[130%] sm:h-[140%] md:h-[150%] max-w-[150%] object-contain"
+    />
+  </div>
+
+  {/* Bottom fade for text readability (unchanged behavior) */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
+
+  <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
+    <Link
+      to={`/explore/${place.emirate}`}
+      className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A]"
+    >
+      <ArrowLeft size={16} />
+      Back to {emirate?.name || 'Emirates'}
+    </Link>
+
+    <div className="flex items-center gap-2">
+      <span className="rounded-full bg-[#C8965A]/20 px-3 py-1 text-xs text-[#E8B97A]">
+        {place.category}
+      </span>
+
+      <span className="rounded-full bg-[#1A3355] px-3 py-1 text-xs text-[#B7C3D4]">
+        {emirate?.name}
+      </span>
+    </div>
+
+    <h1 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">
+      {place.name}
+    </h1>
+  </div>
+
+  <style>{`
+    .hero-fade-image {
+      -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      -webkit-mask-composite: source-in, source-in;
+      mask-image:
+        linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
+      mask-composite: intersect;
+    }
+  `}</style>
+
+</div>
+
     <div className="mx-auto max-w-5xl px-5 py-12">
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-8">

@@ -105,19 +105,58 @@ export default function EmirateDetail() {
   return (
     <main className="min-h-screen bg-[#050E1D]">
       <Navbar />
-      {/* Emirate Hero */}
-      <div className="relative h-[380px] w-full overflow-hidden bg-[#050E1D]">
-         <Image src={emirate.image} alt={emirate.name} fittingType="fit"className="h-full w-full"/>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
-          <Link to="/emirates-explorer" className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A] hover:text-[#F5F0E8]">
-            <ArrowLeft size={16} /> Back to Emirates
-          </Link>
-          <p className="text-[#E8B97A]">{emirate.arabic}</p>
-          <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">{emirate.name}</h1>
-          <p className="mt-1 text-[#B7C3D4]">{emirate.tagline}</p>
-        </div>
-      </div>
+     {/* Emirate Hero */}
+<div className="relative h-[260px] sm:h-[320px] md:h-[380px] w-full overflow-hidden bg-[#050E1D]">
+
+  {/* Image centered, fully undistorted (natural aspect ratio), edges dissolve into bg */}
+  <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-10">
+ <Image
+  src={emirate.image}
+  alt={emirate.name}
+  className="hero-fade-image w-auto h-[130%] sm:h-[140%] md:h-[150%] max-w-[150%] object-contain"
+/>
+  </div>
+
+  {/* Bottom fade for text readability (unchanged behavior) */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
+
+  <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
+    <Link
+      to="/emirates-explorer"
+      className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A] hover:text-[#F5F0E8]"
+    >
+      <ArrowLeft size={16} />
+      Back to Emirates
+    </Link>
+
+    <p className="text-[#E8B97A] text-5xl [font-family:'Architects_Daughter',_system-ui]">{emirate.arabic}</p>
+    <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">
+      {emirate.name}
+    </h1>
+
+    <p className="mt-1 text-[#B7C3D4]">
+      {emirate.tagline}
+    </p>
+  </div>
+
+  <style>{`
+    .hero-fade-image {
+      -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      -webkit-mask-composite: source-in, source-in;
+      mask-image:
+        linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
+      mask-composite: intersect;
+    }
+  `}</style>
+
+</div>
 
       <div className="mx-auto max-w-7xl px-5 py-12">
         {/* Introduction + Stamp Progress */}

@@ -16,7 +16,7 @@ export const emirateImages = {
   'sharjah':         'https://www.arabianbusiness.com/cloud/2022/03/31/Sharjah-skyline.jpg',
   'ajman':           'https://world-arabia.com/storage/images/news/crops/news-promo/jxsQZu1Obz1t8wutVorwht5kSh2oVHkBWWfRNlac.webp',
   'umm-al-quwain':   'https://metropolitan.realestate/wp-content/uploads/2025/05/Aerial-masterplan-2.jpg',
-  'ras-al-khaimah':  'https://vootours.com/wp-content/uploads/2025/02/Rasalkhaimah-CityScape-1140x530.jpg',
+  'ras-al-khaimah':  'https://wow-rak.com/wp-content/uploads/2026/06/Every-New-Hotel-Opening-in-Ras-Al-Khaimah-Before-2027-1.jpg',
   'fujairah':        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoM_efN738cNd1aDsf5enoEJGeWwMYu5pKuxdpaMhDmysuq1Q1lHKEtfr&s=10'
 };
 
