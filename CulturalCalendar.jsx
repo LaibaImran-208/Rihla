@@ -46,6 +46,7 @@ export default function CulturalCalendar() {
                   <h2 className="font-display text-2xl font-bold text-white">
                     {f.name}
                   </h2>
+                    <p className="mt-1 text-sm text-[#C8965A]">  {f.edate} </p>
                 </div>
               </div>
 
