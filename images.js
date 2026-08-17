@@ -17,7 +17,7 @@ export const emirateImages = {
   'ajman':           'https://world-arabia.com/storage/images/news/crops/news-promo/jxsQZu1Obz1t8wutVorwht5kSh2oVHkBWWfRNlac.webp',
   'umm-al-quwain':   'https://metropolitan.realestate/wp-content/uploads/2025/05/Aerial-masterplan-2.jpg',
   'ras-al-khaimah':  'https://wow-rak.com/wp-content/uploads/2026/06/Every-New-Hotel-Opening-in-Ras-Al-Khaimah-Before-2027-1.jpg',
-  'fujairah':        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoM_efN738cNd1aDsf5enoEJGeWwMYu5pKuxdpaMhDmysuq1Q1lHKEtfr&s=10'
+  'fujairah':        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpFZ3cat9iGYV2NUogLVGXT7LOCmC5HLeBhiKEFDGNR40TgWxiLnPa9E&s=10'
 };
 
 // ===== LOCATION IMAGES =====
@@ -96,16 +96,16 @@ export const locationImages = {
   'shimal':                       'https://rakheritage.rak.ae/wp-content/uploads/2024/09/DigitalWeb_medium_JPG-RAKWALLPAPER-14.jpg',
 
   // --- Fujairah ---
-  'fujairah-fort':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/3872c4e6e_generated_image.png',
-  'fujairah-museum':              'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/69a75eaae_generated_image.png',
-  'al-bidyah-mosque':             'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fd171bf39_generated_image.png',
-  'bithnah-fort':                 'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/8e84edf68_generated_image.png',
-  'al-aqah-beach':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/7cb1af214_generated_image.png',
-  'snoopy-island':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/a7690b596_generated_image.png',
-  'wadi-wurayah':                 'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/50250c344_generated_image.png',
-  'fujairah-corniche':            'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/405bfca17_generated_image.png',
-  'sheikh-zayed-mosque-fujairah': 'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=85',
-  'dibba':                        'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/003697f9e_generated_image.png'
+  'fujairah-fort':                'https://upload.wikimedia.org/wikipedia/commons/8/8e/Fujairah_Fort_Side_View%2C_Fujairah%2C_UAE.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+  'fujairah-museum':              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYAhXbATxDJ-43b6ZFhWsERwQiroeutIKSNPcOc8YNZlHf4MMIR3_E4F2&s=10',
+  'al-bidyah-mosque':             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYWxsi-HBS0sCimE-ZitB5Spc-IDUtAlsoZscqB-E-7jaodOMVNy9FaM&s=10',
+  'bithnah-fort':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717764431.jpg',
+  'al-aqah-beach':                'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717670099.jpg',
+  'snoopy-island':                'https://www.dubaicitytourism.com/wp-content/uploads/2025/07/Snoopy-Island-day-pass.webp',
+  'wadi-wurayah':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image2_1717764972.jpg',
+  'fujairah-corniche':            'https://www.holidify.com/images/cmsuploads/compressed/fujCorniche_20180716175340.jpg',
+  'sheikh-zayed-mosque-fujairah': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1QKHQvJD_IlOZXiiHDzqEg6sn2mBDh1F9CZyM6QpK3A&s=10',
+  'dibba':                        'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shoreline_Dibba.jpg?utm_source=en.wikivoyage.org&utm_campaign=index&utm_content=original'
 };
 
 /// ===== CULTURE IMAGES =====
@@ -173,11 +173,11 @@ export const timelineImages = {
 // ===== SUSTAINABILITY IMAGES =====
 export const sustainabilityImages = {
   'masdar-city':           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBYcoYKrYTRRfychekf2cIoyoFKmDSxpbtKgj9LOoKQ&s=10',
-  'solar-park':            'https://images.unsplash.com/photo-1687754715959-41fed2161528?auto=format&fit=crop&w=1200&q=85',
-  'mangrove-restoration': 'https://images.unsplash.com/photo-1641852347240-9d64f5c7b8f2?auto=format&fit=crop&w=1200&q=85',
-  'marine-conservation':  'https://images.unsplash.com/photo-1677632227880-4d21073ef8f4?auto=format&fit=crop&w=1200&q=85',
-  'desert-conservation':  'https://images.unsplash.com/photo-1594970856432-db143678c831?auto=format&fit=crop&w=1200&q=85',
-  'wildlife-protection':  'https://images.unsplash.com/photo-1686918269961-507270a5a238?auto=format&fit=crop&w=1200&q=85',
-  'water-conservation':   'https://images.unsplash.com/photo-1658301839070-656a71f805d1?auto=format&fit=crop&w=1200&q=85',
-  'net-zero-2050':        'https://images.unsplash.com/photo-1667592441284-b590021411e3?auto=format&fit=crop&w=1200&q=85'
+  'solar-park':            'https://www.mbrsic.ae/media/exke04gn/phase-6.jpg',
+  'mangrove-restoration': 'https://data.emiratesnaturewwf.ae/media/files/2024-11/mangrove-projects.jpg',
+  'marine-conservation':  'https://www.dubaidet.gov.ae/en/-/media/images/leisure/campaigns/reef-dubai/reef-dubai-2025/pillar-3-v2.jpg?iar=0&cw=1040&ch=400&q=75',
+  'desert-conservation':  'https://offloadmedia.feverup.com/secretdubai.co/wp-content/uploads/2019/02/17083723/al-marmoom-1024x597.jpg',
+  'wildlife-protection':  'https://www.thenationalnews.com/resizer/v2/VX2UZWTMOVFJRIAFUYBDQ5PUTM.JPG?smart=true&auth=7db24ed4dd511a33519272bc5c73a69261283ca2d04330e74bcaa244ed4495cd&width=400&height=263',
+  'water-conservation':   'https://3phtechservices.com/wp-content/uploads/2026/01/Water-Efficiency-and-Conservation-Technologies-for-UAE-Water-Utilities-image.jpg',
+  'net-zero-2050':        'https://www.mepmiddleeast.com/cloud/2024/12/06/net-zero-min-1024x576.jpg'
 };
