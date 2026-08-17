@@ -154,7 +154,7 @@ export const festivalImages = {
   'eid-al-fitr':       'https://static.toiimg.com/thumb/msid-128705634,imgsize-1210730,width-400,resizemode-4/uae.jpg',
   'eid-al-adha':       'https://storage.viory.video/thumbnails/a3022_16062024/AaTbLzmqwF7diWoq/AaTbLzmqwF7diWoq.jpg',
   'islamic-new-year':  'https://readfoundation.org.uk/wp-content/uploads/2025/01/Top-10-Facts-About-Ramadan.png',
-  'prophet-birthday': 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/12-rabi-ul-awal-template-design-afaf461d986e866b9a454acdf6411985_screen.jpg?ts=1695987101'
+  'prophet-birthday': 'https://static.toiimg.com/thumb/msid-123520346,imgsize-781479,width-400,resizemode-4/holiday.jpg'
 };
 
 // ===== TIMELINE IMAGES =====
