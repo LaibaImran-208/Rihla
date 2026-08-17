@@ -96,16 +96,16 @@ export const locationImages = {
   'shimal':                       'https://rakheritage.rak.ae/wp-content/uploads/2024/09/DigitalWeb_medium_JPG-RAKWALLPAPER-14.jpg',
 
   // --- Fujairah ---
-  'fujairah-fort':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/3872c4e6e_generated_image.png',
-  'fujairah-museum':              'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/69a75eaae_generated_image.png',
-  'al-bidyah-mosque':             'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/fd171bf39_generated_image.png',
-  'bithnah-fort':                 'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/8e84edf68_generated_image.png',
-  'al-aqah-beach':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/7cb1af214_generated_image.png',
-  'snoopy-island':                'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/a7690b596_generated_image.png',
-  'wadi-wurayah':                 'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/50250c344_generated_image.png',
-  'fujairah-corniche':            'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/405bfca17_generated_image.png',
-  'sheikh-zayed-mosque-fujairah': 'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=85',
-  'dibba':                        'https://media.db.com/images/public/6a7c883244b0c2e59e05c109/003697f9e_generated_image.png'
+  'fujairah-fort':                'https://upload.wikimedia.org/wikipedia/commons/8/8e/Fujairah_Fort_Side_View%2C_Fujairah%2C_UAE.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+  'fujairah-museum':              'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/ac/13/24/fujairah-museum-20032024.jpg?w=900&h=-1&s=1',
+  'al-bidyah-mosque':             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYWxsi-HBS0sCimE-ZitB5Spc-IDUtAlsoZscqB-E-7jaodOMVNy9FaM&s=10',
+  'bithnah-fort':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717764431.jpg',
+  'al-aqah-beach':                'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717670099.jpg',
+  'snoopy-island':                'https://www.dubaicitytourism.com/wp-content/uploads/2025/07/Snoopy-Island-day-pass.webp',
+  'wadi-wurayah':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image2_1717764972.jpg',
+  'fujairah-corniche':            'https://www.holidify.com/images/cmsuploads/compressed/fujCorniche_20180716175340.jpg',
+  'sheikh-zayed-mosque-fujairah': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1QKHQvJD_IlOZXiiHDzqEg6sn2mBDh1F9CZyM6QpK3A&s=10',
+  'dibba':                        'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shoreline_Dibba.jpg?utm_source=en.wikivoyage.org&utm_campaign=index&utm_content=original'
 };
 
 /// ===== CULTURE IMAGES =====
