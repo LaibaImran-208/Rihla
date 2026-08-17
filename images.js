@@ -97,7 +97,7 @@ export const locationImages = {
 
   // --- Fujairah ---
   'fujairah-fort':                'https://upload.wikimedia.org/wikipedia/commons/8/8e/Fujairah_Fort_Side_View%2C_Fujairah%2C_UAE.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
-  'fujairah-museum':              'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/ac/13/24/fujairah-museum-20032024.jpg?w=900&h=-1&s=1',
+  'fujairah-museum':              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYAhXbATxDJ-43b6ZFhWsERwQiroeutIKSNPcOc8YNZlHf4MMIR3_E4F2&s=10',
   'al-bidyah-mosque':             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYWxsi-HBS0sCimE-ZitB5Spc-IDUtAlsoZscqB-E-7jaodOMVNy9FaM&s=10',
   'bithnah-fort':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717764431.jpg',
   'al-aqah-beach':                'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717670099.jpg',
