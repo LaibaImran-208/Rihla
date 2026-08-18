@@ -4,29 +4,24 @@ import { ArrowRight, Stamp } from 'lucide-react';
 import gsap from 'gsap';
 import RihlaTitle from './RihlaTitle';
 
-const INTRO_KEY = 'rihla-intro-seen';
-
 export default function Hero() {
   const kickerRef = useRef(null);
   const arabicRef = useRef(null);
   const descRef = useRef(null);
   const buttonsRef = useRef(null);
-  // Read the flag during render so the delay matches RihlaTitle's decision.
-  const introSeen = typeof window !== 'undefined' && localStorage.getItem(INTRO_KEY) === 'true';
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
     const els = [kickerRef.current, arabicRef.current, descRef.current, buttonsRef.current].filter(Boolean);
     gsap.set(els, { opacity: 0, y: 20 });
-    // If the intro animation will play, wait for it; otherwise appear quickly.
-    const tl = gsap.timeline({ delay: introSeen ? 0.2 : 1.5 });
+    const tl = gsap.timeline({ delay: 1.5 });
     tl.to(kickerRef.current, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }).
     to(arabicRef.current, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2').
     to(descRef.current, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2').
     to(buttonsRef.current, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2');
     return () => tl.kill();
-  }, [introSeen]);
+  }, []);
 
   return (
     <section className="relative flex min-h-[790px] items-center overflow-hidden pt-20 text-center">

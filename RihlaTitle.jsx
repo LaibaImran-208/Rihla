@@ -1,31 +1,14 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const INTRO_KEY = 'rihla-intro-seen';
-
 export default function RihlaTitle({ onComplete }) {
   const maskRef = useRef(null);
   const planeRef = useRef(null);
-  // Read the flag during render so both this component and Hero see the same
-  // value before any effects run (child effects fire before parent effects).
-  const introSeen = typeof window !== 'undefined' && localStorage.getItem(INTRO_KEY) === 'true';
 
   useEffect(() => {
     const mask = maskRef.current;
     const plane = planeRef.current;
     if (!mask || !plane) return;
-
-    // If the intro has already been played, show the completed title immediately.
-    if (introSeen) {
-      gsap.set(mask, { attr: { width: 600 } });
-      gsap.set(plane, { opacity: 0 });
-      onComplete?.();
-      return;
-    }
-
-    // First visit — mark as seen immediately so it never replays, even if the
-    // user navigates away mid-animation or refreshes.
-    localStorage.setItem(INTRO_KEY, 'true');
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
@@ -64,7 +47,7 @@ export default function RihlaTitle({ onComplete }) {
       startAnimation();
     }
     return () => { if (cleanup) cleanup(); };
-  }, [onComplete, introSeen]);
+  }, [onComplete]);
 
   return (
     <div className="relative w-full" style={{ minHeight: '140px' }}>
