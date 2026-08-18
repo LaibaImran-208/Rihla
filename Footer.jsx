@@ -4,7 +4,7 @@ export default function Footer() {
   const team = [
     ' Laiba Imran',
     'Ankita Ghosh',
-    'Athirs Olikkoor Raji',
+    'Athira Olikkoor Raji',
     'Shruthika Meinathan','Abhirami Pradeep','Anna Tresa Vipin'
   ];
 
@@ -16,12 +16,17 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
 
           {/* Logo */}
-          <Link
-            to="/"
-            className="font-display text-xl font-bold text-[#F5F0E8]"
-          >
-            🧭 Rihla <span className="text-[#C8965A]">رحلة</span>
-          </Link>
+<Link to="/" className="flex items-center gap-2">
+  <img
+    src="/rihla_logo.png"
+    alt="Rihla logo"
+    className="h-9 w-9 object-contain"
+  />
+
+  <span className="font-display text-xl font-bold text-[#F5F0E8]">
+    Rihla <span className="text-[#C8965A]">رحلة</span>
+  </span>
+</Link>
 
           {/* Copyright */}
           <p className="text-sm text-[#8FA3BF]">
