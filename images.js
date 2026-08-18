@@ -12,7 +12,7 @@ const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me
 
 export const emirateImages = {
   'abu-dhabi':       'https://media.assettype.com/outlooktraveller/2024-08-20/0nbfvji7/shutterstock_2473580625.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100',
-  'dubai':           'https://365adventures.me/wp-content/uploads/2023/09/Dubai-COVER-PHOTO.jpg',
+  'dubai':           'https://images.trvl-media.com/place/1079/7c70ab1d-5b73-4916-a4a6-3cfdd2e876b7.jpg',
   'sharjah':         'https://www.arabianbusiness.com/cloud/2022/03/31/Sharjah-skyline.jpg',
   'ajman':           'https://world-arabia.com/storage/images/news/crops/news-promo/jxsQZu1Obz1t8wutVorwht5kSh2oVHkBWWfRNlac.webp',
   'umm-al-quwain':   'https://metropolitan.realestate/wp-content/uploads/2025/05/Aerial-masterplan-2.jpg',
