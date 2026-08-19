@@ -12,7 +12,16 @@ export default function Navbar() {
     alt="Rihla logo"
     className="h-12 w-12 object-contain"
   />
-      <span><b className="block text-[#F5F0E8] [font-family:'Sacramento',_system-ui] text-3xl">Rihla</b><small className="block text-right text-[#C8965A] text-2xl [font-family:'Architects_Daughter',_system-ui]">رحلة</small></span></Link>
+<span className="flex items-center gap-2">
+  <p className="text-[#F5F0E8] [font-family:'Sacramento',_system-ui] text-3xl">
+    Rihla
+  </p>
+
+  <small className="text-[#C8965A] text-2xl [font-family:'Architects_Daughter',_system-ui]">
+    رحلة
+  </small>
+</span>
+      </Link>
       <nav className="hidden items-center gap-5 lg:flex">{links.map(([to, label]) => <NavLink key={to} to={to} className={({ isActive }) => `text-sm transition ${isActive ? 'text-[#E8B97A]' : 'text-[#8FA3BF] hover:text-[#F5F0E8]'}`}>{label}</NavLink>)}</nav>
       <Link to="/digital-passport" className="hidden rounded-full border border-[#C8965A]/40 px-5 py-2 text-sm font-semibold text-[#E8B97A] md:block">🛂 Passport</Link>
       <button onClick={() => setOpen(!open)} className="text-[#F5F0E8] lg:hidden" aria-label="Toggle menu">{open ? <X /> : <Menu />}</button>
