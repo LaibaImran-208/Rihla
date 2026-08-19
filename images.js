@@ -117,7 +117,7 @@ export const cultureImages = {
   'sadu-weaving':       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTUNJrBlU6wIiknQ3e39ncNh25tj0bzUQOyf6hk7SroLDF8Y-UCn8PrQ&s=10',
   'henna':              'https://www.harpersbazaararabia.com/wp-content/uploads/sites/7/cloud/2021/09/09/hba-hennasalons-lead-1.jpg',
   'machboos':           'https://www.remitly.com/blog/wp-content/uploads/2023/09/kuwait-machboos-scaled.jpg?wpId=24328',
-  'harees':             'https://ychef.files.bbci.co.uk/624x351/p0391nrj.jpg',
+  'harees':             'https://ninefoods.com.pk/wp-content/uploads/2025/01/Emirati-Harees-Recipe.png',
   'luqaimat':           'https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2024/02/20/80f466aa53f7425ca3f004d3e6a5de99_luqaimat-al-fanar-dubai.jpg',
   'balaleet':           'https://thumbs.dreamstime.com/b/emirati-balaleet-traditional-dish-presented-ornate-blue-white-bowl-thin-noodles-topped-bright-yellow-406874624.jpg',
   'arabic-coffee':      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi6n3cOtvNopkEE7weF9b2Am4MCB4AxEIndaah7erKix0ajdcTSCmD4yQ&s=10',
