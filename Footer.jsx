@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 export default function Footer() {
   const team = [
     ' Laiba Imran',
@@ -23,7 +22,7 @@ export default function Footer() {
     className="h-9 w-9 object-contain"
   />
 
-  <span className="font-display text-xl font-bold text-[#F5F0E8]">
+  <span className="block text-[#F5F0E8] [font-family:'Sacramento',_system-ui] text-3xl ">
     Rihla <span className="text-[#C8965A]">رحلة</span>
   </span>
 </Link>
