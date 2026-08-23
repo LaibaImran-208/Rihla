@@ -1,79 +1,136 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+# Rihla — A Journey Through the Emirates
 
-# Base44 Project
+**Rihla (رحلة)** is an interactive educational website designed to help users explore the **United Arab Emirates** through its culture, heritage, landmarks, values, sustainability initiatives, history, and national identity.
 
-Use this repository to run and edit the app locally, then publish changes back through db.
+Instead of presenting information as a traditional static website, Rihla turns learning about the UAE into an interactive journey where users can explore the seven emirates, complete challenges, take quizzes, collect passport stamps, and track their progress.
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Features
 
-## Prerequisites
+### 🇦🇪 Explore the Emirates
 
-1. Clone the repository using the project's Git URL.
-2. Navigate to the project directory.
-3. Install dependencies: `npm install`.
-4. Install the Base44 CLI: `npm install -g base44@latest`.
+Discover all seven emirates of the UAE through interactive exploration pages featuring:
 
-See the [Base44 CLI docs](https://docs.db.com/developers/references/cli/get-started/overview) if you want to run Base44 commands directly.
+* Major landmarks and destinations
+* Heritage and cultural sites
+* Local traditions
+* Interesting facts
+* Emirate-specific information
 
-## Run Locally
+### UAE Culture & Heritage
 
-Run the full local development environment from the project root:
+Learn about the traditions and cultural identity of the UAE through dedicated sections covering:
+
+* Cultural heritage
+* Traditional practices
+* National values
+* Emirati identity
+
+### Sustainability
+
+Explore the UAE's sustainability efforts and environmental initiatives, including information about conservation and the country's vision for a sustainable future.
+
+### Historical Timeline
+
+Follow important events in UAE history through an interactive timeline, from the country's early history to the formation and development of the United Arab Emirates.
+
+### Digital Passport
+
+The Digital Passport records the user's progress throughout their journey.
+
+Users can track:
+
+* Places explored
+* Points earned
+* Quizzes completed
+* Emirate stamps collected
+
+Completing all seven emirates unlocks an achievement certificate.
+
+### Challenges & Quizzes
+
+Interactive challenges and quizzes encourage users to test what they have learned while exploring the website.
+
+### Cultural Calendar
+
+Explore important UAE festivals, celebrations, and cultural occasions through a dedicated calendar with countdown features.
+
+### Responsive Design
+
+The website is designed to work across desktop, tablet, and mobile screen sizes, with a responsive navigation menu for smaller screens.
+
+---
+
+
+
+##  Technologies Used
+
+### Frontend
+
+* **React**
+* **JavaScript / JSX**
+* **Vite**
+* **Tailwind CSS**
+* **React Router**
+* **Lucide React**
+
+### Animation & Interaction
+
+* **GSAP**
+* CSS transitions and animations
+
+### Deployment
+
+* **Cloudflare Workers**
+* **Wrangler**
+
+### Development Tools
+
+* Git
+* GitHub
+* npm
+
+---
+
+## Project Structure
+
+```text
+Rihla/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── rihla/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── wrangler.jsonc
+```
+
+The project is organized into reusable components, page-level components, data files, and custom hooks to make the website easier to maintain and expand.
+
+## Deployment
+
+Rihla is deployed using **Cloudflare Workers**.
+
+The production build is generated using Vite and deployed using Wrangler:
 
 ```bash
-base44 dev
+npm run build
+npx wrangler deploy
 ```
 
-`base44 dev` starts the local Base44 development backend and, when this app is configured for it, also starts the frontend dev server for you. Use the frontend URL printed by the command.
 
-For example, when the Base44 project config includes a `serveCommand`, `base44 dev` can launch the frontend too:
+##  Team
 
-```json5
-{
-  "site": {
-    "serveCommand": "npm run dev"
-  }
-}
-```
+**Created by:**
 
-In a Base44 project this lives in `base44/config.jsonc`.
-
-## Run Only The Frontend
-
-If you only want to work on the frontend against the hosted Base44 backend, run:
-
-```bash
-npm run dev
-```
-
-Open the local URL printed by Vite.
-
-## Use The Hosted Backend
-
-For frontend-only development, create or update `.env.local` in the project root:
-
-```bash
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=https://your-app.db.app
-```
-
-`VITE_BASE44_APP_ID` identifies the Base44 app.
-
-`VITE_BASE44_APP_BASE_URL` tells the Base44 Vite plugin where to send local `/api` requests. Point it at your deployed Base44 app URL when you want the local frontend to use the hosted backend.
-
-When you use `base44 dev`, the command injects the local Base44 values for you, so `.env.local` is mainly needed for frontend-only workflows.
-
-## Publish Your Changes
-
-After pushing your changes to git, open the Base44 dashboard and publish the app:
-
-```bash
-base44 dashboard open
-```
-
-## Docs & Support
-
-Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
-
-Base44 CLI command reference: [https://docs.db.com/developers/references/cli/commands/introduction](https://docs.db.com/developers/references/cli/commands/introduction)
-
-Support: [https://app.db.com/support](https://app.db.com/support)
+* Laiba Imran
+* Ankita Ghosh
+* Athira Olikkoor Raji
+* Shruthika Meinathan
+* Abhirami Pradeep
+* Anna Tresa Vipin
