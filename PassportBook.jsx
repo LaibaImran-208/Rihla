@@ -34,7 +34,7 @@ export default function PassportBook() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[.25em] text-[#C8965A]">United Arab Emirates</p>
             <h2 className="mt-2 font-display text-3xl font-bold text-[#F5F0E8]">Digital Passport</h2>
-            <p className="text-[#8FA3BF]">رحلة عبر الإمارات</p>
+            <p className="text-[#8FA3BF] text-3xl [font-family:'Architects_Daughter',_system-ui]">رحلة عبر الإمارات</p>
           </div>
           <span className="text-5xl">🇦🇪</span>
         </div>

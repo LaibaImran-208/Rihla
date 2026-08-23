@@ -1,15 +1,167 @@
 import { festivalImages } from './images';
-export const festivals=[
-{name:'UAE National Day (Eid Al Etihad)',arabic:'يوم العلم',date:{month:12,day:2},type:'fixed',significance:'Celebrates the formation of the United Arab Emirates on December 2, 1971, when six emirates agreed to form a federation.',history:'On December 2, 1971, six emirates — Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al Quwain, and Fujairah — agreed to form the United Arab Emirates. Ras Al Khaimah joined on February 10, 1972. Sheikh Zayed bin Sultan Al Nahyan and Sheikh Rashid bin Saeed Al Maktoum were the key architects of the union.',traditions:'National Day is celebrated with fireworks, parades, cultural events, car decorations, and national dress. Buildings and streets are decorated with UAE flags and lights.',food:'Traditional Emirati dishes like machboos and harees are served at family gatherings.',image:'https://images.unsplash.com/photo-1694431452845-719ff1e1eea9?auto=format&fit=crop&w=1200&q=85'},
-{name:'Flag Day',arabic:'يوم العلم',date:{month:11,day:3},type:'fixed',significance:'Celebrates the adoption of the UAE flag and encourages national pride and unity.',history:'Flag Day was initiated in 2013 to commemorate the accession of Sheikh Khalifa bin Zayed Al Nahyan as President of the UAE. It is celebrated annually on November 3.',traditions:'Government buildings, schools, and homes raise the UAE flag. Many organizations hold flag-raising ceremonies.',food:'Not specifically associated with particular foods.',image:'https://images.unsplash.com/photo-1518684079-3c830dced0fd?auto=format&fit=crop&w=1200&q=85'},
-{name:'Commemoration Day',arabic:'يوم الشهيد',date:{month:11,day:30},type:'fixed',significance:'Honours the UAE\'s fallen soldiers and servicemen who gave their lives in service of the nation.',history:'Commemoration Day was established in 2015 to honour the UAE\'s fallen soldiers. It is observed on November 30, the date of the first UAE soldier to fall in duty.',traditions:'A minute of silence is observed, and ceremonies are held at Wahat Al Karama and other memorial sites.',food:'Not specifically associated with particular foods.',image:'https://images.unsplash.com/photo-1606382837285-96f342fc1ef8?auto=format&fit=crop&w=1200&q=85'},
-{name:'Ramadan',arabic:'رمضان',date:{month:'variable',day:'variable'},type:'variable',significance:'The holy month of fasting in Islam, observed by Muslims worldwide as a period of spiritual reflection, self-discipline, and community.',history:'Ramadan is the ninth month of the Islamic lunar calendar, during which Muslims fast from dawn to sunset. It commemorates the first revelation of the Quran to the Prophet Muhammad.',traditions:'Muslims fast from dawn to sunset, pray, read the Quran, and engage in charity. Iftar (breaking the fast) is shared with family and community. Nightly prayers (Taraweeh) are held at mosques.',food:'Iftar typically begins with dates and water, followed by dishes like harees, machboos, and luqaimat. Arabic coffee and dates are served throughout.',image:'https://images.unsplash.com/photo-1565538813539-8f68b084d99c?auto=format&fit=crop&w=1200&q=85'},
-{name:'Eid Al-Fitr',arabic:'عيد الفطر',date:{month:'variable',day:'variable'},type:'variable',significance:'The festival marking the end of Ramadan, celebrated with prayers, family gatherings, and feasting.',history:'Eid Al-Fitr marks the end of the fasting month of Ramadan. It is one of the two major Islamic holidays and is celebrated by Muslims worldwide.',traditions:'Morning prayers at the mosque, visiting family and friends, giving gifts (Eidiya) to children, wearing new clothes, and sharing meals.',food:'Traditional dishes include luqaimat, balaleet, and special Eid sweets. Arabic coffee and dates are served to guests.',image:'https://images.unsplash.com/photo-1564507060528-2545673c9e63?auto=format&fit=crop&w=1200&q=85'},
-{name:'Eid Al-Adha',arabic:'عيد الأضحى',date:{month:'variable',day:'variable'},type:'variable',significance:'The Festival of Sacrifice, commemorating the willingness of Ibrahim to sacrifice his son in obedience to God.',history:'Eid Al-Adha marks the end of the Hajj pilgrimage and commemorates the story of Ibrahim\'s willingness to sacrifice his son. It is the second major Islamic holiday.',traditions:'Morning prayers, the sacrifice of an animal (usually a sheep or goat) with the meat shared with family, friends, and those in need, and visiting family.',food:'The sacrificial meat is prepared in various dishes and shared. Traditional Emirati dishes are served at family gatherings.',image:'https://images.unsplash.com/photo-1583771803077-e512cbd2059c?auto=format&fit=crop&w=1200&q=85'},
-{name:'Islamic New Year',arabic:'رأس السنة الهجرية',date:{month:'variable',day:'variable'},type:'variable',significance:'Marks the beginning of the Islamic lunar calendar year.',history:'The Islamic New Year commemorates the migration (Hijra) of the Prophet Muhammad from Mecca to Medina in 622 CE, which marks the beginning of the Islamic calendar.',traditions:'Generally a quieter observance with prayers and reflection. It is a public holiday in the UAE.',food:'Not specifically associated with particular foods.',image:'https://images.unsplash.com/photo-1562078128-70ebca46b10e?auto=format&fit=crop&w=1200&q=85'},
-{name:'Prophet Muhammad\'s Birthday',arabic:'المولد النبوي',date:{month:'variable',day:'variable'},type:'variable',significance:'Commemorates the birth of the Prophet Muhammad.',history:'Mawlid al-Nabi is observed by Muslims worldwide to celebrate the birth of the Prophet Muhammad. It is a public holiday in the UAE.',traditions:'Prayers, recitation of poetry about the Prophet, and community gatherings. Some families prepare special sweets.',food:'Special sweets and traditional dishes may be prepared and shared.',image:'https://images.unsplash.com/photo-1569069438599-4b719f7463b4?auto=format&fit=crop&w=1200&q=85'}
+
+export const festivals = [
+  {
+    name: 'UAE National Day (Eid Al Etihad)',
+    arabic: 'عيد الاتحاد',
+    edate: '2 December',
+    date: { month: 12, day: 2 },
+    type: 'fixed',
+    significance:
+      'Celebrates the formation of the United Arab Emirates on December 2, 1971, when six emirates agreed to form a federation.',
+    history:
+      'On December 2, 1971, six emirates — Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al Quwain, and Fujairah — agreed to form the United Arab Emirates. Ras Al Khaimah joined on February 10, 1972. Sheikh Zayed bin Sultan Al Nahyan and Sheikh Rashid bin Saeed Al Maktoum were the key architects of the union.',
+    traditions:
+      'National Day is celebrated with fireworks, parades, cultural events, car decorations, and national dress. Buildings and streets are decorated with UAE flags and lights.',
+    food:
+      'Traditional Emirati dishes like machboos and harees are served at family gatherings.',
+    image:
+      'https://images.unsplash.com/photo-1694431452845-719ff1e1eea9?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Flag Day',
+    arabic: 'يوم العلم',
+    edate: '3 November',
+    date: { month: 11, day: 3 },
+    type: 'fixed',
+    significance:
+      'Celebrates the adoption of the UAE flag and encourages national pride and unity.',
+    history:
+      'Flag Day was initiated in 2013 to commemorate the accession of Sheikh Khalifa bin Zayed Al Nahyan as President of the UAE. It is celebrated annually on November 3.',
+    traditions:
+      'Government buildings, schools, and homes raise the UAE flag. Many organizations hold flag-raising ceremonies.',
+    food:
+      'Not specifically associated with particular foods.',
+    image:
+      'https://images.unsplash.com/photo-1518684079-3c830dced0fd?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Commemoration Day',
+    arabic: 'يوم الشهيد',
+    edate: '30 November',
+    date: { month: 11, day: 30 },
+    type: 'fixed',
+    significance:
+      "Honours the UAE's fallen soldiers and servicemen who gave their lives in service of the nation.",
+    history:
+      'Commemoration Day was established in 2015 to honour the UAE’s fallen soldiers. It is observed on November 30.',
+    traditions:
+      'A minute of silence is observed, and ceremonies are held at Wahat Al Karama and other memorial sites.',
+    food:
+      'Not specifically associated with particular foods.',
+    image:
+      'https://images.unsplash.com/photo-1606382837285-96f342fc1ef8?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Ramadan',
+    arabic: 'رمضان',
+    edate: '1 Ramadan',
+    date: { month: 'variable', day: 'variable' },
+    type: 'variable',
+    significance:
+      'The holy month of fasting in Islam, observed by Muslims worldwide as a period of spiritual reflection, self-discipline, and community.',
+    history:
+      'Ramadan is the ninth month of the Islamic lunar calendar, during which Muslims fast from dawn to sunset. It commemorates the first revelation of the Quran to the Prophet Muhammad.',
+    traditions:
+      'Muslims fast from dawn to sunset, pray, read the Quran, and engage in charity. Iftar (breaking the fast) is shared with family and community. Nightly prayers (Taraweeh) are held at mosques.',
+    food:
+      'Iftar typically begins with dates and water, followed by dishes like harees, machboos, and luqaimat. Arabic coffee and dates are served throughout.',
+    image:
+      'https://images.unsplash.com/photo-1565538813539-8f68b084d99c?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Eid Al-Fitr',
+    arabic: 'عيد الفطر',
+    edate: '1 Shawwal',
+    date: { month: 'variable', day: 'variable' },
+    type: 'variable',
+    significance:
+      'The festival marking the end of Ramadan, celebrated with prayers, family gatherings, and feasting.',
+    history:
+      'Eid Al-Fitr marks the end of the fasting month of Ramadan. It is one of the two major Islamic holidays and is celebrated by Muslims worldwide.',
+    traditions:
+      'Morning prayers at the mosque, visiting family and friends, giving gifts (Eidiya) to children, wearing new clothes, and sharing meals.',
+    food:
+      'Traditional dishes include luqaimat, balaleet, and special Eid sweets. Arabic coffee and dates are served to guests.',
+    image:
+      'https://images.unsplash.com/photo-1564507060528-2545673c9e63?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Eid Al-Adha',
+    arabic: 'عيد الأضحى',
+    edate: '10 Dhu al-Hijjah',
+    date: { month: 'variable', day: 'variable' },
+    type: 'variable',
+    significance:
+      'The Festival of Sacrifice, commemorating the willingness of Ibrahim to sacrifice his son in obedience to God.',
+    history:
+      "Eid Al-Adha marks the end of the Hajj pilgrimage and commemorates the story of Ibrahim's willingness to sacrifice his son. It is the second major Islamic holiday.",
+    traditions:
+      'Morning prayers, the sacrifice of an animal with the meat shared with family, friends, and those in need, and visiting family.',
+    food:
+      'The sacrificial meat is prepared in various dishes and shared. Traditional Emirati dishes are served at family gatherings.',
+    image:
+      'https://images.unsplash.com/photo-1583771803077-e512cbd2059c?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: 'Islamic New Year',
+    arabic: 'رأس السنة الهجرية',
+    edate: '1 Muharram',
+    date: { month: 'variable', day: 'variable' },
+    type: 'variable',
+    significance:
+      'Marks the beginning of the Islamic lunar calendar year.',
+    history:
+      'The Islamic New Year commemorates the migration (Hijra) of the Prophet Muhammad from Mecca to Medina in 622 CE, which marks the beginning of the Islamic calendar.',
+    traditions:
+      'Generally a quieter observance with prayers and reflection. It is a public holiday in the UAE.',
+    food:
+      'Not specifically associated with particular foods.',
+    image:
+      'https://images.unsplash.com/photo-1562078128-70ebca46b10e?auto=format&fit=crop&w=1200&q=85'
+  },
+
+  {
+    name: "Prophet Muhammad's Birthday",
+    arabic: 'المولد النبوي',
+    edate: '12 Rabi al-Awwal',
+    date: { month: 'variable', day: 'variable' },
+    type: 'variable',
+    significance:
+      'Commemorates the birth of the Prophet Muhammad.',
+    history:
+      'Mawlid al-Nabi is observed by Muslims worldwide to commemorate the birth of the Prophet Muhammad.',
+    traditions:
+      'Prayers, recitation of poetry about the Prophet, and community gatherings. Some families prepare special sweets.',
+    food:
+      'Special sweets and traditional dishes may be prepared and shared.',
+    image:
+      'https://images.unsplash.com/photo-1569069438599-4b719f7463b4?auto=format&fit=crop&w=1200&q=85'
+  }
 ];
 
-// Override festival images from centralized registry (src/data/images.js).
-const _festivalSlugs = { 'UAE National Day (Eid Al Etihad)': 'national-day', 'Flag Day': 'flag-day', 'Commemoration Day': 'commemoration-day', 'Ramadan': 'ramadan', 'Eid Al-Fitr': 'eid-al-fitr', 'Eid Al-Adha': 'eid-al-adha', 'Islamic New Year': 'islamic-new-year', 'Prophet Muhammad\'s Birthday': 'prophet-birthday' };
-festivals.forEach(f => { const s = _festivalSlugs[f.name]; if (s && festivalImages[s]) f.image = festivalImages[s]; });
+// Override festival images from centralized registry
+const _festivalSlugs = {
+  'UAE National Day (Eid Al Etihad)': 'national-day',
+  'Flag Day': 'flag-day',
+  'Commemoration Day': 'commemoration-day',
+  'Ramadan': 'ramadan',
+  'Eid Al-Fitr': 'eid-al-fitr',
+  'Eid Al-Adha': 'eid-al-adha',
+  'Islamic New Year': 'islamic-new-year',
+  "Prophet Muhammad's Birthday": 'prophet-birthday'
+};
+
+festivals.forEach((f) => {
+  const s = _festivalSlugs[f.name];
+
+  if (s && festivalImages[s]) {
+    f.image = festivalImages[s];
+  }
+});
