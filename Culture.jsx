@@ -1,21 +1,17 @@
 import { useState } from 'react';
 import Navbar from '@/components/rihla/Navbar';
 import Footer from '@/components/rihla/Footer';
-import QuizCard from '@/components/rihla/QuizCard';
 import { arabicPhrases, placeNames, heritage, cuisine, clothing, architecture, musicPoetry, nationalSymbols } from '@/data/culture';
 import { Image } from '@/components/ui/image';
-import useJourney from '@/hooks/useJourney';
 const tabs = [['Arabic', 'Arabic Language', '🗣️'], ['Names', 'Place Names', '📍'], ['Heritage', 'Heritage', '🏛'], ['Cuisine', 'Cuisine', '🍽'], ['Clothing', 'Clothing', '👔'], ['Architecture', 'Architecture', '🏗'], ['Music', 'Music & Poetry', '🎵'], ['Symbols', 'National Symbols', '🇦🇪']];
 export default function Culture() {
   const [tab, setTab] = useState('Arabic');
-  const { completeQuiz } = useJourney();
   return <main className="min-h-screen bg-[#050E1D]"><Navbar />
     <section className="px-5 pb-8 pt-36 text-center"><span className="rihla-kicker">الثقافة · Culture</span><h1 className="font-display text-5xl font-bold text-[#F5F0E8] sm:text-6xl">UAE <span className="text-[#C8965A]">Culture</span></h1><p className="rihla-subtitle">Explore Arabic language, heritage, cuisine, clothing, architecture, music, poetry, and national symbols.</p></section>
     <div className="sticky top-20 z-30 border-y border-[#1A3355] bg-[#071426]/95 px-5 py-3 backdrop-blur"><div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto">{tabs.map(([id, label, icon]) => <button key={id} onClick={() => setTab(id)} className={`flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2 text-xs font-bold ${tab === id ? 'bg-[#C8965A] text-[#050E1D]' : 'border border-[#1A3355] text-[#B7C3D4]'}`}><span>{icon}</span>{label}</button>)}</div></div>
     <section className="mx-auto max-w-7xl px-5 py-14">
       {tab === 'Arabic' && <div><h2 className="mb-6 font-display text-3xl font-bold text-[#F5F0E8]">Arabic Language <span className="text-[#C8965A]">العربية</span></h2><p className="mb-8 max-w-2xl leading-8 text-[#8FA3BF]">Arabic is the official language of the UAE. Here are common expressions with transliteration and meaning to help you connect with Emirati culture.</p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{arabicPhrases.map((p) => <div key={p.translit} className="rounded-2xl border border-[#1A3355] bg-[#0A1A30] p-5"><p className="font-display text-2xl text-[#E8B97A]" dir="rtl">{p.arabic}</p><p className="mt-2 font-bold text-[#F5F0E8]">{p.translit}</p><p className="text-sm text-[#C8965A]">{p.meaning}</p><p className="mt-2 text-xs leading-5 text-[#8FA3BF]">{p.context}</p></div>)}</div>
-        <div className="mt-8"><QuizCard quiz={{ question: 'What does "Marhaba" mean?', options: ['Goodbye', 'Hello / Welcome', 'Thank you', 'Sorry'], correct: 1, explanation: '"Marhaba" is a common Arabic greeting meaning "Hello" or "Welcome," used in everyday interactions.' }} quizId="arabic-marhaba" onComplete={completeQuiz} /></div>
       </div>}
       {tab === 'Names' && <div><h2 className="mb-6 font-display text-3xl font-bold text-[#F5F0E8]">Place Name <span className="text-[#C8965A]">Meanings</span></h2><p className="mb-8 max-w-2xl leading-8 text-[#8FA3BF]">The names of UAE places carry meaning and history. Learn the origins and significance behind these names.</p>
         <div className="grid gap-4 sm:grid-cols-2">{placeNames.map((n) => <div key={n.name} className="rounded-2xl border border-[#1A3355] bg-[#0A1A30] p-5"><div className="flex items-center justify-between"><b className="font-display text-xl text-[#F5F0E8]">{n.name}</b><span className="font-display text-lg text-[#E8B97A]" dir="rtl">{n.arabic}</span></div><span className="mt-1 inline-block rounded-full bg-[#1A3355] px-2 py-0.5 text-[10px] text-[#B7C3D4]">{n.topic}</span><p className="mt-3 text-sm leading-6 text-[#8FA3BF]">{n.meaning}</p></div>)}</div>

@@ -25,9 +25,94 @@ export default function Home(){
     <section className="bg-[#071426] px-5 py-24"><div className="mx-auto max-w-7xl"><div className="mb-12 text-center"><span className="rihla-kicker">Cultural Calendar</span><h2 className="rihla-heading">Upcoming <span>Celebration</span></h2></div>
       <div className="mx-auto max-w-2xl rounded-[2rem] border border-[#1A3355] bg-[#0A1A30] p-8"><div className="flex items-center justify-between"><div><p className="text-sm text-[#E8B97A]">{upcoming.arabic}</p><h3 className="font-display text-2xl font-bold text-[#F5F0E8]">{upcoming.name}</h3></div><span className="text-4xl">🎉</span></div><p className="mt-4 text-sm leading-6 text-[#8FA3BF]">{upcoming.significance}</p><div className="mt-5"><Countdown festival={upcoming}/></div><Link to="/calendar" className="mt-6 inline-flex items-center gap-2 font-bold text-[#E8B97A]">View Calendar <ArrowRight size={16}/></Link></div>
     </div></section>
-    <section className="px-5 py-24"><div className="mx-auto max-w-7xl"><div className="mb-12 text-center"><span className="rihla-kicker">Sustainability</span><h2 className="rihla-heading">Building a <span>Greener Future</span></h2></div>
-      <div className="mx-auto max-w-3xl rounded-[2rem] border border-[#1A3355] bg-[#0A1A30] p-8"><div className="flex items-center gap-4"><span className="text-4xl">{sustainabilityInitiatives[0].icon}</span><div><h3 className="font-display text-2xl font-bold text-[#F5F0E8]">{sustainabilityInitiatives[0].title}</h3><p className="text-sm text-[#C8965A]">UAE Net Zero 2050</p></div></div><p className="mt-4 text-sm leading-7 text-[#8FA3BF]">{sustainabilityInitiatives[0].overview}</p><Link to="/sustainability" className="mt-6 inline-flex items-center gap-2 font-bold text-[#E8B97A]">Explore Sustainability <ArrowRight size={16}/></Link></div>
-    </div></section>
+<section className="px-5 py-24">
+  <div className="mx-auto max-w-7xl">
+
+    <div className="mb-12 text-center">
+      <span className="rihla-kicker">Challenges & Activities</span>
+
+      <h2 className="rihla-heading">
+        Learn Through <span>Play</span>
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#8FA3BF]">
+        Take a break from quizzes and explore the UAE through interactive
+        challenges designed to test your knowledge in a different way.
+      </p>
+    </div>
+
+    <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+
+      {/* Crossword */}
+      <Link
+        to="/challenges"
+        className="group rounded-[2rem] border border-[#1A3355] bg-[#0A1A30] p-8 transition hover:border-[#C8965A]/60"
+      >
+        <div className="flex items-center gap-4">
+          <span className="text-4xl">🧩</span>
+
+          <div>
+            <h3 className="font-display text-2xl font-bold text-[#F5F0E8]">
+              UAE Crossword
+            </h3>
+
+            <p className="text-sm text-[#C8965A]">
+              Piece together what you know
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-5 text-sm leading-7 text-[#8FA3BF]">
+          Solve UAE-themed crossword puzzles covering the Emirates, heritage,
+          landmarks, culture and history.
+        </p>
+
+        <div className="mt-6 inline-flex items-center gap-2 font-bold text-[#E8B97A]">
+          Play Crossword
+          <ArrowRight
+            size={16}
+            className="transition-transform group-hover:translate-x-1"
+          />
+        </div>
+      </Link>
+
+      {/* UAE Word Game */}
+      <Link
+        to="/challenges"
+        className="group rounded-[2rem] border border-[#1A3355] bg-[#0A1A30] p-8 transition hover:border-[#C8965A]/60"
+      >
+        <div className="flex items-center gap-4">
+          <span className="text-4xl">🔤</span>
+
+          <div>
+            <h3 className="font-display text-2xl font-bold text-[#F5F0E8]">
+              Guess the UAE Word
+            </h3>
+
+            <p className="text-sm text-[#C8965A]">
+              Can you find the hidden word?
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-5 text-sm leading-7 text-[#8FA3BF]">
+          Test your UAE knowledge by guessing a hidden five-letter word in a
+          limited number of attempts.
+        </p>
+
+        <div className="mt-6 inline-flex items-center gap-2 font-bold text-[#E8B97A]">
+          Play Now
+          <ArrowRight
+            size={16}
+            className="transition-transform group-hover:translate-x-1"
+          />
+        </div>
+      </Link>
+
+    </div>
+
+  </div>
+</section>
     <section className="bg-[#071426] px-5 py-24"><div className="mx-auto max-w-4xl text-center"><span className="rihla-kicker">Your Journey</span><h2 className="rihla-heading">Passport <span>Progress</span></h2><div className="mt-8 grid grid-cols-3 gap-4">{[['⭐',points,'Points'],['📍',exploredPlaces.length,'Places Visited'],['🛂',`${stamps.length}/7`,'Stamps Unlocked']].map(([icon,val,label])=><div key={label} className="rounded-2xl border border-[#1A3355] bg-[#0A1A30] p-6"><div className="text-3xl">{icon}</div><b className="font-display text-3xl text-[#E8B97A]">{val}</b><p className="text-xs uppercase tracking-wider text-[#8FA3BF]">{label}</p></div>)}</div><Link to="/digital-passport" className="rihla-primary mt-8">View My Passport <ArrowRight size={18}/></Link></div></section>
     <Footer/></main>);
 }

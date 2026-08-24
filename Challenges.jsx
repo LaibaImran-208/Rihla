@@ -1,123 +1,69 @@
-import { useState, useRef, useEffect } from 'react';
-import { Star, Trophy, CheckCircle, Award } from 'lucide-react';
-import gsap from 'gsap';
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight, CheckCircle, Compass, Play, Trophy } from 'lucide-react';
 import Navbar from '@/components/rihla/Navbar';
 import Footer from '@/components/rihla/Footer';
 import ChallengeQuiz from '@/components/rihla/ChallengeQuiz';
-import { allPlaces, emirates } from '@/data/emirates';
-import { values } from '@/data/values';
+import Crossword from '@/components/rihla/Crossword';
+import GuessUaeWord from '@/components/rihla/GuessUaeWord';
+import { challengeTopics } from '@/data/challengesData';
 import useJourney from '@/hooks/useJourney';
 
-const placeQuizzes = allPlaces.map(p => {
-  const emirate = emirates.find(e => e.locations.includes(p));
-  return { id: p.id, question: p.quiz.question, options: p.quiz.options, correct: p.quiz.correct, explanation: p.quiz.explanation, category: emirate ? emirate.name : 'UAE', source: p.name };
-});
-const valueQuizzes = values.map(v => ({ id: `value-${v.name}`, question: v.scenario.question, options: v.scenario.options, correct: v.scenario.correct, explanation: v.scenario.explanation, category: 'Values', source: v.name }));
-const allQuizzes = [...placeQuizzes, ...valueQuizzes];
+/** @typedef {{ score: number, total: number }} TopicScore */
+
+/** @param {TopicScore | undefined} score */
+const formatScore = score => score ? `${score.score}/${score.total}` : 'Not completed';
 
 export default function Challenges() {
-  const { completeQuiz, completedQuizzes, points } = useJourney();
-  const [score, setScore] = useState(0);
-  const [currentIdx, setCurrentIdx] = useState(() => {
-    const idx = allQuizzes.findIndex(q => !completedQuizzes.includes(q.id));
-    return idx === -1 ? 0 : idx;
-  });
-  const [showComplete, setShowComplete] = useState(() =>
-    allQuizzes.every(q => completedQuizzes.includes(q.id))
-  );
+  const { completeQuiz, addPoints, topicScores = {}, points, saveTopicScore } = useJourney();
+  const [view, setView] = useState('hub');
+  const [selectedTopic, setSelectedTopic] = useState(/** @type {string | null} */ (null));
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [quizScore, setQuizScore] = useState(0);
+  const [result, setResult] = useState(/** @type {TopicScore | null} */ (null));
+  const [activity, setActivity] = useState(/** @type {'crossword' | 'word' | null} */ (null));
+  const topic = challengeTopics.find(item => item.id === selectedTopic);
+  const question = topic?.questions[questionIndex];
 
-  const scoreRef = useRef(null);
-  const completionRef = useRef(null);
+  /** @param {string} topicId */
+  const startTopic = topicId => {
+    setSelectedTopic(topicId);
+    setQuestionIndex(0);
+    setQuizScore(0);
+    setResult(null);
+    setView('quiz');
+  };
 
-  const quiz = allQuizzes[currentIdx];
-  const remaining = allQuizzes.filter(q => !completedQuizzes.includes(q.id)).length;
-
-  useEffect(() => {
-    if (scoreRef.current && score > 0) {
-      gsap.fromTo(scoreRef.current, { scale: 1.4 }, { scale: 1, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
-    }
-  }, [score]);
-
-  useEffect(() => {
-    if (!showComplete || !completionRef.current) return;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
-    const elements = completionRef.current.querySelectorAll('[data-animate]');
-    const tl = gsap.timeline();
-    tl.fromTo(completionRef.current, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' })
-      .fromTo(elements, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.1, ease: 'power2.out' }, '-=0.2');
-    return () => tl.kill();
-  }, [showComplete]);
-
+  /** @param {string} id @param {boolean} correct */
   const handleComplete = (id, correct) => {
     completeQuiz(id, correct);
-    if (correct) setScore(s => s + 10);
+    if (correct) addPoints(10);
+    if (correct) setQuizScore(score => score + 1);
   };
 
   const handleNext = () => {
-    for (let i = currentIdx + 1; i < allQuizzes.length; i++) {
-      if (!completedQuizzes.includes(allQuizzes[i].id)) { setCurrentIdx(i); return; }
+    if (!topic) return;
+    if (questionIndex < topic.questions.length - 1) {
+      setQuestionIndex(index => index + 1);
+      return;
     }
-    for (let i = 0; i < currentIdx; i++) {
-      if (!completedQuizzes.includes(allQuizzes[i].id)) { setCurrentIdx(i); return; }
-    }
-    setShowComplete(true);
+    const finalScore = quizScore;
+    saveTopicScore(topic.id, finalScore, topic.questions.length);
+    setResult({ score: finalScore, total: topic.questions.length });
   };
 
-  return (
-    <main className="min-h-screen bg-[#050E1D]">
-      <Navbar />
-      <section className="px-5 pb-8 pt-36 text-center">
-        <span className="rihla-kicker">Test Your Knowledge</span>
-        <h1 className="font-display text-5xl font-bold text-[#F5F0E8] sm:text-6xl">Challenges & <span className="text-[#C8965A]">Quizzes</span></h1>
-        <p className="rihla-subtitle">Answer questions from across the UAE journey. Each correct answer earns you 10 points. Your progress is saved automatically.</p>
-      </section>
-      <section className="mx-auto max-w-3xl px-5 py-14">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[#1A3355] bg-[#0A1A30] p-5">
-          <div className="flex items-center gap-3">
-            <Star className="text-[#E8B97A]" size={24} />
-            <div><b ref={scoreRef} className="font-display text-2xl text-[#E8B97A]">{score}</b><p className="text-xs text-[#8FA3BF]">Session Score</p></div>
-          </div>
-          <div className="flex items-center gap-3">
-            <Trophy className="text-[#C8965A]" size={24} />
-            <div><b className="font-display text-2xl text-[#E8B97A]">{completedQuizzes.length}</b><p className="text-xs text-[#8FA3BF]">Completed</p></div>
-          </div>
-          <div className="flex items-center gap-3">
-            <CheckCircle className="text-[#2D6A4F]" size={24} />
-            <div><b className="font-display text-2xl text-[#E8B97A]">{remaining}</b><p className="text-xs text-[#8FA3BF]">Remaining</p></div>
-          </div>
-        </div>
-        {showComplete ? (
-          <div ref={completionRef} className="rounded-2xl border border-[#C8965A]/40 bg-[#0A1A30] p-8 text-center">
-            <div data-animate className="text-5xl">🏆</div>
-            <h2 data-animate className="mt-4 font-display text-2xl font-bold text-[#F5F0E8]">All Challenges Completed!</h2>
-            <p data-animate className="mt-2 text-sm text-[#8FA3BF]">You've answered all {allQuizzes.length} questions. Great work on your UAE journey!</p>
-            <div data-animate className="mt-6 flex justify-center gap-4">
-              <div className="rounded-xl border border-[#1A3355] bg-[#071426] px-6 py-3">
-                <b className="font-display text-2xl text-[#E8B97A]">{score}</b>
-                <p className="text-xs text-[#8FA3BF]">Session Points</p>
-              </div>
-              <div className="rounded-xl border border-[#1A3355] bg-[#071426] px-6 py-3">
-                <b className="font-display text-2xl text-[#E8B97A]">{points}</b>
-                <p className="text-xs text-[#8FA3BF]">Total Points</p>
-              </div>
-            </div>
-            <div data-animate className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#C8965A]/40 bg-[#C8965A]/10 px-5 py-2 text-sm font-bold text-[#E8B97A]">
-              <Award size={18} /> Achievement Unlocked
-            </div>
-          </div>
-        ) : (
-          <>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="rounded-full bg-[#1A3355] px-3 py-1 text-xs text-[#B7C3D4]">{quiz.category}</span>
-              <span className="text-xs text-[#8FA3BF]">{quiz.source}</span>
-            </div>
-            <ChallengeQuiz key={quiz.id} quiz={quiz} quizId={quiz.id} onComplete={handleComplete} onNext={handleNext} />
-            {remaining > 0 && <p className="mt-4 text-center text-xs text-[#8FA3BF]">{remaining} questions remaining</p>}
-          </>
-        )}
-      </section>
-      <Footer />
-    </main>
-  );
+  const returnToHub = () => { setView('hub'); setActivity(null); setResult(null); };
+
+  return <main className="min-h-screen bg-[#050E1D]"><Navbar />
+    <section className="px-5 pb-8 pt-36 text-center"><span className="rihla-kicker">The Rihla Challenge Hub</span><h1 className="font-display text-5xl font-bold text-[#F5F0E8] sm:text-6xl">Challenges <span className="text-[#C8965A]">& Activities</span></h1><p className="rihla-subtitle">Test what you know about the UAE through focused topic quizzes, clues, and playful challenges.</p></section>
+    <section className="mx-auto max-w-6xl px-5 pb-14">
+      {view === 'hub' && <>
+        <div className="mb-14 flex flex-wrap items-center justify-between gap-6 border-y border-[#1A3355] py-7"><div><span className="rihla-kicker">Your Progress</span><h2 className="font-display text-3xl font-bold text-[#F5F0E8]">Total Score</h2></div><div className="flex items-center gap-3"><Trophy className="text-[#C8965A]" size={28} /><strong className="font-display text-4xl text-[#E8B97A]">{points}</strong><span className="text-sm text-[#8FA3BF]">points</span></div></div>
+        <div className="mb-16"><div className="mb-7 flex items-end justify-between gap-4"><div><h2 className="font-display text-3xl font-bold text-[#F5F0E8]">Quiz</h2></div><Compass className="text-[#C8965A]" size={30} /></div><div className="grid gap-x-8 gap-y-5 md:grid-cols-2">{challengeTopics.map(item => <button key={item.id} onClick={() => startTopic(item.id)} className="group border-b border-[#1A3355] py-5 text-left transition hover:border-[#C8965A]"><div className="flex items-start justify-between gap-4"><div><h3 className="font-display text-2xl font-bold text-[#F5F0E8] group-hover:text-[#E8B97A]">{item.name}</h3><p className="mt-2 max-w-md text-sm leading-6 text-[#8FA3BF]">{item.description}</p></div><ArrowRight className="mt-1 shrink-0 text-[#C8965A] transition group-hover:translate-x-1" size={20} /></div><div className="mt-4 flex items-center gap-4 text-xs uppercase tracking-wider text-[#B7C3D4]"><span>{item.questions.length} Questions</span><span className="text-[#C8965A]">{formatScore(topicScores[item.id])}</span></div></button>)}</div></div>
+        <div><div className="mb-7"><span className="rihla-kicker">Play Beyond the Quiz</span><h2 className="font-display text-3xl font-bold text-[#F5F0E8]">Interactive Activities</h2></div><div className="grid gap-8 md:grid-cols-2"><button onClick={() => { setActivity('crossword'); setView('activity'); }} className="group border-l-2 border-[#C8965A] bg-[#0A1A30] p-7 text-left transition hover:bg-[#0D2038]"><h3 className="font-display text-2xl font-bold text-[#F5F0E8]">UAE Crossword</h3><p className="mt-3 text-sm leading-6 text-[#8FA3BF]">Decode clues about heritage, landmarks, and traditions in a playable crossing-word puzzle.</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#E8B97A]">Start puzzle <Play size={15} /></span></button>
+        <button onClick={() => { setActivity('word'); setView('activity'); }} className="group border-l-2 border-[#2D6A4F] bg-[#0A1A30] p-7 text-left transition hover:bg-[#0D2038]"><h3 className="font-display text-2xl font-bold text-[#F5F0E8]">Guess the UAE Word</h3><p className="mt-3 text-sm leading-6 text-[#8FA3BF]">Find a five-letter UAE-themed word using letter-position clues and six guesses.</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#E8B97A]">Start game <Play size={15} /></span></button></div></div>
+      </>}
+      {view === 'quiz' && topic && question && !result && <div className="mx-auto max-w-3xl"><button onClick={returnToHub} className="mb-8 inline-flex items-center gap-2 text-sm text-[#E8B97A]"><ArrowLeft size={16} /> Choose another topic</button><div className="mb-7 flex items-end justify-between gap-4"><div><span className="rihla-kicker">{topic.name}</span><h2 className="font-display text-3xl font-bold text-[#F5F0E8]">Question {questionIndex + 1} of {topic.questions.length}</h2></div><span className="text-sm text-[#8FA3BF]">{quizScore} correct</span></div><div className="mb-6 h-2 overflow-hidden bg-[#1A3355]"><div className="h-full bg-[#C8965A] transition-all" style={{ width: `${((questionIndex + 1) / topic.questions.length) * 100}%` }} /></div><ChallengeQuiz key={question.id} quiz={question} quizId={question.id} onComplete={handleComplete} onNext={handleNext} /></div>}
+      {view === 'quiz' && topic && result && <div className="mx-auto max-w-2xl border-t border-[#C8965A] pt-10 text-center"><span className="rihla-kicker">{topic.name}</span><h2 className="font-display text-4xl font-bold text-[#F5F0E8]">Quiz complete</h2><p className="mt-6 text-sm uppercase tracking-wider text-[#8FA3BF]">You scored</p><p className="mt-2 font-display text-7xl text-[#E8B97A]">{result.score}<span className="text-3xl text-[#8FA3BF]">/{result.total}</span></p><p className="mt-5 inline-flex items-center gap-2 text-sm text-[#6FCF97]"><CheckCircle size={17} /> Result saved for this topic</p><div className="mt-10 flex flex-wrap justify-center gap-3"><button onClick={() => startTopic(topic.id)} className="rihla-primary min-w-0 px-6 py-3">Try again</button><button onClick={returnToHub} className="inline-flex items-center gap-2 border border-[#1A3355] px-6 py-3 text-sm font-bold text-[#B7C3D4]">Choose another topic</button></div></div>}
+      {view === 'activity' && <div><button onClick={returnToHub} className="mb-8 inline-flex items-center gap-2 text-sm text-[#E8B97A]"><ArrowLeft size={16} /> Back to Challenges</button>{activity === 'crossword' ? <Crossword /> : <GuessUaeWord />}</div>}
+    </section><Footer /></main>;
 }

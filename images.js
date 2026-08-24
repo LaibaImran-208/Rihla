@@ -40,7 +40,7 @@ export const locationImages = {
 'abrahamic-family-house':       'https://afhqportalimageslive.blob.core.windows.net/qportalimageslive/venue/22/2025/06/01/customer-portal-config/pages/cover_images/1748807882_683cb0ca832fb_Main_Banner-min.jpg',
 // --- Dubai ---
   'burj-khalifa':                 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVyaiUyMGtoYWxpZmF8ZW58MHx8MHx8fDA%3D',
-  'dubai-creek':                  'https://hotairballoondubai.co/wp-content/uploads/2024/11/Dubai-Creek-history.jpg',
+  'dubai-creek':                  'https://skyvalleyrealestate.ae/wp-content/uploads/2026/05/Dubai-Creek-Harbour-1.webp',
   'al-fahidi-historical-neighbourhood': 'https://openspace.ae/wp-content/uploads/2023/02/al-fahidi-scaled-1.jpg',
   'dubai-frame':                  'https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWklMjBmcmFtZXxlbnwwfHwwfHx8MA%3D%3D',
   'museum-of-the-future':         'https://images.unsplash.com/photo-1667592441284-b590021411e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVzZXVtJTIwb2YlMjBmdXR1cmV8ZW58MHx8MHx8fDA%3D',

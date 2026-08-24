@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import Navbar from '@/components/rihla/Navbar';
 import Footer from '@/components/rihla/Footer';
-import QuizCard from '@/components/rihla/QuizCard';
 import { values } from '@/data/values';
-import useJourney from '@/hooks/useJourney';
 export default function Values() {
   const [active, setActive] = useState(0);
-  const { completeQuiz } = useJourney();
   const v = values[active];
   return <main className="min-h-screen bg-[#050E1D]"><Navbar />
     <section className="px-5 pb-8 pt-36 text-center"><span className="rihla-kicker">القيم · Values</span><h1 className="font-display text-5xl font-bold text-[#F5F0E8] sm:text-6xl">UAE <span className="text-[#C8965A]">Values</span></h1><p className="rihla-subtitle">Discover the values that shape Emirati society — respect, compassion, hospitality, tolerance, and more.</p></section>
@@ -19,10 +16,8 @@ export default function Values() {
           <div><b className="text-[#C8965A]">UAE Cultural Context</b><p className="mt-1 leading-7 text-[#B7C3D4]">{v.uaeContext}</p></div>
           <div><b className="text-[#C8965A]">Everyday Example</b><p className="mt-1 leading-7 text-[#B7C3D4]">{v.everydayExample}</p></div>
           <div><b className="text-[#C8965A]">Why It Matters</b><p className="mt-1 leading-7 text-[#B7C3D4]">{v.whyItMatters}</p></div>
-          <div className="rounded-xl border border-[#C8965A]/30 bg-[#C8965A]/5 p-4"><b className="text-[#E8B97A]">Reflection Question</b><p className="mt-1 leading-7 text-[#B7C3D4]">{v.reflection}</p></div>
         </div>
       </div>
-      <div className="mt-8"><QuizCard quiz={v.scenario} quizId={`value-${v.name}`} onComplete={completeQuiz} /></div>
       <div className="mt-8 flex justify-between"><button onClick={() => setActive((a) => Math.max(0, a - 1))} disabled={active === 0} className="rounded-full border border-[#1A3355] px-5 py-2 text-sm text-[#B7C3D4] disabled:opacity-30">← Previous</button><span className="text-sm text-[#8FA3BF]">{active + 1} / {values.length}</span><button onClick={() => setActive((a) => Math.min(values.length - 1, a + 1))} disabled={active === values.length - 1} className="rounded-full border border-[#1A3355] px-5 py-2 text-sm text-[#B7C3D4] disabled:opacity-30">Next →</button></div>
     </section><Footer /></main>;
 }

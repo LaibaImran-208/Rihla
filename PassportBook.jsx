@@ -4,7 +4,7 @@ import { emirates } from '@/data/emirates';
 import useJourney from '@/hooks/useJourney';
 
 export default function PassportBook() {
-  const { exploredPlaces, stamps, points, completedQuizzes } = useJourney();
+  const { exploredPlaces, stamps, points, topicScores = {} } = useJourney();
   const totalPlaces = emirates.reduce((s, e) => s + e.locations.length, 0);
   const placePercent = Math.round((exploredPlaces.length / totalPlaces) * 100);
   const stampGridRef = useRef(null);
@@ -22,7 +22,7 @@ export default function PassportBook() {
   const stats = [
     ['Points', points, '⭐'],
     ['Places', `${exploredPlaces.length}/${totalPlaces}`, '📍'],
-    ['Quizzes', completedQuizzes.length, '🧠'],
+    ['Topics', Object.keys(topicScores).length, '🧠'],
     ['Stamps', `${stamps.length}/7`, '🛂']
   ];
 
