@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-const links = [['/', 'Home'], ['/emirates-explorer', 'Emirates'], ['/culture', 'Culture'], ['/values', 'Values'], ['/citizenship', 'Citizenship'], ['/sustainability', 'Sustainability'], ['/timeline', 'Timeline'], ['/calendar', 'Calendar'], ['/challenges', 'Challenges']];
+const links = [['/', 'Home'], ['/emirates-explorer', 'Emirates'], ['/culture', 'Culture'], ['/values', 'Values'], ['/citizenship', 'Citizenship'], ['/sustainability', 'Sustainability'], ['/timeline', 'Timeline'], ['/calendar', 'Calendar'], ['/challenges', 'Challenges'], ['/puzzles', 'Puzzles']];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return <header className="fixed inset-x-0 top-0 z-50 border-b border-[#1A3355]/80 bg-[#050E1D]/90 backdrop-blur-xl">

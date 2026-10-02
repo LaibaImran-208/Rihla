@@ -18,6 +18,7 @@ import Sustainability from '@/pages/Sustainability';
 import Timeline from '@/pages/Timeline';
 import CulturalCalendar from '@/pages/CulturalCalendar';
 import Challenges from '@/pages/Challenges';
+import Puzzles from '@/pages/RihlaPuzzles';
 // GitHub deployment test
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -56,6 +57,7 @@ const AuthenticatedApp = () => {
       <Route path="/timeline" element={<Timeline />} />
       <Route path="/calendar" element={<CulturalCalendar />} />
       <Route path="/challenges" element={<Challenges />} />
+      <Route path="/puzzles" element={<Puzzles />} />
       <Route path="/digital-passport" element={<DigitalPassport />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

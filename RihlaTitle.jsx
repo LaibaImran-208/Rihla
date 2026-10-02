@@ -57,7 +57,7 @@ export default function RihlaTitle({ onComplete }) {
             <rect ref={maskRef} x="0" y="0" width="0" height="200" />
           </clipPath>
         </defs>
-        <text x="300" y="150" textAnchor="middle" fontSize="140" fontFamily="'Sacramento', cursive" fill="#F5F0E8" clipPath="url(#rihla-clip)">Rihla</text>
+        <text x="300" y="150" textAnchor="middle" fontSize="135" fontFamily="'Sacramento', cursive" fill="#F5F0E8" clipPath="url(#rihla-clip)">Rihla</text>
         <g ref={planeRef}>
           <path d="M0,0 L30,10 L0,22 L10,10 Z" fill="#F5F0E8" stroke="#C8965A" strokeWidth="1.5" />
           <path d="M10,10 L30,10" stroke="#C8965A" strokeWidth="0.8" />

@@ -9,7 +9,7 @@ const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me
  * Generated images are hosted on media.db.com.
  * Stock photos are from Unsplash (images.unsplash.com).
  */
-
+export const uaemapimg ={ 'map':'https://static.vecteezy.com/system/resources/previews/024/309/615/non_2x/uae-map-flat-with-high-details-united-arab-emirates-political-map-with-labeling-uae-administrative-map-7-emirates-and-capital-cities-also-vector.jpg' };
 export const emirateImages = {
   'abu-dhabi':       'https://media.assettype.com/outlooktraveller/2024-08-20/0nbfvji7/shutterstock_2473580625.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100',
   'dubai':           'https://images.trvl-media.com/place/1079/7c70ab1d-5b73-4916-a4a6-3cfdd2e876b7.jpg',
