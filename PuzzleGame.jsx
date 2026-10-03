@@ -43,7 +43,7 @@ function PieceArtwork({ piece, image, layer = 'tray', outline = false }) {
 
 const initialDrag = null;
 
-export default function PuzzleGame({ puzzle, onNext, onComplete, isLastStage, completedCount }) {
+export default function PuzzleGame({ puzzle, trayOrder, onNext, onComplete, isLastStage, completedCount }) {
   const pieces = useMemo(() => createPuzzlePieces(PUZZLE_ROWS, PUZZLE_COLUMNS), []);
   const boardRef = useRef(null);
   const dragRef = useRef(initialDrag);
@@ -245,7 +245,8 @@ export default function PuzzleGame({ puzzle, onNext, onComplete, isLastStage, co
     }
   };
 
-  const remainingPieces = pieces.filter(piece => !placedIds.has(piece.id));
+  const pieceOrder = useMemo(() => new Map((trayOrder || pieces.map(piece => piece.id)).map((id, index) => [id, index])), [pieces, trayOrder]);
+  const remainingPieces = pieces.filter(piece => !placedIds.has(piece.id)).sort((first, second) => pieceOrder.get(first.id) - pieceOrder.get(second.id));
   const draggedPiece = dragging ? pieces.find(piece => piece.id === dragging.id) : null;
   const cellWidth = boardSize.width / PUZZLE_COLUMNS;
   const cellHeight = boardSize.height / PUZZLE_ROWS;

@@ -1,0 +1,123 @@
+.passport-profile { margin-bottom: 2.5rem; padding: 1.5rem; border: 1px solid #1a3355; border-radius: 14px; background: linear-gradient(130deg, rgba(13, 34, 64, .96), rgba(7, 20, 38, .96)); box-shadow: 0 18px 40px rgba(0, 0, 0, .18); }
+.passport-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.passport-section-heading h2 { margin-top: .25rem; color: #f5f0e8; font-family: var(--font-display, inherit); font-size: 1.5rem; font-weight: 700; }
+.passport-edit-button, .certificate-close { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: .5rem; border: 1px solid rgba(200, 150, 90, .42); border-radius: 7px; padding: .55rem .85rem; color: #e8b97a; background: rgba(5, 14, 29, .55); font-size: .86rem; font-weight: 650; }
+.passport-profile button:focus-visible, .certificate-modal button:focus-visible { outline: 2px solid #e8b97a; outline-offset: 3px; }
+.profile-form-note { margin: 0 0 1rem; color: #8fa3bf; font-size: .78rem; }
+.profile-form-note span, .profile-field b { color: #e8b97a; }
+.profile-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.profile-field { display: grid; align-content: start; gap: .45rem; color: #dce3ed; font-size: .88rem; font-weight: 650; }
+.profile-field > span { display: flex; align-items: center; gap: .35rem; }
+.profile-field > span small { color: #7387a2; font-size: .72rem; font-weight: 500; }
+.profile-field input { width: 100%; min-height: 46px; border: 1px solid #294568; border-radius: 7px; padding: .65rem .8rem; color: #f5f0e8; background: #071426; outline: none; }
+.profile-field input:focus { border-color: #e8b97a; box-shadow: 0 0 0 3px rgba(232, 185, 122, .14); }
+.profile-field input[aria-invalid="true"] { border-color: #d98181; }
+.profile-field-error { color: #f0a5a5; font-size: .76rem; font-weight: 500; }
+.profile-form-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.profile-saved-card { display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(143, 163, 191, .18); padding-top: 1.25rem; }
+.profile-avatar { display: grid; width: 48px; height: 48px; flex: 0 0 48px; place-items: center; border: 1px solid rgba(200, 150, 90, .45); border-radius: 50%; color: #e8b97a; background: rgba(200, 150, 90, .1); }
+.profile-saved-details h3 { color: #f5f0e8; font-family: var(--font-display, inherit); font-size: 1.2rem; font-weight: 700; }
+.profile-detail-list { display: flex; flex-wrap: wrap; gap: .45rem 1rem; margin-top: .35rem; color: #9aacc4; font-size: .84rem; }
+.profile-detail-list span + span { position: relative; }
+.profile-detail-list span + span::before { position: absolute; top: .25em; left: -.55rem; height: .9em; border-left: 1px solid #49617f; content: ''; }
+.passport-stamp-page { background: linear-gradient(145deg, #f7f2e7, #e8dfcd); box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .45), 0 5px 14px rgba(0, 0, 0, .12); }
+.passport-stamp-image { display: block; width: 100%; max-width: 132px; height: 82px; margin: 0 auto; object-fit: contain; }
+.passport-stamp-locked { display: grid; width: 100px; height: 82px; place-items: center; color: #768399; font-family: Arial, sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+.certificate-section { margin-top: 2.5rem; border-top: 1px solid #1a3355; padding-top: 2rem; }
+.certificate-section-heading { display: flex; align-items: center; gap: .8rem; color: #c8965a; }
+.certificate-section-heading h2 { color: #f5f0e8; font-family: var(--font-display, inherit); font-size: 1.65rem; font-weight: 700; }
+.certificate-status-panel { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 1rem; border: 1px solid #1a3355; border-radius: 10px; padding: 1.25rem; background: #0a1a30; }
+.certificate-status-panel.is-ready { border-color: rgba(200, 150, 90, .52); background: linear-gradient(120deg, rgba(200, 150, 90, .1), rgba(10, 26, 48, .96) 50%); }
+.certificate-status-copy h3 { color: #f5f0e8; font-size: 1.05rem; font-weight: 700; }
+.certificate-status-copy p { max-width: 620px; margin-top: .35rem; color: #8fa3bf; font-size: .88rem; line-height: 1.6; }
+.certificate-status-copy .certificate-remaining { color: #e8b97a; }
+.certificate-status-panel .rihla-primary, .certificate-status-panel .rihla-secondary { flex: 0 0 auto; }
+
+.certificate-modal { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow: auto; padding: 1.25rem; background: rgba(2, 8, 17, .88); }
+.certificate-modal-panel { width: min(100%, 1240px); max-height: calc(100vh - 2.5rem); overflow: auto; border: 1px solid rgba(200, 150, 90, .4); border-radius: 10px; padding: 1rem; background: #071426; box-shadow: 0 24px 80px rgba(0, 0, 0, .5); }
+.certificate-modal-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.certificate-modal-header h2 { color: #f5f0e8; font-family: var(--font-display, inherit); font-size: 1.25rem; font-weight: 700; }
+.certificate-modal-actions { display: flex; align-items: center; gap: .65rem; }
+.certificate-close { width: 42px; padding: 0; }
+
+.certificate-paper { position: relative; isolation: isolate; display: block; width: 100%; aspect-ratio: 297 / 210; overflow: hidden; color: #132945; background: #f2eddf; font-family: Georgia, 'Times New Roman', serif; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.certificate-backdrop, .certificate-veil { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; }
+.certificate-backdrop { object-fit: cover; opacity: .31; }
+.certificate-veil { z-index: -1; background: linear-gradient(120deg, rgba(7, 20, 38, .24), rgba(7, 20, 38, .66)); }
+.certificate-frame { position: absolute; inset: 2.15%; border: 1px solid #b5813f; padding: .65%; }
+.certificate-frame::before { position: absolute; inset: 4px; border: 1px solid rgba(19, 41, 69, .44); content: ''; pointer-events: none; }
+.certificate-content { position: relative; display: flex; width: 100%; height: 100%; flex-direction: column; justify-content: space-between; overflow: hidden; border: 1px solid rgba(181, 129, 63, .55); padding: 2.5% 4.25% 1.8%; background: rgba(247, 244, 234, .96); }
+.certificate-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1.2%; border-bottom: 1px solid rgba(181, 129, 63, .48); padding-bottom: 1.15%; }
+.certificate-brand { display: flex; align-items: center; gap: .7em; }
+.certificate-brand img { width: 3.5em; height: 3.5em; object-fit: contain; }
+.certificate-brand > div { display: flex; align-items: baseline; gap: .45em; }
+.certificate-brand-name { color: #153251; font-family: 'Sacramento', Georgia, serif; font-size: 1.7em; }
+.certificate-brand-arabic { color: #a87536; font-family: 'Architects_Daughter', Georgia, serif; font-size: 1em; }
+.certificate-school { display: block; width: 17em; max-width: 100%; max-height: 3.5em; object-fit: contain; }
+.certificate-country { justify-self: end; color: #94642c; font-family: Arial, sans-serif; font-size: .68em; font-weight: 700; letter-spacing: .14em; text-align: right; text-transform: uppercase; }
+.certificate-achievement { text-align: center; }
+.certificate-eyebrow { color: #a87536; font-family: Arial, sans-serif; font-size: .67em; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.certificate-achievement h1 { margin-top: .2em; color: #122b48; font-family: Georgia, 'Times New Roman', serif; font-size: 2em; font-weight: 500; }
+.certificate-presented { margin-top: .25em; color: #53647a; font-size: .8em; font-style: italic; }
+.certificate-recipient { display: inline-block; max-width: 95%; margin-top: .05em; border-bottom: 1px solid #b5813f; padding: 0 .3em .08em; color: #102945; font-family: Georgia, 'Times New Roman', serif; font-size: 2.45em; line-height: 1.15; overflow-wrap: anywhere; }
+.certificate-recipient-details { margin-top: .15em; color: #6f7884; font-family: Arial, sans-serif; font-size: .68em; }
+.certificate-copy { max-width: 74%; margin: .45em auto 0; color: #3f5269; font-family: Arial, sans-serif; font-size: .74em; line-height: 1.55; }
+.certificate-proof { border-top: 1px solid rgba(181, 129, 63, .38); padding-top: .8%; }
+.certificate-passport-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.certificate-passport-heading h2 { margin-top: .08em; color: #183754; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05em; font-weight: 700; }
+.certificate-points { display: flex; align-items: baseline; gap: .5em; color: #173655; font-family: Arial, sans-serif; }
+.certificate-points strong { color: #9a672d; font-family: Georgia, 'Times New Roman', serif; font-size: 1.55em; }
+.certificate-points span { font-size: .65em; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.certificate-stamps { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .75%; margin-top: .65%; }
+.certificate-stamp { display: grid; min-width: 0; height: 5.1em; place-items: center; padding: .1em; }
+.certificate-stamp img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.certificate-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(181, 129, 63, .38); padding-top: .5%; color: #66768a; font-family: Arial, sans-serif; font-size: .61em; }
+.certificate-footer-mark { display: inline-flex; align-items: center; gap: .55em; color: #8d6637; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.certificate-footer-mark i { width: 3px; height: 3px; border-radius: 50%; background: #b5813f; }
+
+@media (max-width: 640px) {
+  .passport-profile { padding: 1.1rem; }
+  .passport-section-heading { align-items: flex-start; }
+  .passport-section-heading h2 { font-size: 1.3rem; }
+  .profile-form-grid { grid-template-columns: 1fr; gap: .8rem; }
+  .profile-form-actions { flex-direction: column; }
+  .profile-form-actions .rihla-primary, .profile-form-actions .rihla-secondary { width: 100%; }
+  .certificate-status-panel { align-items: flex-start; flex-direction: column; }
+  .certificate-status-panel .rihla-primary, .certificate-status-panel .rihla-secondary { width: 100%; }
+  .certificate-modal { align-items: start; padding: .6rem; }
+  .certificate-modal-panel { max-height: calc(100vh - 1.2rem); padding: .6rem; }
+  .certificate-modal-header { align-items: flex-start; }
+  .certificate-modal-actions { gap: .35rem; }
+  .certificate-modal-actions .rihla-primary { min-height: 38px; padding-inline: .6rem; font-size: .75rem; }
+  .certificate-close { width: 38px; min-height: 38px; }
+  .certificate-content { padding: 2% 3% 1.5%; }
+  .certificate-header { grid-template-columns: 1fr auto; }
+  .certificate-school { width: 11em; grid-column: 2; grid-row: 1; }
+  .certificate-country { display: none; }
+  .certificate-brand img { width: 2.7em; height: 2.7em; }
+  .certificate-brand-name { font-size: 1.35em; }
+  .certificate-brand-arabic { font-size: .8em; }
+  .certificate-achievement h1 { font-size: 1.35em; }
+  .certificate-recipient { font-size: 1.65em; }
+  .certificate-copy { max-width: 90%; font-size: .62em; }
+  .certificate-stamp { height: 3.6em; }
+  .certificate-footer { font-size: .5em; }
+}
+
+@page { size: A4 landscape; margin: 0; }
+
+@media print {
+  html, body, #root { width: 297mm !important; height: 210mm !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #f2eddf !important; }
+  body * { visibility: hidden !important; }
+  .certificate-modal { position: static !important; display: block !important; width: 297mm !important; height: 210mm !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; background: transparent !important; }
+  .certificate-modal-panel { display: contents !important; }
+  .certificate-modal-header { display: none !important; }
+  .print-certificate-only, .print-certificate-only * { visibility: visible !important; }
+  .print-certificate-only { position: fixed !important; inset: 0 !important; width: 297mm !important; height: 210mm !important; max-width: none !important; aspect-ratio: auto !important; margin: 0 !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: avoid !important; break-after: avoid-page !important; }
+  .certificate-frame { inset: 6mm !important; padding: 1.5mm !important; }
+  .certificate-frame::before { inset: 1.5mm !important; }
+  .certificate-content { padding: 7mm 12mm 5mm !important; }
+  .certificate-backdrop { opacity: .31 !important; }
+  * { animation: none !important; transition: none !important; }
+}

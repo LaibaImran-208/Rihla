@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin } from 'lucide-react';
 import Navbar from '@/components/rihla/Navbar';
@@ -9,8 +9,16 @@ import { Image } from '@/components/ui/image';
 import useJourney from '@/hooks/useJourney';
 
 export default function EmiratesExplorer() {
-  const { exploredPlaces, stamps } = useJourney();
+  const { exploredPlaces, stamps, recordActivity } = useJourney();
   const [searchActive, setSearchActive] = useState(false);
+  const openedRef = useRef(false);
+
+  useEffect(() => {
+    if (!openedRef.current) {
+      openedRef.current = true;
+      recordActivity('EMIRATES_OPENED');
+    }
+  }, [recordActivity]);
 
   return (
     <main className="min-h-screen bg-[#050E1D]">

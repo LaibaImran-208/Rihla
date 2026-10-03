@@ -10,7 +10,7 @@ import './Puzzles.css';
 const stageIcon = stage => stage.id === 'uae' ? '🇦🇪' : stage.icon;
 
 export default function Puzzles() {
-  const { puzzleCompleted = [], completePuzzle } = useJourney();
+  const { puzzleCompleted = [], puzzleTileOrders = {}, completePuzzle } = useJourney();
   const [stageIndex, setStageIndex] = useState(() => {
     const firstIncomplete = puzzleStages.findIndex(stage => !puzzleCompleted.includes(stage.id));
     return firstIncomplete === -1 ? puzzleStages.length : firstIncomplete;
@@ -77,6 +77,7 @@ export default function Puzzles() {
             <PuzzleGame
               key={stage.id}
               puzzle={stage}
+              trayOrder={puzzleTileOrders[stage.id]}
               onNext={() => setStageIndex(current => Math.min(current + 1, puzzleStages.length - 1))}
               onComplete={completePuzzle}
               isLastStage={stageIndex === puzzleStages.length - 1}

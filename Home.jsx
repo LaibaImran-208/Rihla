@@ -5,14 +5,22 @@ import EmiratesPreview from '@/components/rihla/EmiratesPreview';
 import Footer from '@/components/rihla/Footer';
 import Countdown from '@/components/rihla/Countdown';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Puzzle } from 'lucide-react';
 import { timelineEvents } from '@/data/timeline';
 import { festivals } from '@/data/festivals';
 import { sustainabilityInitiatives } from '@/data/sustainability';
 import useJourney from '@/hooks/useJourney';
+import { useEffect, useRef } from 'react';
 const stats=[['🇦🇪','7','Emirates'],['📍','80+','Locations'],['🏛','50+','Heritage Sites'],['🚀','2071','Future Vision'],['🌱','Net Zero','by 2050'],['🏆','3','Identity Pillars']];
 export default function Home(){
-  const { exploredPlaces, points, stamps } = useJourney();
+  const { exploredPlaces, points, stamps, journeyStartedAt, recordActivity } = useJourney();
+  const startedRef = useRef(false);
+  useEffect(() => {
+    if (!journeyStartedAt && !startedRef.current) {
+      startedRef.current = true;
+      recordActivity('JOURNEY_STARTED');
+    }
+  }, [journeyStartedAt, recordActivity]);
   const upcoming=festivals.find(f=>f.type==='fixed')||festivals[0];
   const timelinePreview=timelineEvents.filter(e=>['1971','2010','2020','2023'].some(y=>e.year.includes(y))).slice(0,4);
   return (<main className="min-h-screen bg-[#050E1D]"><Navbar/><Hero/>
@@ -41,7 +49,7 @@ export default function Home(){
       </p>
     </div>
 
-    <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+    <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
 
       {/* Crossword */}
       <Link
@@ -106,6 +114,24 @@ export default function Home(){
             size={16}
             className="transition-transform group-hover:translate-x-1"
           />
+        </div>
+      </Link>
+
+      <Link
+        to="/puzzles"
+        className="group rounded-[2rem] border border-[#1A3355] bg-[#0A1A30] p-8 transition hover:border-[#C8965A]/60"
+      >
+        <div className="flex items-center gap-4">
+          <span className="grid size-14 place-items-center rounded-xl border border-[#C8965A]/35 bg-[#C8965A]/10 text-[#E8B97A]"><Puzzle size={28} aria-hidden="true" /></span>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-[#F5F0E8]">Rihla Puzzles</h3>
+            <p className="text-sm text-[#C8965A]">Piece together the UAE</p>
+          </div>
+        </div>
+        <p className="mt-5 text-sm leading-7 text-[#8FA3BF]">Piece together the UAE and explore its emirates through image-based jigsaw puzzles.</p>
+        <div className="mt-6 inline-flex items-center gap-2 font-bold text-[#E8B97A]">
+          Play Puzzles
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
         </div>
       </Link>
 

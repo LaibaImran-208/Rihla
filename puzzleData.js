@@ -81,3 +81,8 @@ export const puzzleStages = [
     icon: '🏰',
   },
 ];
+
+export const PUZZLE_STAGE_IDS = puzzleStages.map(stage => stage.id);
+
+// Saved completion state depends on these stable IDs.
+

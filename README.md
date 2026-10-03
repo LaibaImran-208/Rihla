@@ -116,12 +116,25 @@ The project is organized into reusable components, page-level components, data f
 
 Rihla is deployed using **Cloudflare Workers**.
 
-The production build is generated using Vite and deployed using Wrangler:
+Explorer profile and activity sync use a Cloudflare Worker with a D1 database. Before first deployment, create the database and copy its ID into `wrangler.jsonc` in place of the zero UUID placeholder. Then apply the migration and deploy:
 
 ```bash
+npx wrangler d1 create rihla-explorer-activity
+npx wrangler d1 migrations apply rihla-explorer-activity --remote
 npm run build
 npx wrangler deploy
 ```
+
+For local activity API testing, apply the migration locally and run Wrangler and Vite in separate terminals. Vite proxies `/api/*` to Wrangler:
+
+```bash
+npm run build
+npx wrangler d1 migrations apply rihla-explorer-activity --local
+npx wrangler dev --local --port 8787
+npm run dev
+```
+
+The activity API stores a random explorer ID and a per-browser bearer token hash. The browser token authorizes only that explorer's own profile/activity reads and writes. Activity data is client-reported, so it is useful for engagement reporting but is not tamper-proof proof of student identity or completion. The Worker intentionally has no endpoint that lists explorers. There is no admin authentication system in this project, so an owner dashboard is not exposed; adding one requires authenticated admin identity and authorization before any aggregate or cross-explorer read endpoint is introduced. The explorer ID and bearer token are stored in that browser's existing journey state. A person who clears site storage creates a new explorer record.
 
 
 ##  Team

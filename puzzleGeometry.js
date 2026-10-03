@@ -54,6 +54,15 @@ export const createPuzzlePieces = (rows = 6, cols = 8) => {
   return pieces.sort((first, second) => hash(`order-${first.id}`) - hash(`order-${second.id}`));
 };
 
+export const createShuffledPuzzlePieceIds = () => {
+  const ids = createPuzzlePieces(PUZZLE_ROWS, PUZZLE_COLUMNS).map(piece => piece.id);
+  for (let index = ids.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [ids[index], ids[swapIndex]] = [ids[swapIndex], ids[index]];
+  }
+  return ids;
+};
+
 export const PUZZLE_ROWS = 6;
 export const PUZZLE_COLUMNS = 8;
 export const PUZZLE_CELL_SIZE = 100;

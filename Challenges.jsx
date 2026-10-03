@@ -14,7 +14,7 @@ import useJourney from '@/hooks/useJourney';
 const formatScore = score => score ? `${score.score}/${score.total}` : 'Not completed';
 
 export default function Challenges() {
-  const { completeQuiz, addPoints, topicScores = {}, points, saveTopicScore } = useJourney();
+  const { completeQuiz, addPoints, topicScores = {}, points, saveTopicScore, recordActivity } = useJourney();
   const [view, setView] = useState('hub');
   const [selectedTopic, setSelectedTopic] = useState(/** @type {string | null} */ (null));
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -48,6 +48,7 @@ export default function Challenges() {
     }
     const finalScore = quizScore;
     saveTopicScore(topic.id, finalScore, topic.questions.length);
+    recordActivity('CHALLENGE_COMPLETED', { challengeId: topic.id, kind: 'quiz', score: finalScore, total: topic.questions.length });
     setResult({ score: finalScore, total: topic.questions.length });
   };
 

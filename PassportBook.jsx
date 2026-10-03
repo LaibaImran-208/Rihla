@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { emirates } from '@/data/emirates';
 import useJourney from '@/hooks/useJourney';
+import { passportStampAssets } from './passportStamps';
 
 export default function PassportBook() {
   const { exploredPlaces, stamps, points, topicScores = {} } = useJourney();
@@ -70,10 +71,14 @@ export default function PassportBook() {
               <div
                 key={e.id}
                 data-stamp-earned={done || undefined}
-                className={`grid min-h-28 place-items-center rounded-2xl border p-3 text-center ${done ? 'border-[#C8965A]/60 bg-[#C8965A]/10' : 'border-[#1A3355] bg-[#071426]'}`}
+                className={`passport-stamp-page grid min-h-36 place-items-center rounded-2xl border p-3 text-center ${done ? 'border-[#C8965A]/60' : 'border-[#1A3355]'}`}
               >
                 <div>
-                  <span className={`text-2xl ${done ? '' : 'grayscale opacity-30'}`}>{done ? e.icon : '🔒'}</span>
+                  {done ? (
+                    <img className="passport-stamp-image" src={passportStampAssets[e.id]} alt={`${e.name} passport stamp`} />
+                  ) : (
+                    <span className="passport-stamp-locked" aria-label="Stamp not yet earned">Locked</span>
+                  )}
                   <p className={`mt-2 text-xs font-bold ${done ? 'text-[#E8B97A]' : 'text-[#65758D]'}`}>{e.name}</p>
                 </div>
               </div>
