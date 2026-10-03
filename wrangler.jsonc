@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rihla-uae-explorer",
+  "name": "rihla",
   "main": "worker.js",
   "compatibility_date": "2026-10-03",
   "assets": {
@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "rihla-explorer-activity",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "9f2fa303-550e-480b-9dc0-9587b9fb91ce",
       "migrations_dir": "migrations"
     }
   ]

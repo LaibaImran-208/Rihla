@@ -25,7 +25,7 @@ export default function Puzzles() {
       <section className="puzzle-main mx-auto max-w-6xl px-5 pb-20 pt-32 sm:pt-36">
         <header className="puzzle-heading">
           <span className="rihla-kicker">Rihla exploration</span>
-          <h1 className="font-display text-4xl font-bold text-[#F5F0E8] sm:text-5xl">Rihla <span className="text-[#C8965A]">Puzzles</span></h1>
+          <h1 className="font-display text-4xl font-bold text-[#F5F0E8] sm:text-5xl">Puzzles <span className="text-[#C8965A]"></span></h1>
           <p className="mt-3 text-[#8FA3BF]">Piece together the UAE.</p>
         </header>
 
