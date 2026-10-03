@@ -73,7 +73,7 @@ export default function DigitalPassport() {
               {journeyComplete && profileComplete ? (
                 <p>Your seven emirate passport stamps are complete. Your certificate is personalized with your saved profile and passport progress.</p>
               ) : journeyComplete ? (
-                <p>Add your full name and age to prepare your certificate. Class / Grade is optional.</p>
+                <p>Add your full name and age to prepare your certificate. Grade / Class is optional.</p>
               ) : (
                 <>
                   <p>Earn all seven emirate passport stamps to complete the Rihla journey. Your current passport has {earnedEmirates.length} of 7 stamps.</p>

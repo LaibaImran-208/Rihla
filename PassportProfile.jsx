@@ -27,7 +27,7 @@ export default function PassportProfile({ profile = emptyProfile, onSave, editin
     else if (name.length > 80) nextErrors.name = 'Name must be 80 characters or fewer.';
     if (!values.age.trim()) nextErrors.age = 'Enter the explorer’s age.';
     else if (!/^\d+$/.test(values.age.trim()) || age < 5 || age > 25) nextErrors.age = 'Enter an age from 5 to 25.';
-    if (values.grade.trim().length > 30) nextErrors.grade = 'Class / Grade must be 30 characters or fewer.';
+    if (values.grade.trim().length > 30) nextErrors.grade = 'Grade / Class must be 30 characters or fewer.';
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) return;
 
@@ -66,7 +66,7 @@ export default function PassportProfile({ profile = emptyProfile, onSave, editin
             <h3>{profile.name}</h3>
             <div className="profile-detail-list">
               <span>Age {profile.age}</span>
-              {profile.grade && <span>Class / Grade {profile.grade}</span>}
+              {profile.grade && <span>Grade / Class {profile.grade}</span>}
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function PassportProfile({ profile = emptyProfile, onSave, editin
               {errors.age && <small className="profile-field-error" id="profile-age-error">{errors.age}</small>}
             </label>
             <label className="profile-field" htmlFor="profile-grade">
-              <span>Class / Grade <small>Optional</small></span>
+              <span>Grade / Class <small>Optional</small></span>
               <input id="profile-grade" name="grade" maxLength={40} value={values.grade} onChange={updateField} aria-invalid={Boolean(errors.grade)} aria-describedby={errors.grade ? 'profile-grade-error' : undefined} />
               {errors.grade && <small className="profile-field-error" id="profile-grade-error">{errors.grade}</small>}
             </label>

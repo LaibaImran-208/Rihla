@@ -38,7 +38,7 @@ function CertificateArtwork({ profile, stamps, points, completedAt }) {
             <p className="certificate-recipient">{profile.name}</p>
             {profile.grade && (
               <p className="certificate-recipient-details">
-                Class / Grade {profile.grade}
+                Grade / Class {profile.grade}
               </p>
             )}
             <p className="certificate-copy">
