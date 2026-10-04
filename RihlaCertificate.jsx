@@ -74,7 +74,7 @@ const DOWNLOAD_FIELD_POINTS = {
   },
 
   journeyPoints: {
-    x: 632,
+    x: 625,
     y: 190,
     size: 15.5,
   },
