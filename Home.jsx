@@ -124,7 +124,7 @@ export default function Home(){
         <div className="flex items-center gap-4">
           <span className="grid size-14 place-items-center rounded-xl border border-[#C8965A]/35 bg-[#C8965A]/10 text-[#E8B97A]"><Puzzle size={28} aria-hidden="true" /></span>
           <div>
-            <h3 className="font-display text-2xl font-bold text-[#F5F0E8]">Rihla Puzzles</h3>
+            <h3 className="font-display text-2xl font-bold text-[#F5F0E8]">Puzzles</h3>
             <p className="text-sm text-[#C8965A]">Piece together the UAE</p>
           </div>
         </div>

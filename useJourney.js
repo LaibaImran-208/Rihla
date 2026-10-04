@@ -103,19 +103,19 @@ export default function useJourney() {
   const saveTopicScore = useCallback((topicId, score, total) => setState(current => ({ ...current, topicScores: { ...current.topicScores, [topicId]: { score, total } } })), []);
   const completeCrossword = useCallback(id => {
     if (state.crosswordCompleted.includes(id)) return;
-    const next = { ...addPointsToState({ ...state, crosswordCompleted: [...state.crosswordCompleted, id] }, 10), lastActivity: ACTIVITY_LABELS.CHALLENGE_COMPLETED, lastActivityAt: dateNow() };
+    const next = { ...addPointsToState({ ...state, crosswordCompleted: [...state.crosswordCompleted, id] }, 10), lastActivity: ACTIVITY_LABELS.CHALLENGE_COMPLETED, lastActivityAt: new Date().toISOString() };
     setState(next);
     sendActivity(next, 'CHALLENGE_COMPLETED', { challengeId: id, kind: 'crossword' });
   }, [state]);
   const completeWordGame = useCallback(id => {
     if (state.wordGamesCompleted.includes(id)) return;
-    const next = { ...addPointsToState({ ...state, wordGamesCompleted: [...state.wordGamesCompleted, id] }, 10), lastActivity: ACTIVITY_LABELS.CHALLENGE_COMPLETED, lastActivityAt: dateNow() };
+    const next = { ...addPointsToState({ ...state, wordGamesCompleted: [...state.wordGamesCompleted, id] }, 10), lastActivity: ACTIVITY_LABELS.CHALLENGE_COMPLETED, lastActivityAt: new Date().toISOString() };
     setState(next);
     sendActivity(next, 'CHALLENGE_COMPLETED', { challengeId: id, kind: 'word-game' });
   }, [state]);
   const completePuzzle = useCallback(id => {
     if (state.puzzleCompleted.includes(id)) return;
-    const next = { ...state, puzzleCompleted: [...state.puzzleCompleted, id], lastActivity: ACTIVITY_LABELS.PUZZLE_COMPLETED, lastActivityAt: dateNow() };
+    const next = { ...state, puzzleCompleted: [...state.puzzleCompleted, id], lastActivity: ACTIVITY_LABELS.PUZZLE_COMPLETED, lastActivityAt: new Date().toISOString() };
     setState(next);
     sendActivity(next, 'PUZZLE_COMPLETED', { puzzleId: id });
   }, [state]);

@@ -1,3 +1,4 @@
+
 .passport-profile {
   margin-bottom: 2.5rem;
   padding: 1.5rem;
@@ -268,16 +269,12 @@
   position: fixed;
   z-index: 1000;
   inset: 0;
-
   display: grid;
   place-items: center;
-
   width: 100vw;
   height: 100vh;
-
   overflow: auto;
   padding: 1.25rem;
-
   background: rgba(2, 8, 17, .88);
 }
 
@@ -310,6 +307,7 @@
 
 .certificate-modal-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: .65rem;
 }
@@ -319,315 +317,7 @@
   padding: 0;
 }
 
-/* CERTIFICATE PAPER */
-
-.certificate-paper {
-  position: relative;
-  isolation: isolate;
-  display: block;
-  width: 100%;
-  aspect-ratio: 297 / 175;
-  overflow: hidden;
-  color: #132945;
-  background: #f2eddf;
-  font-family: Georgia, 'Times New Roman', serif;
-  print-color-adjust: exact;
-  -webkit-print-color-adjust: exact;
-}
-
-.certificate-backdrop,
-.certificate-veil {
-  position: absolute;
-  z-index: -2;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.certificate-backdrop {
-  object-fit: cover;
-  opacity: .31;
-}
-
-.certificate-veil {
-  z-index: -1;
-  background: linear-gradient(
-    120deg,
-    rgba(7, 20, 38, .24),
-    rgba(7, 20, 38, .66)
-  );
-}
-
-.certificate-frame {
-  position: absolute;
-  inset: 2.15%;
-  border: 1px solid #b5813f;
-  padding: .65%;
-}
-
-.certificate-frame::before {
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(19, 41, 69, .44);
-  content: '';
-  pointer-events: none;
-}
-
-/* CERTIFICATE CONTENT */
-
-.certificate-content {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden;
-  border: 1px solid rgba(181, 129, 63, .55);
-  padding: 2.5% 4.25% 1.8%;
-  background: rgba(247, 244, 234, .96);
-}
-
-/* CERTIFICATE HEADER */
-
-.certificate-header {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 1.2%;
-  border-bottom: 1px solid rgba(181, 129, 63, .48);
-  padding-bottom: 2%;
-}
-
-.certificate-school {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  width: 22em;
-  max-width: 100%;
-  max-height: 4.7em;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
-}
-
-.certificate-country {
-  grid-column: 3;
-  justify-self: end;
-  color: #94642c;
-  font-family: Arial, sans-serif;
-  font-size: .82em;
-  font-weight: 700;
-  letter-spacing: .1em;
-  line-height: 1.05;
-  text-align: right;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.certificate-brand {
-  display: flex;
-  align-items: center;
-  gap: .09em;
-}
-
-.certificate-brand img {
-  width: 4em;
-  height: 4em;
-  object-fit: contain;
-}
-
-.certificate-brand > div {
-  display: flex;
-  align-items: baseline;
-  gap: .3em;
-  white-space: nowrap;
-}
-
-.certificate-brand-name {
-  color: #153251;
-  font-family: 'Sacramento', Georgia, serif;
-  font-size: 2.35em;
-  line-height: .9;
-}
-
-.certificate-brand-arabic {
-  color: #a87536;
-  font-family: 'Architects_Daughter', system-ui;
-  font-size: 1.80em;
-  line-height: .9;
-  gap: .2em;
-}
-
-/* CERTIFICATE ACHIEVEMENT */
-
-.certificate-achievement {
-  text-align: center;
-  padding: 1.5% 0 1%;
-}
-
-.certificate-eyebrow {
-  color: #a87536;
-  font-family: Arial, sans-serif;
-  font-size: .78em;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-}
-
-.certificate-achievement h1 {
-  margin-top: .2em;
-  color: #122b48;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2.65em;
-  font-weight: 500;
-  line-height: 1.05;
-}
-
-.certificate-presented {
-  margin-top: .4em;
-  color: #53647a;
-  font-size: 1em;
-  font-style: italic;
-}
-
-.certificate-recipient {
-  display: inline-block;
-  max-width: 95%;
-  margin-top: .06em;
-  border-bottom: 1px solid #b5813f;
-  padding: 0 .3em .06em;
-  color: #102945;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2.6em;
-  line-height: 1.05;
-  overflow-wrap: anywhere;
-}
-
-.certificate-recipient-details {
-  margin-top: .18em;
-  color: #6f7884;
-  font-family: Arial, sans-serif;
-  font-size: .86em;
-}
-
-.certificate-copy {
-  max-width: 78%;
-  margin: .6em auto 0;
-  color: #3f5269;
-  font-family: Arial, sans-serif;
-  font-size: .72em;
-  line-height: 1.5;
-}
-
-/* PASSPORT PROOF SECTION */
-
-.certificate-proof {
-  position: relative;
-  top: -9.5%;
-  margin-top: auto;
-  border-top: 1px solid rgba(181, 129, 63, .38);
-  padding-top: 0;
-}
-
-.certificate-passport-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  height: 1.65em;
-  margin: 0;
-  padding: 0;
-}
-
-/* Hide "PROOF OF JOURNEY" but keep the points */
-
-.certificate-passport-heading h2 {
-  display: none;
-}
-
-.certificate-points {
-  display: flex;
-  align-items: baseline;
-  gap: .5em;
-  margin: 0;
-  padding: 0;
-  color: #173655;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-}
-
-.certificate-points strong {
-  color: #9a672d;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.55em;
-  line-height: 1;
-}
-
-.certificate-points span {
-  font-size: .65em;
-  font-weight: 700;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-/* STAMPS — same size, pulled as close to the line above as possible */
-
-.certificate-stamps {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: .75%;
-  margin-top: -0.15%;
-  padding: 0;
-}
-
-.certificate-stamp {
-  display: grid;
-  min-width: 0;
-  height: 5.1em;
-  place-items: center;
-  padding: .1em;
-}
-
-.certificate-stamp img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* CERTIFICATE FOOTER */
-
-.certificate-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(181, 129, 63, .38);
-  padding-top: .5%;
-  color: #66768a;
-  font-family: Arial, sans-serif;
-  font-size: .61em;
-}
-
-.certificate-footer-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: .55em;
-  color: #8d6637;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.certificate-footer-mark i {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #b5813f;
-}
-
-/* MOBILE */
+/* MODAL RESPONSIVENESS */
 
 @media (max-width: 640px) {
   .passport-profile {
@@ -695,157 +385,125 @@
     min-height: 38px;
   }
 
-  .certificate-content {
-    padding: 2% 3% 1.5%;
-  }
-
-  .certificate-header {
-    grid-template-columns: 1fr auto;
-  }
-
-  .certificate-school {
-    width: 11em;
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .certificate-country {
-    display: none;
-  }
-
-  .certificate-brand img {
-    width: 2.7em;
-    height: 2.7em;
-  }
-
-  .certificate-brand-name {
-    font-size: 1.35em;
-  }
-
-  .certificate-brand-arabic {
-    font-size: .95em;
-  }
-
-  .certificate-achievement {
-    padding: 1.2% 0 .8%;
-  }
-
-  .certificate-eyebrow {
-    font-size: .7em;
-  }
-
-  .certificate-achievement h1 {
-    font-size: 1.35em;
-  }
-
-  .certificate-presented {
-    font-size: .7em;
-  }
-
-  .certificate-recipient {
-    font-size: 1.65em;
-  }
-
-  .certificate-recipient-details {
-    font-size: .58em;
-  }
-
-  .certificate-copy {
-    max-width: 90%;
-    font-size: .62em;
-  }
-
-  .certificate-stamp {
-    height: 3.6em;
-  }
-
-  .certificate-footer {
-    font-size: .5em;
+  .certificate-modal-actions .rihla-secondary {
+    min-height: 38px;
+    padding-inline: .6rem;
+    font-size: .75rem;
   }
 }
 
-/* PRINT */
+/* FIXED A4 PDF PAGE AND COORDINATE-BASED TEXT OVERLAY */
 
-@page {
-  size: A4 landscape;
-  margin: 0;
+.certificate-paper {
+  width: 100%;
+  aspect-ratio: 842.04 / 594.96;
+  overflow: hidden;
+  background: #f8f6ef;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 
-@media print {
-  html,
-  body,
-  #root {
-    width: 297mm !important;
-    height: 210mm !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    background: #f2eddf !important;
-  }
+.certificate-surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  container-type: size;
+}
 
-  body * {
-    visibility: hidden !important;
-  }
+.certificate-template-canvas,
+.certificate-dynamic-overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-  .certificate-modal {
-    position: static !important;
-    display: block !important;
-    width: 297mm !important;
-    height: 210mm !important;
-    overflow: visible !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
+.certificate-dynamic-overlay {
+  pointer-events: none;
+  color: #102945;
+  font-family: Georgia, 'Times New Roman', serif;
+}
 
-  .certificate-modal-panel {
-    display: contents !important;
-  }
+.certificate-dynamic-field {
+  position: absolute;
+  display: block;
+  max-width: 40%;
+  overflow: hidden;
+  color: inherit;
+  line-height: 1;
+  white-space: nowrap;
+  text-overflow: clip;
+  transform: translateY(-100%);
+}
 
-  .certificate-modal-header {
-    display: none !important;
-  }
+/* NAME */
 
-  .print-certificate-only,
-  .print-certificate-only * {
-    visibility: visible !important;
-  }
+.certificate-field-name {
+  max-width: 55%;
+  width: max-content;
+  color: #102945;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.05cqw;
+  font-weight: 400;
+  text-align: center;
+  transform: translate(-50%, -100%) scaleX(var(--name-scale, 1));
+  transform-origin: center bottom;
+}
 
-  .print-certificate-only {
-    position: fixed !important;
-    inset: 0 !important;
-    width: 297mm !important;
-    height: 210mm !important;
-    max-width: none !important;
-    aspect-ratio: auto !important;
-    margin: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    page-break-after: avoid !important;
-    break-after: avoid-page !important;
-  }
+/* CLASS */
 
-  .certificate-frame {
-    inset: 6mm !important;
-    padding: 1.5mm !important;
-  }
+.certificate-field-grade {
+  max-width: 25%;
+   color: #6f7884;
+  font-family: Arial, sans-serif;
+  gap: 0.25rem;
+  font-size: 1.55cqw;
+  font-weight: 400;
+}
 
-  .certificate-frame::before {
-    inset: 1.5mm !important;
-  }
+/* JOURNEY POINTS */
 
-  .certificate-content {
-    padding: 7mm 12mm 5mm !important;
-  }
+.certificate-field-journeyPoints {
+  color: #cf934f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.85cqw;
+  font-weight: 700;
+}
 
-  .certificate-backdrop {
-    opacity: .31 !important;
-  }
+/* PASSPORT SCORE LABEL */
 
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+.certificate-field-passportScore {
+  max-width: 30%;
+  color: #102945;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.55cqw;
+  font-weight: 400;
+  text-align: left;
+  transform: translateY(-100%);
+}
+
+/* COMPLETION DATE */
+
+.certificate-field-completedAt {
+  color: #102945;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5cqw;
+  font-weight: 400;
+}
+
+.certificate-template-status,
+.certificate-template-error {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  color: #132945;
+  font: 14px Arial, sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+.certificate-download-error {
+  margin: 0 0 .75rem;
+  color: #f0a5a5;
+  font-size: .85rem;
 }
