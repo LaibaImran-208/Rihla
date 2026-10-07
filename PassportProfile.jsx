@@ -26,7 +26,7 @@ export default function PassportProfile({ profile = emptyProfile, onSave, editin
     if (!name) nextErrors.name = 'Enter the explorer’s full name.';
     else if (name.length > 80) nextErrors.name = 'Name must be 80 characters or fewer.';
     if (!values.age.trim()) nextErrors.age = 'Enter the explorer’s age.';
-    else if (!/^\d+$/.test(values.age.trim()) || age < 5 || age > 25) nextErrors.age = 'Enter an age from 5 to 25.';
+    else if (!/^\d+$/.test(values.age.trim())) nextErrors.age = 'Enter an age.';
     if (values.grade.trim().length > 30) nextErrors.grade = 'Grade / Class must be 30 characters or fewer.';
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) return;

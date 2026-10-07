@@ -111,7 +111,7 @@ async function routeApi(request, env) {
     const name = cleanText(body.profile?.name, 80);
     const grade = cleanText(body.profile?.grade, 30);
     const age = Number(body.profile?.age);
-    if (!name || !Number.isInteger(age) || age < 5 || age > 25) return json({ error: 'Valid name and age are required.' }, 400);
+    if (!name || !Number.isInteger(age)) return json({ error: 'Valid name and age are required.' }, 400);
     if (!await ensureExplorer(env, owner, 'PROFILE_SAVED')) return json({ error: 'Explorer credentials are invalid.' }, 403);
     await env.DB.prepare(`UPDATE explorers SET name = ?, age = ?, grade = ?, updated_at = ? WHERE id = ? AND token_hash = ?`)
       .bind(name, age, grade || null, dateNow(), owner.id, owner.hash).run();

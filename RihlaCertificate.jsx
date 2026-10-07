@@ -74,7 +74,7 @@ const DOWNLOAD_FIELD_POINTS = {
   },
 
   journeyPoints: {
-    x: 625,
+    x: 620,
     y: 190,
     size: 15.5,
   },
@@ -95,7 +95,11 @@ function loadCertificatePage() {
     certificatePagePromise = pdfjs
       .getDocument({ url: CERTIFICATE_URL })
       .promise
-      .then(document => document.getPage(1));
+      .then(document => document.getPage(1))
+      .catch(error => {
+        certificatePagePromise = null;
+        throw error;
+      });
   }
 
   return certificatePagePromise;
