@@ -33,7 +33,7 @@ const FIELD_POINTS = {
   },
 
   journeyPoints: {
-    x: 625,
+    x: 620,
     y: 190,
     align: 'left',
     size: 15.5,
