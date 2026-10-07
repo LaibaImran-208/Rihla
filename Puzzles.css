@@ -64,7 +64,7 @@
   .puzzle-piece-tray { height: 166px; border-radius: 11px; }
   .puzzle-tray-header { padding: .55rem .7rem .1rem; }
   .puzzle-tray-scroll { height: 127px; gap: .35rem; padding: .3rem .7rem .8rem; }
-.puzzle-piece { width: 88px; height: 88px; flex-basis: 88px; }
+.puzzle-piece { width: 68px; height: 68px; flex-basis: 68px; }
   .puzzle-hint { margin: .75rem 0 .65rem; }
   .puzzle-finish-row { align-items: flex-start; flex-direction: column; }
   .puzzle-reward .rihla-primary, .puzzle-reward .rihla-secondary { width: 100%; }
