@@ -438,6 +438,28 @@ export default function Crossword() {
     }
   };
 
+  /*
+   * Mobile keyboards fire input events rather than
+   * relying only on keydown. Capture the typed letter
+   * from the real input and feed it into the same
+   * crossword logic used by the desktop keyboard.
+   */
+  const handleMobileInput = event => {
+    const value = event.target.value;
+
+    if (!value) return;
+
+    const letter = value
+      .replace(/[^a-zA-Z]/g, '')
+      .slice(-1);
+
+    if (letter) {
+      enterLetter(letter);
+    }
+
+    event.target.value = '';
+  };
+
   const revealLetter = () => {
     if (!activeCell) return;
 
@@ -563,16 +585,22 @@ export default function Crossword() {
         </div>
       </div>
 
-      <div
+      <input
         ref={keyboardRef}
+        type="text"
+        inputMode="text"
+        autoCapitalize="characters"
+        autoCorrect="off"
+        spellCheck={false}
+        maxLength={1}
         onKeyDown={handleKeyDown}
-        className="absolute h-px w-px opacity-0"
+        onInput={handleMobileInput}
+        className="absolute h-px w-px border-0 p-0 opacity-0"
         aria-label="Type letters into the crossword"
-        role="application"
-        tabIndex="-1"
+        tabIndex={-1}
       />
 
-      <div className="grid gap-10 lg:grid-cols-[minmax(300px,520px)_1fr]">
+<div className="grid items-start gap-8 xl:grid-cols-[minmax(0,520px)_minmax(280px,1fr)]">
         <div className="flex justify-center lg:justify-start">
           <div
             className="grid w-full max-w-[520px] gap-px border-2 border-[#C8965A] bg-[#C8965A] p-px"

@@ -106,7 +106,7 @@ export default function EmirateDetail() {
     <main className="min-h-screen bg-[#050E1D]">
       <Navbar />
      {/* Emirate Hero */}
-<div className="relative h-[260px] sm:h-[320px] md:h-[380px] w-full overflow-hidden bg-[#050E1D]">
+<div className="relative h-[310px] sm:h-[320px] md:h-[380px] w-full overflow-hidden bg-[#050E1D]">
 
   {/* Image centered, fully undistorted (natural aspect ratio), edges dissolve into bg */}
   <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-10">
@@ -120,7 +120,7 @@ export default function EmirateDetail() {
   {/* Bottom fade for text readability (unchanged behavior) */}
   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050E1D] via-[#050E1D]/40 to-transparent" />
 
-  <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-10">
+ <div className="absolute inset-x-0 bottom-0 mx-auto max-w-5xl px-5 pb-8 sm:pb-10">
     <Link
       to="/emirates-explorer"
       className="mb-4 inline-flex items-center gap-2 text-sm text-[#E8B97A] hover:text-[#F5F0E8]"
