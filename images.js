@@ -1,184 +1,182 @@
 const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
 
-/**
- * Centralized Image References for Rihla UAE Explorer
- * ====================================================
- * To replace any image, simply update the URL in this file.
- * Images are keyed by slug for easy identification.
- *
- * Generated images are hosted on media.db.com.
- * Stock photos are from Unsplash (images.unsplash.com).
- */
 
-export const uaemapimg ={ 'map':'https://static.vecteezy.com/system/resources/previews/024/309/615/non_2x/uae-map-flat-with-high-details-united-arab-emirates-political-map-with-labeling-uae-administrative-map-7-emirates-and-capital-cities-also-vector.jpg' };
+export const uaemapimg = {
+  'map': '/pics/emi/uaemapimg.jpg'
+};
+
 export const emirateImages = {
-  'abu-dhabi':       'https://media.assettype.com/outlooktraveller/2024-08-20/0nbfvji7/shutterstock_2473580625.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100',
-  'dubai':           'https://images.trvl-media.com/place/1079/7c70ab1d-5b73-4916-a4a6-3cfdd2e876b7.jpg',
-  'sharjah':         'https://www.arabianbusiness.com/cloud/2022/03/31/Sharjah-skyline.jpg',
-  'ajman':           'https://world-arabia.com/storage/images/news/crops/news-promo/jxsQZu1Obz1t8wutVorwht5kSh2oVHkBWWfRNlac.webp',
-  'umm-al-quwain':   'https://metropolitan.realestate/wp-content/uploads/2025/05/Aerial-masterplan-2.jpg',
-  'ras-al-khaimah':  'https://wow-rak.com/wp-content/uploads/2026/06/Every-New-Hotel-Opening-in-Ras-Al-Khaimah-Before-2027-1.jpg',
-  'fujairah':        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpFZ3cat9iGYV2NUogLVGXT7LOCmC5HLeBhiKEFDGNR40TgWxiLnPa9E&s=10'
+  'abu-dhabi':       '/pics/emi/abu-dhabi.avif',
+  'dubai':           '/pics/emi/dubai.webp',
+  'sharjah':         '/pics/emi/sharjah.jpg',
+  'ajman':           '/pics/emi/ajman.webp',
+  'umm-al-quwain':   '/pics/emi/umm-al-quwain.jpg',
+  'ras-al-khaimah':  '/pics/emi/ras-al-khaimah.jpg',
+  'fujairah':        '/pics/emi/fujairah.jpg'
 };
 
 // ===== LOCATION IMAGES =====
 // Each key matches the location's `id` field in the data files.
 export const locationImages = {
+
 // --- Abu Dhabi ---
-'sheikh-zayed-grand-mosque':    'https://www.planetjanettravels.com/wp-content/uploads/2017/02/1_UAE-abu-dhabi-sheik-zayed-grand-mosque-name.jpg',
-'qasr-al-watan':                'https://upload.wikimedia.org/wikipedia/en/7/7c/Qasr_Al_Watan_in_March_2022_02.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
-'qasr-al-hosn':                 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Qasr_al_Hosn_in_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
-'louvre-abu-dhabi':             'https://images.trvl-media.com/place/553248621560904133/0b49858a-e085-449c-bd25-6d8fab79e2d8.jpg',
-'heritage-village':             'https://visitabudhabi.ae/-/media/project/vad/things-to-do/culture-mfd/heritage/heritage-village/main-image.jpg?rev=2de66dfaeeda4ac288d96137dbc154c0',
-'emirates-palace':              'https://media.cntraveler.com/photos/5dc074ad03b23c0008cae1c1/16:9/w_2560,c_limit/emiratespalace-abudhabi-2019-2.jpg',
-'abu-dhabi-corniche':           'https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto/memphis/large/1092895729_Abu%20Dahbi%20Cornish.jpg',
-'wahat-al-karama':              'https://visitabudhabi.ae/-/media/project/vad/things-to-do/culture-mfd/heritage/wahat-al-karama/wahat-al-karama-main-image-5000x2800.jpg?rev=ce2465ed4cbd43a5938ccd5c7fd0ba31',
-'mangrove-national-park':       'https://visitabudhabi.ae/-/media/project/vad/things-to-do/nature-and-wildlife-mfd/parks/jubail-mangrove-park/jubail-mangrove-park-main-image-5000x2800.jpg?rev=2c21f4c64bd543eba756ce42fb4d0dfc',
-'al-wathba-fossil-dunes':       'https://visitabudhabi.ae/-/media/project/vad/things-to-do/nature-and-wildlife-mfd/natural-wonders/al-wathba-fossil-dunes/fossil-dunes-abu-dhabi-cover-20210712.jpg?rev=-1',
-'al-ain-oasis':                 'https://media.cntraveler.com/photos/582a01b09e1b702b18b73cfe/16:9/w_2560%2Cc_limit/CR52WG.jpg',
-'jebel-hafeet':                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Q5WGDQWq1h8kpvRCR-qnIelHKo2L_fkKs5bxy6erjoOEpesn__WqlbM&s=10',
-'sir-bani-yas-island':          'https://www.msccruises.fi/-/media/global-contents/destinations/ports/united-arab-emirates/sir-bani-yas-island/cruise-to-sir-bani-yas-island-united-arab-emirates.jpg?bc=transparent&as=1&mh=1395&mw=2460&hash=5E62787852643DA1A8E678186C0692F5',
-'abrahamic-family-house':       'https://afhqportalimageslive.blob.core.windows.net/qportalimageslive/venue/22/2025/06/01/customer-portal-config/pages/cover_images/1748807882_683cb0ca832fb_Main_Banner-min.jpg',
+  'sheikh-zayed-grand-mosque':    '/pics/auh/sheikh-zayed-grand-mosque.jpg',
+  'qasr-al-watan':                '/pics/auh/qasr-al-watan.jpg',
+  'qasr-al-hosn':                 '/pics/auh/qasr-al-hosn.jpg',
+  'louvre-abu-dhabi':             '/pics/auh/louvre-abu-dhabi.jpg',
+  'heritage-village':             '/pics/auh/heritage-village.JPG',
+  'emirates-palace':              '/pics/auh/emirates-palace.webp',
+  'abu-dhabi-corniche':           '/pics/auh/abu-dhabi-corniche.webp',
+  'wahat-al-karama':              '/pics/auh/wahat-al-karama.jpg',
+  'mangrove-national-park':       '/pics/auh/mangrove-national-park.jpg',
+  'al-wathba-fossil-dunes':       '/pics/auh/al-wathba-fossil-dunes.jpg',
+  'al-ain-oasis':                 '/pics/auh/al-ain-oasis.webp',
+  'jebel-hafeet':                 '/pics/auh/jebel-hafeet.jpg',
+  'sir-bani-yas-island':          '/pics/auh/sir-bani-yas-island.webp',
+  'abrahamic-family-house':       '/pics/auh/abrahamic-family-house.jpg',
+
 // --- Dubai ---
-  'burj-khalifa':                 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVyaiUyMGtoYWxpZmF8ZW58MHx8MHx8fDA%3D',
-  'dubai-creek':                  'https://skyvalleyrealestate.ae/wp-content/uploads/2026/05/Dubai-Creek-Harbour-1.webp',
-  'al-fahidi-historical-neighbourhood': 'https://openspace.ae/wp-content/uploads/2023/02/al-fahidi-scaled-1.jpg',
-  'dubai-frame':                  'https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWklMjBmcmFtZXxlbnwwfHwwfHx8MA%3D%3D',
-  'museum-of-the-future':         'https://images.unsplash.com/photo-1667592441284-b590021411e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVzZXVtJTIwb2YlMjBmdXR1cmV8ZW58MHx8MHx8fDA%3D',
-  'jumeirah-mosque':              'https://img.avianexperiences.com/attractions/9123d47e-4a15-41e9-b760-4c62e066433e',
-  'etihad-museum':                'https://www.egypttoursplus.com/wp-content/uploads/2025/07/Etihad-Museum-in-Dubai-%E2%80%93-modern-cultural-landmark-showcasing-the-history-of-the-UAEs-unification-through-interactive-exhibits-and-original-documents.webp',
-  'palm-jumeirah':                'https://www.iranydubai.hu/wp-content/uploads/2020/08/palm-jumeirah.jpg',
-  'burj-al-arab':                 'https://images.unsplash.com/flagged/photo-1555457900-4f4cf4768371?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'hatta-heritage-village':       'https://www.visitdubai.com/-/media/gathercontent/article/h/hattas-rich-history/fallback-image/discover-hattas-rich-historyherodtcm.jpg',
-  'global-village':               'https://blog.citylaila.com/wp-content/uploads/2023/11/GlobalVillageTicketinDubaiUnitedArabEmirates-KlookIndia.jpg',
-  'ras-al-khor-wildlife-sanctuary': 'https://captaindunes.com/wp-content/uploads/2025/09/Ras-Al-Khor-Wildlife-Sanctuary-In-Dubai.jpg',
-
-  // --- Sharjah ---
-  'heart-of-sharjah':             'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Heart_of_Sharjah.jpg/500px-Heart_of_Sharjah.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
-  'sharjah-museum-islamic-civilization': 'https://universes.art/fileadmin/media/images/art_destinations/sharjah/museums/islamic_civilization/01_310/1828581-1-eng-GB/01_310.jpg',
-  'sharjah-heritage-museum':      'https://teachmiddleeastmag.com/wp-content/uploads/2014/10/DSC_0099.jpg',
-  'al-noor-mosque':               'https://images.daytrip.com/al-noor-mosque1.jpg?w=1920&q=30',
-  'al-qasba':                     'https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Feature-Photo-4.jpg',
-  'mleiha-archaeological-centre': 'https://images.adsttc.com/media/images/63a5/a8c7/6c62/5769/af37/8d33/slideshow/mleiha-archaeological-centre-dabbagh-architects_1.jpg?1671801077',
-  'sharjah-art-museum':           'https://universes.art/fileadmin/user_upload/Biennials/Sharjah/2023/Venues-500/City/01-Sharjah-Art-Museum-A.jpg',
-  'house-of-wisdom':              'https://www.e-architect.com/wp-content/uploads/2021/03/house-of-wisdom-in-sharjah-uae-f110321-1.jpg',
-  'sharjah-fort':                 'https://2.bp.blogspot.com/-kEeDXq4uUg4/USHjMlZW1wI/AAAAAAAACo0/55wlT0deEVs/s1600/Sharjah_AlHisnFort.jpg',
-  'khor-fakkan':                  'https://shozon.com/blog/wp-content/uploads/2026/02/Sharjah-Khor-Fakkan-1024x505.webp',
+  'burj-khalifa':                 '/pics/dxb/burj-khalifa.avif',
+  'dubai-creek':                  '/pics/dxb/dubai-creek.webp',
+  'al-fahidi-historical-neighbourhood': '/pics/dxb/al-fahidi-historical-neighbourhood.jpg',
+  'dubai-frame':                  '/pics/dxb/dubai-frame.avif',
+  'museum-of-the-future':         '/pics/dxb/museum-of-the-future.avif',
+  'jumeirah-mosque':              '/pics/dxb/jumeirah-mosque.jpg',
+  'etihad-museum':                '/pics/dxb/etihad-museum.webp',
+  'palm-jumeirah':                '/pics/dxb/palm-jumeirah.jpg',
+  'burj-al-arab':                 '/pics/dxb/burj-al-arab.avif',
+  'hatta-heritage-village':       '/pics/dxb/hatta-heritage-village.avif',
+  'global-village':               '/pics/dxb/global-village.jpg',
+  'ras-al-khor-wildlife-sanctuary': '/pics/dxb/ras-al-khor-wildlife-sanctuary.jpg',
+// --- Sharjah ---
+  'heart-of-sharjah':             '/pics/shj/heart-of-sharjah.jpg',
+  'sharjah-museum-islamic-civilization': '/pics/shj/sharjah-museum-islamic-civilization.jpg',
+  'sharjah-heritage-museum':      '/pics/shj/sharjah-heritage-museum.jpg',
+  'al-noor-mosque':               '/pics/shj/al-noor-mosque.avif',
+  'al-qasba':                     '/pics/shj/al-qasba.jpg',
+  'mleiha-archaeological-centre': '/pics/shj/mleiha-archaeological-centre.jpg',
+  'sharjah-art-museum':           '/pics/shj/sharjah-art-museum.jpg',
+  'house-of-wisdom':              '/pics/shj/house-of-wisdom.jpg',
+  'sharjah-fort':                 '/pics/shj/sharjah-fort.jpg',
+  'khor-fakkan':                  '/pics/shj/khor-fakkan.webp',
 // --- Ajman ---
-  'ajman-museum':                 'https://visit-ajman.ae/media/wusbwwa0/ajman-meuseum-inside-1700x700.jpg',
-  'ajman-fort':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_XGoO3-v1MJdlQN2HwAQ0GqO8yJE-J5CgNmUGU86iBT4hxrZcMfEYrFI&s=10',
-  'ajman-corniche':               'https://topaddress.ae/wp-content/uploads/2022/01/corniche-residences-apart-1br-0.webp',
-  'al-zorah-nature-reserve':      'https://146414699.fs1.hubspotusercontent-eu1.net/hubfs/146414699/Imported_Blog_Media/Al%20Zorah%20Nature%20reserve-jpg-Oct-12-2025-09-56-47-6390-AM.jpg',
-  'al-muwayhat':                  'https://universes.art/fileadmin/_processed_/b/2/csm_04_ab72fa8d1c.jpg',
-  'masfout':                      'https://d3ob0s3rxbjyep.cloudfront.net/content/Masfout_Cover_07_05_2020_9d1dbcc5a6.jpg',
-  'masfout-castle':               'https://visit-ajman.ae/media/4qebogk1/masfout-castle.jpg',
-  'al-nuaimi-mosque':             'https://explore.rehlat.ae/static/media/searchdestination/thingstodo/images/ajman/al_nuaimia_mosque/large_b78dca1a8e9a397526b62f7cee954fa305e35eb8.webp',
-  
-// --- Umm Al Quwain ---
-  'uaq-national-museum':          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuonWB-Lzvmk-znBpMd7Jc66Wm-W-92FIndwW5loAx_rUOrXB3fB2jgBCI&s=10',
-  'uaq-fort':                     'https://mala.ae/wp-content/uploads/2023/03/hiestory-fort.jpg',
-  'uaq-old-harbour':              'https://images.unsplash.com/photo-1617298126699-b58d6a0bae56?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b2xkJTIwcG9ydCUyMHVtbSUyMGFsJTIwcXV3YWlufGVufDB8fDB8fHww',
-  'al-sinniyah-island':           'https://www.timeoutdubai.com/cloud/timeoutdubai/2022/02/18/Zaya-Nurai-Island-1024x768.jpg',
-  'tell-abraq':                   'https://cloudfront-eu-central-1.images.arcpublishing.com/thenational/C5Q2KHMYVVGIDBVENVXN6NKCJQ.jpg',
-  'falaj-al-mualla':              'https://d3ob0s3rxbjyep.cloudfront.net/content/Falaj_Al_Mualla_Fort_692021_be5158320f.jpg',
-  'dreamland-aqua-park':          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLXTP3pHND9E-dVRTf6JO91YQxUf0l_xveskCT7WqJkREjL2PGpInHAh8&s=10',
-  'uaq-mangrove-reserve':         'https://gulfbuzz.com/wp-content/uploads/2024/10/2-3.png',
-  
-  // --- Ras Al Khaimah ---
-  'jebel-jais':                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEXFeoTtGOmSpkRt8afyJ-nCHzspQ5F6PBMUao60wWnA&s=10',
-  'dhayah-fort':                  'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-10.jpg',
-  'al-jazirah-al-hamra':          'https://upload.wikimedia.org/wikipedia/commons/5/58/Al_Jazirah_Al_Hamra_2026-01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
-  'rak-national-museum':          'https://visitrasalkhaimah.com/wp-content/uploads/2019/07/1-6.jpg',
-  'al-rams':                      'https://lh5.googleusercontent.com/p/AF1QipP79FxqS8Tb6nvTSq9-zO5xLy8svIrFtv9j8q2a=s1600',
-  'suwaidi-pearls':               'https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/w9ey2gqhmieotgljynck.jpg',
-  'khatt-springs':                'https://www.trawell.in/admin/images/upload/480294652khatts-springs.jpg',
-'wadi-shawka':                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8_V55k-RytXDCd78ipWTsblDcj1xMnhpJDr_pYVgGSOsMytktpU5Sg&s=10',
-  'jais-flight':                  'https://rak.ae/wps/wcm/connect/a6d503be-379a-41fa-8100-98de7bc35fb6/%D8%AC%D8%A8%D9%84+%D8%AC%D9%8A%D8%B3.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-a6d503be-379a-41fa-8100-98de7bc35fb6-murF1QA',
-  'shimal':                       'https://rakheritage.rak.ae/wp-content/uploads/2024/09/DigitalWeb_medium_JPG-RAKWALLPAPER-14.jpg',
+  'ajman-museum':                 '/pics/ajman/ajman-museum.jpg',
+  'ajman-fort':                   '/pics/ajman/ajman-fort.jpg',
+  'ajman-corniche':               '/pics/ajman/ajman-corniche.webp',
+  'al-zorah-nature-reserve':      '/pics/ajman/al-zorah-nature-reserve.jpg',
+  'al-muwayhat':                  '/pics/ajman/al-muwayhat.jpg',
+  'masfout':                      '/pics/ajman/masfout.jpg',
+  'masfout-castle':               '/pics/ajman/masfout-castle.jpg',
+  'al-nuaimi-mosque':             '/pics/ajman/al-nuaimi-mosque.webp',
 
-  // --- Fujairah ---
-  'fujairah-fort':                'https://upload.wikimedia.org/wikipedia/commons/8/8e/Fujairah_Fort_Side_View%2C_Fujairah%2C_UAE.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
-  'fujairah-museum':              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYAhXbATxDJ-43b6ZFhWsERwQiroeutIKSNPcOc8YNZlHf4MMIR3_E4F2&s=10',
-  'al-bidyah-mosque':             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYWxsi-HBS0sCimE-ZitB5Spc-IDUtAlsoZscqB-E-7jaodOMVNy9FaM&s=10',
-  'bithnah-fort':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717764431.jpg',
-  'al-aqah-beach':                'https://tourism.fujairah.ae/public/uploads/destinations/images/image3_1717670099.jpg',
-  'snoopy-island':                'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/dOqbqlER9wtELn2p/photo-18-01-2015-4-30-13a-pm-YanBnMjjW7cDr6V9.jpg',
-  'wadi-wurayah':                 'https://tourism.fujairah.ae/public/uploads/destinations/images/image2_1717764972.jpg',
-  'fujairah-corniche':            'https://www.holidify.com/images/cmsuploads/compressed/fujCorniche_20180716175340.jpg',
-  'sheikh-zayed-mosque-fujairah': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1QKHQvJD_IlOZXiiHDzqEg6sn2mBDh1F9CZyM6QpK3A&s=10',
-  'dibba':                        'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shoreline_Dibba.jpg?utm_source=en.wikivoyage.org&utm_campaign=index&utm_content=original'
+// --- Umm Al Quwain ---
+  'uaq-national-museum':          '/pics/uaq/uaq-national-museum.jpg',
+  'uaq-fort':                     '/pics/uaq/uaq-fort.jpg',
+  'uaq-old-harbour':              '/pics/uaq/uaq-old-harbour.avif',
+  'al-sinniyah-island':           '/pics/uaq/al-sinniyah-island.jpg',
+  'tell-abraq':                   '/pics/uaq/tell-abraq.jpg',
+  'falaj-al-mualla':              '/pics/uaq/falaj-al-mualla.jpg',
+  'dreamland-aqua-park':          '/pics/uaq/dreamland-aqua-park.jpg',
+  'uaq-mangrove-reserve':         '/pics/uaq/uaq-mangrove-reserve.png',
+
+// --- Ras Al Khaimah ---
+  'jebel-jais':                   '/pics/rak/jebel-jais.jpg',
+  'dhayah-fort':                  '/pics/rak/dhayah-fort.jpg',
+  'al-jazirah-al-hamra':          '/pics/rak/al-jazirah-al-hamra.jpg',
+  'rak-national-museum':          '/pics/rak/rak-national-museum.jpg',
+  'al-rams':                      '/pics/rak/al-rams.jpg',
+  'suwaidi-pearls':               '/pics/rak/suwaidi-pearls.jpg',
+  'khatt-springs':                '/pics/rak/khatt-springs.jpg',
+  'wadi-shawka':                  '/pics/rak/wadi-shawka.jpg',
+  'jais-flight':                  '/pics/rak/jais-flight.jpg',
+  'shimal':                       '/pics/rak/shimal.jpg',
+
+// --- Fujairah ---
+  'fujairah-fort':                '/pics/fuj/fujairah-fort.jpg',
+  'fujairah-museum':              '/pics/fuj/fujairah-museum.jpg',
+  'al-bidyah-mosque':             '/pics/fuj/al-bidyah-mosque.jpg',
+  'bithnah-fort':                 '/pics/fuj/bithnah-fort.jpg',
+  'al-aqah-beach':                '/pics/fuj/al-aqah-beach.jpg',
+  'snoopy-island':                '/pics/fuj/snoopy-island.jpg',
+  'wadi-wurayah':                 '/pics/fuj/wadi-wurayah.jpg',
+  'fujairah-corniche':            '/pics/fuj/fujairah-corniche.jpg',
+  'sheikh-zayed-mosque-fujairah': '/pics/fuj/sheikh-zayed-mosque-fujairah.jpg',
+  'dibba':                        '/pics/fuj/dibba.jpg'
 };
+
 
 /// ===== CULTURE IMAGES =====
 export const cultureImages = {
-  'falconry':           'https://www.dayoutdubai.ae/blog/wp-content/uploads/2019/09/man-holding-falcon-copy-1024x538.jpg',
-  'camel-racing':       'https://media.cntraveler.com/photos/5e3072085d81ee0009342a11/16:9/w_2560,c_limit/CamelRacing-DubaiTTD-2020-GettyImages-450199299.jpg',
-  'pearl-diving':       'https://www.dotwnews.com/uploads/posts_photos/serdal-pearl-diving-2-min-d8nnaj.jpg',
-  'dhow-building':      'https://d1snrxh3s61e7p.cloudfront.net/media/CACHE/images/venues/a04b47bc-dece-42e5-a60b-23884b111ee5/dhow-building-yard.jpg',
-  'sadu-weaving':       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTUNJrBlU6wIiknQ3e39ncNh25tj0bzUQOyf6hk7SroLDF8Y-UCn8PrQ&s=10',
-  'henna':              'https://www.harpersbazaararabia.com/wp-content/uploads/sites/7/cloud/2021/09/09/hba-hennasalons-lead-1.jpg',
-  'machboos':           'https://www.remitly.com/blog/wp-content/uploads/2023/09/kuwait-machboos-scaled.jpg?wpId=24328',
-  'harees':             'https://ninefoods.com.pk/wp-content/uploads/2025/01/Emirati-Harees-Recipe.png',
-  'luqaimat':           'https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2024/02/20/80f466aa53f7425ca3f004d3e6a5de99_luqaimat-al-fanar-dubai.jpg',
-  'balaleet':           'https://thumbs.dreamstime.com/b/emirati-balaleet-traditional-dish-presented-ornate-blue-white-bowl-thin-noodles-topped-bright-yellow-406874624.jpg',
-  'arabic-coffee':      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi6n3cOtvNopkEE7weF9b2Am4MCB4AxEIndaah7erKix0ajdcTSCmD4yQ&s=10',
-  'dates':              'https://visitrasalkhaimah.com/wp-content/uploads/2023/11/dates-uae.jpeg',
-  'kandura':            'https://www.shutterstock.com/shutterstock/videos/1105570639/thumb/1.jpg?ip=x480',
-  'ghutra':             'https://www.dayoutdubai.ae/blog/wp-content/uploads/2021/02/formal-ghutra.jpg',
-  'agal':               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvee5MpvCJMCQyhWKwZsCH6vpufZy8d0-sCQz9TQlbO6rIOr771cyHrfM&s=10',
-  'abaya':              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP7JXaqNOskbEYbDY4Vvu0m6nfMf_d8sZNanDcZpiEaOu6ryJhUZ8pKz4&s=10',
-  'shayla':             'https://dannibindubai.com/wp-content/uploads/2021/04/abaya-and-shayla-emirati-woman.jpg',
-  'barasti-houses':    'https://pbs.twimg.com/media/Cgu6aHNWYAAbM-X.jpg',
-  'wind-towers':        'https://cdn1.matadornetwork.com/blogs/1/2021/06/Dubai-wind-towers-219649834-1200x852.jpg',
-  'coral-stone-houses': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JgMb4VitbIXlbkstmf8iVjxW40yVeoILTu7fYfIcl8lxYN-_vXjUYC8u&s=10',
-  'forts-and-watchtowers': 'https://glimpsesofuae.com/wp-content/uploads/2023/11/Al-Fujairah-Fort-UAE-768x369.jpg',
-  'traditional-mosques': 'https://glimpsesofuae.com/wp-content/uploads/2024/04/Mosques-in-the-UAE-2.jpg',
-  'modern-architecture': 'https://www.visitdubai.com/-/media/images/leisure/detail-pages/explore-dubai/1-3-dubai-neighbourhoods-t34/dubai-neighborhood-business-bay.jpg',
-  'al-ayala':           'https://s3.ap-south-1.amazonaws.com/production.media.hafla.com/db/product_images/people-and-services/al-ayallah-dancers/Images/660_412/-al-ayallah-dancers2.png',
-  'traditional-instruments': 'https://storage.ghost.io/c/8e/d7/8ed7937e-239e-4c73-8661-3ab95a578ef0/content/images/2024/03/Your-paragraph-text--3--1.jpg',
-  'nabati-poetry':      'https://www.al-monitor.com/sites/default/files/styles/article_hero_medium/public/2025-11/PHOTO-2025-10-29-21-38-36.jpg?h=ada05aa9&itok=egYzPxCv',
-  'oral-traditions':    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBaHDnFL5sN7vGgR5PSJuYeQI3yBKHZuM3QCCwhmyWps0OexCEFbVPbRyS&s=10',
-  'uae-flag':           'https://elements-resized.envatousercontent.com/elements-video-cover-images/d81652b5-e711-47ab-8cdd-a41e9ff2ff30/video_preview/video_preview_0000.jpg?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=b8f5d618433fb85b479b639b0416e173d842f53d5a2c521c75866b17cb984d58',
-  'coat-of-arms':       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3b705xSGXnXoiKSDLv-nRGlhyc4e-z-0B7dhmor-1aw&s',
-  'national-anthem':    'https://i.ytimg.com/vi/7jTZMcxAUP8/hqdefault.jpg',
-  'national-bird':      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaRB77TqqgyZEKNAwB6-zrNCT6VCB9KOLc02QLTlYBGDDRVPHXyOUC26B&s=10',
-  'national-tree':      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGwEIkF8BjA60tEmXjELGN1OPRN3V7PwKiIiHRFxmEf9vMdcQ_fORk9ls&s=10',
-  'national-animal':    'https://spaces.greatbigstory.com/uploads/2024/04/arabian-oryx-survive-extinction3-1024x576.jpg'
+  'falconry':           '/pics/culture/falconry.jpg',
+  'camel-racing':       '/pics/culture/camel-racing.jpg',
+  'pearl-diving':       '/pics/culture/pearl-diving.jpg',
+  'dhow-building':      '/pics/culture/dhow-building-yard.jpg',
+  'sadu-weaving':       '/pics/culture/sadu-weaving.jpg',
+  'henna':              '/pics/culture/henna.jpg',
+  'machboos':           '/pics/culture/machboos.jpg',
+  'harees':             '/pics/culture/harees.webp',
+  'luqaimat':           '/pics/culture/luqaimat.jpg',
+  'balaleet':           '/pics/culture/balaleet.webp',
+  'arabic-coffee':      '/pics/culture/arabic-coffee.jpg',
+  'dates':              '/pics/culture/dates.jpg',
+  'kandura':            '/pics/culture/kandura.jpg',
+  'ghutra':             '/pics/culture/ghutra.jpg',
+  'agal':               '/pics/culture/agal.jpg',
+  'abaya':              '/pics/culture/abaya.jpg',
+  'shayla':             '/pics/culture/shayla.jpg',
+  'barasti-houses':     '/pics/culture/barasti-houses.jpg',
+  'wind-towers':        '/pics/culture/wind-towers.jpg',
+  'coral-stone-houses': '/pics/culture/coral-stone-houses.jpg',
+  'forts-and-watchtowers': '/pics/culture/forts-and-watchtowers.jpg',
+  'traditional-mosques': '/pics/culture/traditional-mosques.jpg',
+  'modern-architecture': '/pics/culture/modern-architecture.webp',
+  'al-ayala':           '/pics/culture/al-ayala.png',
+  'traditional-instruments': '/pics/culture/traditional-instruments.jpg',
+  'nabati-poetry':      '/pics/culture/nabati-poetry.jpg',
+  'oral-traditions':    '/pics/culture/oral-traditions.jpg',
+  'uae-flag':           '/pics/culture/uae-flag.jpg',
+  'coat-of-arms':       '/pics/culture/coat-of-arms.jpg',
+  'national-anthem':    '/pics/culture/national-anthem.jpg',
+  'national-bird':      '/pics/culture/national-bird.jpg',
+  'national-tree':      '/pics/culture/national-tree.jpg',
+  'national-animal':    '/pics/culture/national-animal.jpg'
 };
 
 // ===== FESTIVAL IMAGES =====
 export const festivalImages = {
-  'national-day':      'https://tripventura.com/cdn/shop/articles/spectacular-firework-nominated-2023-11-27-05-33-56-utc-scaled-1_b23c09d4-fa0c-4acd-bdf5-f521cc9d4482.jpg?crop=center&height=600&v=1767063291&width=1200',
-  'flag-day':          'https://www.timeoutdubai.com/cloud/timeoutdubai/2024/10/31/qMYceO0v-WhatsApp-Image-2024-10-31-at-14.13.36-1200x900.jpg',
-  'commemoration-day': 'https://media.assettype.com/gulfnews%2Fimport%2F2015%2F11%2F23%2F1_16a0812401e.1624764_1925568966_16a0812401e_large.jpg?w=480&auto=format%2Ccompress&fit=max',
-  'ramadan':           'https://images.squarespace-cdn.com/content/v1/63922504b37f130fb6885933/39f314ad-83ee-40b1-8535-c448f80278b4/Explaining%2BRamadan%2Bto%2Byour%2Bchild.jfif',
-  'eid-al-fitr':       'https://static.toiimg.com/thumb/msid-128705634,imgsize-1210730,width-400,resizemode-4/uae.jpg',
-  'eid-al-adha':       'https://storage.viory.video/thumbnails/a3022_16062024/AaTbLzmqwF7diWoq/AaTbLzmqwF7diWoq.jpg',
-  'islamic-new-year':  'https://readfoundation.org.uk/wp-content/uploads/2025/01/Top-10-Facts-About-Ramadan.png',
-  'prophet-birthday': 'https://static.toiimg.com/thumb/msid-123520346,imgsize-781479,width-400,resizemode-4/holiday.jpg'
+  'national-day':      '/pics/festivals/national-day.jpg',
+  'flag-day':          '/pics/festivals/flag-day.jpg',
+  'commemoration-day': '/pics/festivals/commemoration-day.webp',
+  'ramadan':           '/pics/festivals/ramadan.jpg',
+  'eid-al-fitr':       '/pics/festivals/eid-al-fitr.png',
+  'eid-al-adha':       '/pics/festivals/eid-al-adha.jpg',
+  'islamic-new-year':  '/pics/festivals/islamic-new-year.png',
+  'prophet-birthday':  '/pics/festivals/prophet-birthday.png'
 };
+
 
 // ===== TIMELINE IMAGES =====
 export const timelineImages = {
-  'pearl-diving-era':     'https://146414699.fs1.hubspotusercontent-eu1.net/hubfs/146414699/Imported_Blog_Media/0101279d-6b50-49e0-a1fe-3e10c9ecf7aa-1-Oct-12-2025-09-55-52-9160-AM.jpg',
-  'oil-discovery':        'https://cdn.emiratitimes.com/wp-content/uploads/2021/09/14191037/Emirates-Oil-World.jpg',
-  'uae-formation':        'https://vspauditors.com/wp-content/uploads/2016/06/UAE-Article-300x200.jpg',
-  'sheikh-zayed-mosque-opens': 'https://thenational.shorthandstories.com/sheikh-zayed-grand-mosque-abu-dhabi/assets/2eScnzehQZ/mosque-from-above-after-edit-2560x1447.jpg',
-  'burj-khalifa-opens':   'https://d2csxpduxe849s.cloudfront.net/media/42BB6A60-DC5B-4A0B-87CC3E8C248CB543/C8B8C53F-D4FB-47AD-BC8F1EAB4D570E00/webimage-3D0ADACC-95C6-4E46-917F764AC40B7B27.png',
-  'louvre-opens':         'https://images.trvl-media.com/place/553248621560904133/0b49858a-e085-449c-bd25-6d8fab79e2d8.jpg',
-  'hope-probe':           'https://spacein3d.com/wp-content/uploads/2021/02/Emirates_Hope.jpg',
-  'museum-of-future-opens': 'https://www.visitdubai.com/-/media/images/leisure/campaigns/dubai-presents/itineraries/spy/spy-media-museum-of-the-future.jpg',
-  'cop28':                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMsVa_0U6omz9Q48rSMjdedTjmq2ZTOOX5WApVdgewytVqIRCOOVYwXg&s=10',
-  'net-zero-2050':        'https://www.ku.ac.ae/wp-content/uploads/2021/08/Carbon_Neutrality_by_2050.jpg'
+  'pearl-diving-era':     '/pics/timeline/pearl-diving-era.jpg',
+  'oil-discovery':        '/pics/timeline/oil-discovery.jpg',
+  'uae-formation':        '/pics/timeline/uae-formation.jpg',
+  'sheikh-zayed-mosque-opens': '/pics/timeline/sheikh-zayed-mosque-opens.jpg',
+  'burj-khalifa-opens':   '/pics/timeline/burj-khalifa-opens.jpg',
+  'louvre-opens':         '/pics/timeline/louvre-opens.jpg',
+  'hope-probe':           '/pics/timeline/hope-probe.jpg',
+  'museum-of-future-opens': '/pics/timeline/museum-of-future-opens.jpg',
+  'cop28':                '/pics/timeline/cop28.jpg',
+  'net-zero-2050':        '/pics/timeline/net-zero-2050.jpg'
 };
+
 // ===== SUSTAINABILITY IMAGES =====
 export const sustainabilityImages = {
-  'masdar-city':           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBYcoYKrYTRRfychekf2cIoyoFKmDSxpbtKgj9LOoKQ&s=10',
-  'solar-park':            'https://www.mbrsic.ae/media/exke04gn/phase-6.jpg',
-  'mangrove-restoration': 'https://data.emiratesnaturewwf.ae/media/files/2024-11/mangrove-projects.jpg',
-  'marine-conservation':  'https://www.dubaidet.gov.ae/en/-/media/images/leisure/campaigns/reef-dubai/reef-dubai-2025/pillar-3-v2.jpg?iar=0&cw=1040&ch=400&q=75',
-  'desert-conservation':  'https://offloadmedia.feverup.com/secretdubai.co/wp-content/uploads/2019/02/17083723/al-marmoom-1024x597.jpg',
-  'wildlife-protection':  'https://www.thenationalnews.com/resizer/v2/VX2UZWTMOVFJRIAFUYBDQ5PUTM.JPG?smart=true&auth=7db24ed4dd511a33519272bc5c73a69261283ca2d04330e74bcaa244ed4495cd&width=400&height=263',
-  'water-conservation':   'https://3phtechservices.com/wp-content/uploads/2026/01/Water-Efficiency-and-Conservation-Technologies-for-UAE-Water-Utilities-image.jpg',
-  'net-zero-2050':        'https://www.mepmiddleeast.com/cloud/2024/12/06/net-zero-min-1024x576.jpg'
+  'masdar-city':           '/pics/sustain/masdar-city.jpg',
+  'solar-park':            '/pics/sustain/solar-park.jpg',
+  'mangrove-restoration':  '/pics/sustain/mangrove-restoration.jpg',
+  'marine-conservation':   '/pics/sustain/marine-conservation.jpg',
+  'desert-conservation':   '/pics/sustain/desert-conservation.jpg',
+  'wildlife-protection':   '/pics/sustain/wildlife-protection.jpg',
+  'water-conservation':    '/pics/sustain/water-conservation.jpg',
+  'net-zero-2050':         '/pics/sustain/net-zero-2050.jpg'
 };
