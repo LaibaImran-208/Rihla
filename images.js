@@ -161,7 +161,7 @@ export const timelineImages = {
   'oil-discovery':        '/pics/timeline/oil-discovery.jpg',
   'uae-formation':        '/pics/timeline/uae-formation.jpg',
   'sheikh-zayed-mosque-opens': '/pics/timeline/sheikh-zayed-mosque-opens.jpg',
-  'burj-khalifa-opens':   '/pics/timeline/burj-khalifa-opens.jpg',
+  'burj-khalifa-opens':   '/pics/timeline/burj-khalifa-open.jpg',
   'louvre-opens':         '/pics/timeline/louvre-opens.jpg',
   'hope-probe':           '/pics/timeline/hope-probe.jpg',
   'museum-of-future-opens': '/pics/timeline/museum-of-future-opens.jpg',
